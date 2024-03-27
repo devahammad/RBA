@@ -24,6 +24,7 @@ function openNav() {
 
         }
     }
+
         // Get the current scroll position
         var scrollPosition = [
           self.pageXOffset || document.documentElement.scrollLeft || document.body.scrollLeft,
@@ -64,6 +65,7 @@ function closeNav() {
             closeBtns[i].style.paddingTop = "0em";
         }
     }
+    
     // Get the previous scroll position
     var scrollPosition = parseInt(document.body.style.top || '0', 10);
   
@@ -76,4 +78,3 @@ function closeNav() {
     // Scroll back to the previous position
     window.scrollTo(scrollPosition, scrollPosition);
 }
-
