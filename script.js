@@ -78,3 +78,9 @@ function closeNav() {
     // Scroll back to the previous position
     window.scrollTo(scrollPosition, scrollPosition);
 }
+
+document.addEventListener('DOMContentLoaded', function() {
+    setTimeout(function() {
+        document.querySelector('.starting-page').classList.add('hide');
+    }, 3000); 
+});
