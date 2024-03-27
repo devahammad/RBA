@@ -24,6 +24,23 @@ function openNav() {
 
         }
     }
+        // Get the current scroll position
+        var scrollPosition = [
+          self.pageXOffset || document.documentElement.scrollLeft || document.body.scrollLeft,
+          self.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop
+        ];
+        // Get the current width of the body
+        var bodyStyle = window.getComputedStyle(document.body);
+        var bodyWidth = parseInt(bodyStyle.width, 10);
+        // Calculate the scroll bar width
+        var scrollBarWidth = window.innerWidth - bodyWidth;
+      
+        // Add styles to the body to disable scrolling
+        document.body.style.overflow = 'hidden';
+        document.body.style.position = 'fixed';
+        document.body.style.top = `-${scrollPosition[1]}px`;
+        document.body.style.width = `calc(100% - ${scrollBarWidth}px)`;
+      
 }
 
 function closeNav() {
@@ -47,5 +64,16 @@ function closeNav() {
             closeBtns[i].style.paddingTop = "0em";
         }
     }
+    // Get the previous scroll position
+    var scrollPosition = parseInt(document.body.style.top || '0', 10);
+  
+    // Remove styles to enable scrolling
+    document.body.style.overflow = '';
+    document.body.style.position = '';
+    document.body.style.top = '';
+    document.body.style.width = '';
+  
+    // Scroll back to the previous position
+    window.scrollTo(scrollPosition, scrollPosition);
 }
 
