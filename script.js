@@ -40,7 +40,7 @@ function closeNav() {
         }
         for (var i = 0; i < openBtns.length; i++) {
             openBtns[i].style.opacity = "1";
-            openBtns[i].style.paddingTop = "1em";
+            openBtns[i].style.paddingTop = "0em";
         }
         for (var i = 0; i < closeBtns.length; i++) {
             closeBtns[i].style.opacity = "0";
@@ -48,3 +48,4 @@ function closeNav() {
         }
     }
 }
+
