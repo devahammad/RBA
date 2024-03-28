@@ -1,91 +1,85 @@
-body {
-  margin: 0;
-  font-family: sans-serif;
-  background-color: rgb(0, 0, 0);
+body{
+    margin: 0;
+    font-family: sans-serif;
+background-color: rgb(0, 0, 0);
 }
-
-.main {
-  animation: 2s fadeStart ease forwards;
-  animation-delay: 3s;
-  opacity: 0;
+.main{
+  animation: 2s fadeStart ease ;
+animation-delay: 2.8s;
+opacity: 1;
 }
 
 @keyframes fadeStart {
   0% {
-    opacity: 0;
+  opacity: 0;
   }
-
   100% {
-    opacity: 1;
+  opacity: 1;
   }
-}
-
-.overlay {
-  height: 0%;
-  width: 100%;
-  position: fixed;
-  top: 0;
-  left: 0;
-  background-color: rgba(0, 0, 0, 0.600);
-  overflow: hidden;
-  transition: 0.8s ease;
-
-}
-
-.overlay-content {
-  position: relative;
-  padding-top: 10%;
-  width: 100%;
-  text-align: center;
-  overflow: hidden;
-  backdrop-filter: blur(15px);
-  -webkit-backdrop-filter: blur(10px);
-
-}
-
-.overlay-content a {
-  font-size: 100px;
-}
-
-.overlay a {
-  padding: 8px;
-  text-decoration: none;
-  font-size: 36px;
-  color: #818589;
-  display: block;
-  transition: 0.3s;
-}
-
-.overlay a:hover,
-.overlay a:focus,
-.navI a:hover {
-  color: #f1f1f1;
-  text-shadow: 0 0 2px white;
-  cursor: pointer;
-}
-
-
-@media (max-height: 768px) {
-  .overlay {
-    overflow-y: auto;
+  }
+.overlay{
+    height: 0%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.536);
+    overflow: hidden;
+    transition: 0.8s ease;
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    z-index: 999;
   }
 
-  .overlay .closebtn {
+  .overlay-content {
+    position: relative;
+   padding-top: 10%;
+    width: 100%;
+    text-align: center;
+    overflow: hidden;  
+     backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+  }
+  .overlay-content a {
+ font-size:100px;
+  }
+  
+  .overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #818589;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  .overlay a:hover, .overlay a:focus, .navI a:hover {
+    color: #f1f1f1;
+    text-shadow: 0 0 2px white;
+    cursor: pointer;
+  }
+  
+ 
+  @media (max-height: 768px) {
+    .overlay {overflow-y: auto;}
+    .overlay .closebtn {
     font-size: 40px;
     top: 15px;
     right: 35px;
     z-index: 1;
   }
 }
-
 @media (min-width: 600px) {
-  .openbtn {
-    display: none;
-  }
-
-  .NavItDesk {
+    .openbtn{
+       display: none;
+    }
+    .NavItDesk{
     display: block;
   }
+ 
+
+    }
+
 
   .pkgtagline {
     color: #ffffff;
@@ -131,20 +125,19 @@ body {
 
 }
 
-@media (max-width: 768px) {
-  .openbtn {
-    display: block;
-  }
-
-  .NavItDesk {
-    display: none;
-
-  }
-
-  .HeadMobi {
+    @media (max-width: 768px) {
+      .openbtn{
+       display: block;
+    }
+    .NavItDesk{
+   display: none;
+ 
+  } .HeadMobi{
     position: sticky;
     top: 0;
   }
+  
+      }
 
   .pkgtagline {
     color: #ffffff;
@@ -187,114 +180,115 @@ body {
   }
 
 }
-
-.header {
-  width: 100%;
-  height: 10px;
-  background-color: red;
+    
+.header{
+    width: 100%;
+    height: 10px;
+    background-color: red;
 }
 
-.navI a {
+.navI a{
   color: #818589;
   text-decoration: none;
-  font-size: 1.1em;
-  transition: 0.3s;
-  animation: F-R 1s ease;
-  font-family: cFont;
+font-size: 1.1em;
+transition: 0.3s;
+animation: F-R 1s ease;
+font-family: cFont;
 }
 
 @keyframes F-R {
   from {
     opacity: 0;
   }
-
   to {
-    opacity: 1;
+   opacity: 1;
   }
 }
 
-.overlay .closebtn {
-  position: absolute;
-  padding-top: 0em;
-  transition: 1s ease;
-  z-index: 1;
-}
-
+ .overlay .closebtn {
+    position: absolute;
+    padding-top: 0em;
+    transition: 1s ease;
+    z-index: 1;
+  }
+  
 .openbtn {
-  transition: 1.4s ease;
+  transition:  1.4s ease;
   padding-top: 0;
   animation: 0.5s upop ease;
 }
-
-@keyframes upop {
-  from {
+@keyframes upop{
+  from{
     opacity: 0;
     padding-top: 1.5em;
   }
-
-  to {
+  to{
     opacity: 1;
     padding-top: 0;
   }
 }
-
-.spNav {
+.spNav{
   padding-top: 1em;
   transition: 5s;
   font-family: cFont;
 }
 
 
-.hrPro {
+.hrPro{
   border: 1px solid rgb(255, 255, 255);
-  width: 70%;
+width: 70%;
 }
 
-.themes {
+.themes{
   color: white;
 }
 
-.logo {
+.logo{
   height: 3em;
   animation: F-R 1s ease;
+padding-top: 3px;
+padding-bottom: 3px;
 }
 
-.firstHeader {
-  height: 3em;
-  width: 100%;
+@media (min-width: 768px) {
+.logo{
+    padding-top: 15px;
+  padding-bottom: 10px;
+}
+}
+.firstHeader{
+  height: 3em; 
+  width: 100%; 
   background-color: rgba(0, 0, 0, 0.400);
-  height: 100%;
+  height: 100%; 
   backdrop-filter: blur(15px);
   -webkit-backdrop-filter: blur(15px);
 
 }
-
-.secondHeader {
+.secondHeader{
   height: auto;
-  width: 100%;
-  background-color: rgba(0, 0, 0, 0.400);
-  text-align: center;
-  padding-top: 0px;
-  position: sticky;
-  top: 0;
-  backdrop-filter: blur(15px);
-  -webkit-backdrop-filter: blur(15px)
+   width: 100%; 
+   background-color: rgba(0, 0, 0, 0.400);
+   text-align: center; 
+   padding-top: 0px;
+    position: sticky; top: 0;
+    backdrop-filter: blur(15px);
+   -webkit-backdrop-filter: blur(15px)
 }
 
 ::selection {
   background: rgb(255, 255, 255);
 }
 
-html {
+html{
   user-select: none;
   -webkit-tap-highlight-color: transparent;
 }
 
 @font-face {
-  font-family: cFont;
-  src: url('Fonts/IncompleetaRegular.ttf');
+  font-family: cFont; 
+  src: url('Fonts/IncompleetaRegular.ttf'); 
 }
-
 
 
 .starting-page {
@@ -307,8 +301,8 @@ html {
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 9999;
-  transition: all 0.5s ease;
+  z-index: 9999; 
+  transition: all 0.5s ease; 
 }
 
 .logo-container {
@@ -323,24 +317,21 @@ html {
 .hide {
   display: none;
 }
-
 @keyframes loopinout {
-  0% {
-    opacity: 0;
-  }
-
-  50% {
-    opacity: 1;
-  }
-
-  100% {
-    opacity: 0;
-  }
+0% {
+opacity: 0;
+}
+50% {
+opacity: 1;
+}
+100% {
+opacity: 0;
+}
 }
 
 .logoAnim {
-  opacity: 0;
-  animation: loopinout 4s ease infinite;
+opacity: 0;
+animation: loopinout 4s ease infinite; 
 }
 
 
@@ -355,45 +346,120 @@ html {
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 9999;
-  /* ensure it's on top */
-  transition: all 0.5s ease;
-  /* smooth transition */
+  z-index: 9999; /* ensure it's on top */
+  transition: all 0.5s ease; /* smooth transition */
   backdrop-filter: blur(15px);
   -webkit-backdrop-filter: blur(15px);
 }
 
 
 .hideL {
-  display: none;
+display: none;
 }
-
 .logoLOAD {
   opacity: 0;
-  animation: loopinoutLOAD 1.5s ease infinite;
+  animation: loopinoutLOAD 1.5s ease infinite; 
   transition: 0.5s ease;
 
 }
 
 @keyframes loopinoutLOAD {
   0% {
-    opacity: 1;
+      opacity: 1;
   }
 
   100% {
-    opacity: 0;
+      opacity: 0;
   }
 }
 
-.pkgtaglinediv {
-  display: flex;
-  width: 100%;
-  justify-content: center;
-  margin-bottom: 3em;
-  margin-top: 3em;
+
+
+
+.main2{
+  animation: 1s F-R ease;
 }
 
 
-.main2 {
-  animation: 1s F-R ease;
+ .sptext{
+    background: linear-gradient(to right,black,rgb(0, 0, 0),rgb(43, 43, 43), white);
+    background-clip: text;
+    -webkit-background-clip:text; 
+    -webkit-text-fill-color: transparent;
+    text-fill-color: transparent;
+    text-align: center;
+    font-family: einaRegular;
+    font-size: 40px;
+    animation: sptext 2s ease-in-out forwards;
+    animation-delay: 3s;
+    background-size: 500% auto;
+  
+transition: 0.2s ease;
+font-weight: 500;
+}
+@keyframes sptext{
+    from{
+      transform: scale(1);
+        background-position: 0%;
+
+    }
+    to{
+      transform: scale(0.9);
+        background-position: 100%;
+
+    }
+}
+@media (min-width: 600px) {
+.sptext{
+  font-size: 70px;
+}
+.sptext2{
+  font-size: 40px;
+}
+}
+
+@media (max-width: 600px) {
+  .sptext2{
+    font-size: 15px;
+  }
+  }
+  
+  
+
+.sptext2{
+color: rgb(155, 155, 155);
+  text-align: center;
+ font-family: einaLight;
+  animation: sptext2 1.5s ease-in-out forwards;
+transition: 0.2s ease;
+opacity: 0;
+
+}
+
+@keyframes sptext2{
+  from{
+    opacity: 0;
+    padding-top: 1em;
+
+  }
+  to{
+    opacity: 1;
+    padding-top: 0em;
+  }
+}
+@font-face {
+  font-family: einaRegular; 
+  src: url('Fonts/Eina01-Regular.ttf'); 
+}
+@font-face {
+  font-family: einaLight; 
+  src: url('Fonts/Eina02-Light.ttf'); 
+}
+@font-face {
+  font-family: einaBold; 
+  src: url('Fonts/Eina02-Bold.ttf'); 
+}
+@font-face {
+  font-family: cFont2; 
+  src: url('Fonts/RequestPersonalUse-axgZo.otf'); 
 }
