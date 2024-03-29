@@ -137,6 +137,10 @@ opacity: 1;
     position: sticky;
     top: 0;
   }
+  .pkgtaglinediv{
+    margin-top: 3em;
+    margin-bottom: 3em;
+  }
 
   .pkgtagline {
     color: #ffffff;
