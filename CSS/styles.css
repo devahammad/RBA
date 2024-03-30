@@ -81,11 +81,11 @@ font-size:100px;
 .pkgtagline {
   color: #ffffff;
   text-align: center;
-  font-family: sans-serif;
+  font-family: einaRegular;
   font-weight: 2;
   font-size: xxx-large;
 
-  text-shadow: 0 0 21px #fff;
+  text-shadow: 0 0 15px #fff;
 
 }
 
@@ -146,10 +146,10 @@ font-size:100px;
 .pkgtagline {
   color: #ffffff;
   text-align: center;
-  font-family: sans-serif;
+  font-family: einaRegular;
   font-weight: 2;
   font-size: x-large;
-  text-shadow: 0 0 21px #fff;
+  text-shadow: 0 0 15px #fff;
 
 }
 
