@@ -173,7 +173,7 @@ font-size:100px;
 
 .boxes {
   margin: 0 auto; /* Center the .boxes container horizontally */
-  width: 90%; /* Set a width for the .boxes container */
+  width: 100%; /* Set a width for the .boxes container */
   display: grid;
   grid-auto-flow: column;
   gap: 3rem;
