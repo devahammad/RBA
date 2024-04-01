@@ -180,3 +180,18 @@ document.addEventListener('DOMContentLoaded', function() {
         // Hide the loading screen after all content is loaded
         loadingPage.classList.add('hideL');
     });
+    // JavaScript to scroll to the center box on page load
+window.addEventListener('DOMContentLoaded', () => {
+    const boxesContainer = document.querySelector('.boxes');
+    const centerBox = document.querySelector('.box2');
+    
+    // Calculate the scroll position to center the box
+    const scrollLeft = centerBox.offsetLeft + centerBox.offsetWidth / 2 - boxesContainer.offsetWidth / 2;
+    
+    // Scroll to the calculated position
+    boxesContainer.scroll({
+      left: scrollLeft,
+      behavior: 'smooth' // You can change this to 'auto' for instant scrolling
+    });
+  });
+  
