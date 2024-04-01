@@ -170,16 +170,20 @@ font-size:100px;
   background: radial-gradient(circle at center 35%, #0000001c 5%, #000000)padding-box, linear-gradient(#ffffff96, rgba(255, 255, 255, 0.116)) border-box !important;
   border-color: transparent !important;
 }
+.box2 {
+  background: radial-gradient(circle at center 35%, #0000001c 5%, #000000) padding-box, linear-gradient(#ffffff96, rgba(255, 255, 255, 0.116)) border-box !important;
+  border-color: transparent !important;
+}
+
 .boxes {
-  margin: 1em auto; /* Center the .boxes container horizontally */
+  margin: 0 auto; /* Center the .boxes container horizontally */
   width: 80%; /* Set a width for the .boxes container */
   display: grid;
   grid-auto-flow: column;
-  gap: 1rem;
-  overflow: hidden;
+  gap: 3rem;
   overflow-x: auto; /* Horizontal scroll */
   overscroll-behavior-x: contain;
-  scroll-snap-type: x mandatory;
+  scroll-snap-type: x mandatory; /* Snap to each box when scrolling */
   scrollbar-width: none;
   scroll-snap-stop: always;
   align-items: center;
@@ -190,7 +194,7 @@ font-size:100px;
 .box1,
 .box2,
 .box3 {
-  width: 18em;
+  width: 16em;
   height: 26em;
   border-radius: 1em;
   border: #8B8B8B 2px solid;
@@ -200,6 +204,7 @@ font-size:100px;
 .box2 {
   scroll-snap-align: center; /* Center the box when scrolling */
 }
+
 .dots-container {
   display: flex;
   justify-content: center;
@@ -218,6 +223,7 @@ font-size:100px;
 .dot.active {
   background-color: #ccc;
 }
+
 
 
     }
