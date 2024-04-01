@@ -117,6 +117,17 @@ font-size:100px;
   border: #8B8B8B 2px solid;
 
 }
+.boxes {
+  animation-name: example;
+  animation-duration: 3s;  
+  animation-fill-mode: forwards;
+  animation-delay: .25s;
+}
+
+@keyframes example {
+  from {gap: 0em;}
+  to {gap: 7em;}
+}
 
   }
 
