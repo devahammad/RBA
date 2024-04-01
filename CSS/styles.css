@@ -1,3 +1,30 @@
+@font-face {
+font-family: einaRegular; 
+src: url('Fonts/Eina01-Regular.ttf'); 
+}
+@font-face {
+font-family: einaLight; 
+src: url('Fonts/Eina02-Light.ttf'); 
+}
+@font-face {
+font-family: einaBold; 
+src: url('Fonts/Eina02-Bold.ttf'); 
+}
+@font-face {
+font-family: cFont2; 
+src: url('Fonts/RequestPersonalUse-axgZo.otf'); 
+}
+@font-face {
+  font-family: PSansLight; 
+  src: url('Fonts/PublicaSans-Light.otf'); 
+  }
+  @font-face {
+    font-family: PSansUltraLight; 
+    src: url('Fonts/PublicaSans-ExtraLight.otf'); 
+    }
+
+
+
 body{
   margin: 0;
   font-family: sans-serif;
@@ -60,7 +87,6 @@ font-size:100px;
   cursor: pointer;
 }
 
-
 @media (max-height: 768px) {
   .overlay {overflow-y: auto;}
   .overlay .closebtn {
@@ -118,22 +144,23 @@ font-size:100px;
 
 }
 .boxes {
-  animation-name: example;
-  animation-duration: 3s;  
-  animation-fill-mode: forwards;
-  animation-delay: .25s;
+  animation: example 3s ease-in-out forwards;
+  opacity: 0;
 }
 
 @keyframes example {
-  from {gap: 0em;}
-  to {gap: 7em;}
+
+  from {
+    opacity: 0;
+    gap: 0em;
+  }
+  to {
+    opacity: 1;
+    gap: 7em;
+  }
 }
 
   }
-
-
-
-
 
 
 
@@ -170,28 +197,29 @@ font-size:100px;
   background: radial-gradient(circle at center 35%, #0000001c 5%, #000000)padding-box, linear-gradient(#ffffff96, rgba(255, 255, 255, 0.116)) border-box !important;
   border-color: transparent !important;
 }
-
 .boxes {
   margin: 0 auto; /* Center the .boxes container horizontally */
-  width: 100%; /* Set a width for the .boxes container */
+  width: 80%; /* Set a width for the .boxes container */
   display: grid;
   grid-auto-flow: column;
   gap: 3rem;
   overflow-x: auto; /* Horizontal scroll */
   overscroll-behavior-x: contain;
-  scroll-snap-type: x mandatory; /* Snap to each box when scrolling */
+  scroll-snap-type: x mandatory;
   scrollbar-width: none;
   scroll-snap-stop: always;
   align-items: center;
   justify-content: left; /* Center items horizontally */
   grid-template-columns: repeat(3, 1fr); /* Create 3 columns */
+    overflow: hidden;
+
 }
 
 .box1,
 .box2,
 .box3 {
-  width: 18em;
-  height: 26em;
+  width: 14em;
+  height: 23em;
   border-radius: 1em;
   border: #8B8B8B 2px solid;
   scroll-snap-align: start;
@@ -200,7 +228,6 @@ font-size:100px;
 .box2 {
   scroll-snap-align: center; /* Center the box when scrolling */
 }
-
 .dots-container {
   display: flex;
   justify-content: center;
@@ -219,7 +246,6 @@ font-size:100px;
 .dot.active {
   background-color: #ccc;
 }
-
 
 
     }
@@ -257,12 +283,15 @@ to {
   padding-top: 0em;
   transition: 1s ease;
   z-index: 1;
+  font-family: PSansLight;
 }
 
 .openbtn {
 transition:  1.4s ease;
 padding-top: 0;
 animation: 0.5s upop ease;
+font-family:  PSansLight;
+;
 }
 @keyframes upop{
 from{
@@ -436,7 +465,7 @@ animation: 1s F-R ease;
   -webkit-text-fill-color: transparent;
   text-fill-color: transparent;
   text-align: center;
-  font-family: einaRegular;
+  font-family: PSansLight;
   animation: sptext 2s ease forwards;
   animation-delay: 3s;
   background-size: 500% auto;
@@ -468,6 +497,10 @@ font-size: 40px;
 .sptext2{
   font-size: 15px;
 }
+.sptext{
+  font-size: 40px;
+  padding-top: 50%;
+}
 }
 
 
@@ -475,7 +508,7 @@ font-size: 40px;
 .sptext2{
 color: rgb(155, 155, 155);
 text-align: center;
-font-family: einaLight;
+font-family: PSansUltraLight;
 animation: sptext2 1.5s ease-in-out forwards;
 transition: 0.2s ease;
 opacity: 0;
@@ -493,19 +526,65 @@ to{
   padding-top: 0em;
 }
 }
-@font-face {
-font-family: einaRegular; 
-src: url('Fonts/Eina01-Regular.ttf'); 
+
+
+.animated-text{
+  font-size: 34px;
+  font-weight: 600;
+  min-width: 280px;
+  color: black;
 }
-@font-face {
-font-family: einaLight; 
-src: url('Fonts/Eina02-Light.ttf'); 
+
+.animated-text span{
+  position: relative;
 }
-@font-face {
-font-family: einaBold; 
-src: url('Fonts/Eina02-Bold.ttf'); 
+
+.animated-text span::before{
+  content: "Websites";
+  color: #ff0000;
+  animation: words 20s infinite;
 }
-@font-face {
-font-family: cFont2; 
-src: url('Fonts/RequestPersonalUse-axgZo.otf'); 
+
+.animated-text span::after{
+  content: "";
+  position: absolute;
+  width: calc(100% + 8px);
+  height: 100%;
+  background-color: #ffffff;
+  border-left: 2px solid #ff0000;
+  right: -8px;
+  animation: cursor .8s infinite, typing 20s steps(14) infinite;
+}
+
+@keyframes cursor {
+  to{
+      border-left: 2px solid #ff7f5000;
+  }
+}
+
+@keyframes words {
+  0%,20%{
+      content: "Apps";
+  }
+  21%,40%{
+      content: "Websites";
+  }
+  41%,60%{
+      content: "Apps";
+  }
+  61%,80%{
+      content: "Websites";
+  }
+  81%,100%{
+      content: "Apps";
+  }
+}
+
+@keyframes typing {
+  10%,15%,30%,35%,50%,55%,70%,75%,90%,95%{
+      width: 0;
+  }
+  5%,20%,25%,40%,45%,60%,65%,80%,85%{
+      width: calc(100% + 8px);
+  }
 }
