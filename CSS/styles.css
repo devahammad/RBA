@@ -179,7 +179,7 @@ font-size:100px;
   overflow-x: auto; /* Horizontal scroll */
   overscroll-behavior-x: contain;
   scroll-snap-type: x mandatory;
-  scrollbar-width: 1px;
+  scrollbar-width: none;
   scroll-snap-stop: always;
   align-items: center;
   justify-content: left; /* Center items horizontally */
@@ -199,6 +199,25 @@ font-size:100px;
 .box2 {
   scroll-snap-align: center; /* Center the box when scrolling */
 }
+.dots-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #ccc;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.dot.active {
+  background-color: #555;
+}
+
 
     }
 
