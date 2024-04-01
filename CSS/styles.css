@@ -178,6 +178,7 @@ font-size:100px;
   grid-auto-flow: column;
   gap: 3rem;
   overflow-x: auto; /* Horizontal scroll */
+  overflow: hidden;
   overscroll-behavior-x: contain;
   scroll-snap-type: x mandatory; /* Snap to each box when scrolling */
   scrollbar-width: none;
