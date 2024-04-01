@@ -194,8 +194,8 @@ font-size:100px;
 .box1,
 .box2,
 .box3 {
-  width: 15em;
-  height: 25em;
+  width: 14em;
+  height: 24em;
   border-radius: 1em;
   border: #8B8B8B 2px solid;
   scroll-snap-align: start;
