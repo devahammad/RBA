@@ -127,7 +127,7 @@ document.addEventListener("DOMContentLoaded", function () {
     boxes.forEach((_, index) => {
       const dot = document.createElement("div");
       dot.classList.add("dot");
-      if (index === 1) { // Index 1 is the center dot
+      if (index === 1) {
         dot.classList.add("active");
       }
       dot.addEventListener("click", () => scrollToBox(index));
@@ -142,18 +142,30 @@ document.addEventListener("DOMContentLoaded", function () {
       updateActiveDot(index);
     }
   
-    // Update active dot
+    // Update active dot based on scroll position
     function updateActiveDot(index) {
+      const boxWidth = document.querySelector('.box').offsetWidth;
+      const scrollLeft = document.querySelector('.boxes').scrollLeft;
+      const newIndex = Math.round(scrollLeft / boxWidth);
       const dots = document.querySelectorAll(".dot");
       dots.forEach((dot, i) => {
-        if (i === index) {
+        if (i === newIndex) {
           dot.classList.add("active");
         } else {
           dot.classList.remove("active");
         }
       });
     }
+  
+    // Listen for scroll event on the .boxes container
+    document.querySelector('.boxes').addEventListener('scroll', () => {
+      updateActiveDot();
+    });
+  
+    // Initially update active dot based on initial scroll position
+    updateActiveDot();
   });
+  
   
   
   
