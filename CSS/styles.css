@@ -171,11 +171,11 @@ font-size:100px;
   border-color: transparent !important;
 }
 .boxes {
-  margin: 0 auto; /* Center the .boxes container horizontally */
+  margin: 1em auto; /* Center the .boxes container horizontally */
   width: 80%; /* Set a width for the .boxes container */
   display: grid;
   grid-auto-flow: column;
-  gap: 3rem;
+  gap: 1rem;
   overflow-x: auto; /* Horizontal scroll */
   overscroll-behavior-x: contain;
   scroll-snap-type: x mandatory;
@@ -189,8 +189,8 @@ font-size:100px;
 .box1,
 .box2,
 .box3 {
-  width: 14em;
-  height: 23em;
+  width: 18em;
+  height: 26em;
   border-radius: 1em;
   border: #8B8B8B 2px solid;
   scroll-snap-align: start;
@@ -209,13 +209,13 @@ font-size:100px;
   width: 10px;
   height: 10px;
   border-radius: 50%;
-  background-color: #ccc;
+  background-color: #555;
   margin: 0 5px;
   cursor: pointer;
 }
 
 .dot.active {
-  background-color: #555;
+  background-color: #ccc;
 }
 
 

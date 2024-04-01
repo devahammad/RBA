@@ -124,22 +124,22 @@ document.addEventListener("DOMContentLoaded", function () {
     const boxes = document.querySelectorAll(".box");
   
     // Create dots based on the number of boxes
-    boxes.forEach((box, index) => {
+    boxes.forEach((_, index) => {
       const dot = document.createElement("div");
       dot.classList.add("dot");
-      if (index === 0) {
+      if (index === 1) { // Index 1 is the center dot
         dot.classList.add("active");
       }
-      dot.addEventListener("click", () => {
-        scrollToBox(index);
-        updateActiveDot(index);
-      });
+      dot.addEventListener("click", () => scrollToBox(index));
       dotsContainer.appendChild(dot);
     });
   
     // Scroll to the selected box
     function scrollToBox(index) {
-      boxes[index].scrollIntoView({ behavior: "smooth" });
+      const boxWidth = document.querySelector('.box').offsetWidth;
+      const scrollLeft = index * boxWidth;
+      document.querySelector('.boxes').scrollTo({ left: scrollLeft, behavior: 'smooth' });
+      updateActiveDot(index);
     }
   
     // Update active dot
@@ -154,6 +154,8 @@ document.addEventListener("DOMContentLoaded", function () {
       });
     }
   });
+  
+  
   
   
   
