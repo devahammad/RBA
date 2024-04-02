@@ -165,7 +165,19 @@ document.addEventListener("DOMContentLoaded", function () {
     // Initially update active dot based on initial scroll position
     updateActiveDot();
   });
-  
+  // Center the initially selected box
+const boxesContainer = document.querySelector('.boxes');
+const boxes = document.querySelectorAll('.box');
+const boxWidth = boxes[0].offsetWidth;
+const scrollOffset = (boxesContainer.offsetWidth - boxWidth) / 2;
+
+boxesContainer.scrollLeft = boxes[1].offsetLeft - scrollOffset;
+
+// Add event listener to adjust scroll position on resize
+window.addEventListener('resize', () => {
+  boxesContainer.scrollLeft = boxes[1].offsetLeft - scrollOffset;
+});
+
   
   
   

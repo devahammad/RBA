@@ -182,17 +182,22 @@ font-size:100px;
   margin: 0 auto; /* Center the .boxes container horizontally */
   width: 95%; /* Set a width for the .boxes container */
   display: grid;
-  grid-auto-flow: column;
+  grid-template-columns: repeat(3, 1fr); /* Create 3 columns */
   gap: 3rem;
   overflow-x: auto; /* Horizontal scroll */
   overscroll-behavior-x: contain;
   scroll-snap-type: x mandatory;
   scrollbar-width: none;
-  scroll-snap-stop: always;
-  align-items: center;
-  justify-content: left; /* Center items horizontally */
-  grid-template-columns: repeat(3, 1fr); /* Create 3 columns */
+  
+}
 
+.box {
+  scroll-snap-align: center;
+}
+
+/* Hide scrollbar */
+.boxes::-webkit-scrollbar {
+  display: none;
 }
 
 .box2 {
@@ -1078,7 +1083,6 @@ ul {
   
     border-radius: 1rem;
     box-shadow: 0px -16px 24px 0px rgba(255, 255, 255, 0.25) inset;
-    scroll-snap-align: start;
   }
   
   .box1 .card__border {
@@ -1243,7 +1247,7 @@ ul {
   
   border-radius: 1rem;
   box-shadow: 0px -16px 24px 0px rgba(255, 255, 255, 0.25) inset;
-  scroll-snap-align: start;
+  
 }
 
 .box2 .card__border {
@@ -1404,7 +1408,7 @@ ul {
   
   border-radius: 1rem;
   box-shadow: 0px -16px 24px 0px rgba(255, 255, 255, 0.25) inset;
-  scroll-snap-align: start;
+  
 }
 
 .box3 .card__border {
