@@ -509,7 +509,7 @@ to{
   justify-content: center;
 }
 .animated-text{
-  padding-top: 0em;
+  padding-top: 1em;
 }
 .p2{
   margin-left: 1.5em;
@@ -601,7 +601,7 @@ to{
 display: flex;
 flex-direction: column;
 transition: 1s;
-
+height: auto;
 }
 
 
