@@ -115,7 +115,7 @@ window.addEventListener('DOMContentLoaded', () => {
   // Scroll to the calculated position
   boxesContainer.scroll({
     left: scrollLeft,
-    behavior: 'smooth'
+    behavior: 'auto'
   });
 });
 
@@ -166,17 +166,8 @@ document.addEventListener("DOMContentLoaded", function () {
     updateActiveDot();
   });
   // Center the initially selected box
-const boxesContainer = document.querySelector('.boxes');
-const boxes = document.querySelectorAll('.box');
-const boxWidth = boxes[0].offsetWidth;
-const scrollOffset = (boxesContainer.offsetWidth - boxWidth) / 2;
 
-boxesContainer.scrollLeft = boxes[1].offsetLeft - scrollOffset;
 
-// Add event listener to adjust scroll position on resize
-window.addEventListener('resize', () => {
-  boxesContainer.scrollLeft = boxes[1].offsetLeft - scrollOffset;
-});
 
   
   
