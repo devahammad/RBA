@@ -630,11 +630,12 @@ font-family: einaRegular;
   height: 300px;
 display: flex;
 flex-direction: column;
+background:linear-gradient(to top, Black, White) ;
 }
 
 .LR,
 .LR2{
-  font-family:einaRegular ;
+  font-family: einaLight;
 }
 
 
@@ -648,6 +649,7 @@ flex-direction: column;
   .LR.in-viewport{
   margin-left: 250px;
 }
+
 }
 
 
@@ -679,7 +681,6 @@ flex-direction: column;
     margin-right: 250px;
   }
   }
-  
   
   
   @media (max-width: 600px) {
