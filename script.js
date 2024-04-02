@@ -165,7 +165,36 @@ document.addEventListener("DOMContentLoaded", function () {
     // Initially update active dot based on initial scroll position
     updateActiveDot();
   });
-  // Center the initially selected box
+  
+
+
+
+// NEW SCRIPT
+
+
+function isInViewport(element) {
+  const rect = element.getBoundingClientRect();
+  return (
+      rect.top >= 0 &&
+      rect.left >= 0 &&
+      rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+      rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+  );
+}
+
+function handleAnimation() {
+  const animatedElements = document.querySelectorAll('.animated-text, .p2, .LR, .LR2, .timeline1,.timeline2,.timeline3, .caan1, .caan2, .caan3, .caan4');
+  animatedElements.forEach(function(element) {
+      if (isInViewport(element)) {
+          element.classList.add('in-viewport');
+      } else {
+          element.classList.remove('in-viewport');
+      }
+  });
+}
+
+window.addEventListener('scroll', handleAnimation);
+handleAnimation(); // Initial call to handle animation when page loads
 
 
 
