@@ -192,7 +192,6 @@ font-size:100px;
   align-items: center;
   justify-content: left; /* Center items horizontally */
   grid-template-columns: repeat(3, 1fr); /* Create 3 columns */
-    overflow: hidden;
 
 }
 
