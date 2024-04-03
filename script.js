@@ -187,9 +187,7 @@ function handleAnimation() {
   animatedElements.forEach(function(element) {
       if (isInViewport(element)) {
           element.classList.add('in-viewport');
-      } else {
-          element.classList.remove('in-viewport');
-      }
+      } 
   });
 }
 
