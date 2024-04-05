@@ -79,7 +79,11 @@
 
   .box1 .card_title__container .card_title {
     font-size: 1.5rem;
-    color: var(--white);
+    background: linear-gradient(to right, rgb(255, 255, 255), rgb(0, 255, 247));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 600;
   }
 
   .box1 .card_title__container .card_paragraph {
@@ -294,7 +298,7 @@
     color: var(--white);
   }
 
- .box2 .button {
+  .box2 .button {
     cursor: pointer;
     height: 4em;
     margin: 6.5em 0em 0em 0em;
