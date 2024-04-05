@@ -436,7 +436,6 @@ animation: 1s F-R ease;
   background-clip: text;
   -webkit-background-clip:text; 
   -webkit-text-fill-color: transparent;
-  text-fill-color: transparent;
   text-align: center;
   font-family: PSansLight;
   animation: sptext 2s ease forwards;
