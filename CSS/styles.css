@@ -908,7 +908,6 @@ margin-right: auto;
 }
 
 
-
 .supportHead{
   color: white;
   text-align: center;
@@ -927,24 +926,23 @@ margin-right: auto;
 }
 
 .parentSupport{
-    background: white;
-    height: 40.6rem;
-    width: 82vw;
-    margin-left: 0;
-    display: flex;
-    justify-content: center;
-    align-items: start;
-    
-  }
-  .contactDiv{
-    background: black;
-    height: 18.5rem;
-    width: 81.2vw;
-    border-radius: 30px;
-    margin-top: 22rem;
-    margin-left: -22.49rem;
-    border: none;
-  }
+  background: white;
+  height: 35rem;
+  width: 80vw;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+}
+
+.contactDiv{
+  background: black;
+  height: 34.78rem;
+  width: 40vw;
+  border-radius: 30px;
+  margin-top: 0rem;
+  margin-left: 7rem;
+  border: 2px solid white;
+}
 
 
 .formDiv{
@@ -1137,11 +1135,11 @@ form textarea:focus{
   }
   .parentSupport{
     background: white;
-    height: 39.5rem;
+    height: 40.6rem;
     width: 82vw;
     margin-left: 0;
     display: flex;
-    justify-content: left;
+    justify-content: center;
     align-items: start;
     
   }
@@ -1150,8 +1148,8 @@ form textarea:focus{
     height: 18.5rem;
     width: 81.2vw;
     border-radius: 30px;
-    margin-top: 20.9rem;
-    margin-left: -17.47rem;
+    margin-top: 22rem;
+    margin-left: -22.49rem;
     border: none;
   }
  
