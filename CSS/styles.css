@@ -1141,7 +1141,7 @@ form textarea:focus{
     display: flex;
     justify-content: center;
     align-items: start;
-    
+    border-radius: 30px;
   }
   .contactDiv{
     background: black;
