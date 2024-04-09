@@ -183,17 +183,32 @@ function isInViewport(element) {
 }
 
 function handleAnimation() {
-  const animatedElements = document.querySelectorAll('.animated-text, .p2, .LR, .LR2, .timeline1,.timeline2,.timeline3, .caan1, .caan2, .caan3, .caan4');
+  const animatedElements = document.querySelectorAll('.animated-text, .p2, .timeline1, .timeline2, .timeline3, .caan1, .caan2, .caan3, .caan4, .LR, .faq');
   animatedElements.forEach(function(element) {
-      if (isInViewport(element)) {
-          element.classList.add('in-viewport');
-      } 
+    if (isInViewport(element)) {
+      if (!element.classList.contains('in-viewport')) {
+        element.classList.add('in-viewport');
+      }
+    } 
   });
 }
 
-window.addEventListener('scroll', handleAnimation);
+function handleAnimation2() {
+  const animatedElements = document.querySelectorAll('');
+  animatedElements.forEach(function(element) {
+    if (isInViewport(element)) {
+      element.classList.add('in-viewport');
+    } else {
+      element.classList.remove('in-viewport');
+    }
+  });
+}
+
+window.addEventListener('scroll', function() {
+  handleAnimation();
+  handleAnimation2();
+});
+
 handleAnimation(); // Initial call to handle animation when page loads
-
-
-
+handleAnimation2(); // Initial call for the second set of animations
 
