@@ -908,6 +908,7 @@ margin-right: auto;
 }
 
 
+
 .supportHead{
   color: white;
   text-align: center;
@@ -1149,8 +1150,9 @@ form textarea:focus{
     width: 81.2vw;
     border-radius: 30px;
     margin-top: 22rem;
-    margin-left: -22.49rem;
+    margin-left: 0rem;
     border: none;
+    position: absolute;
   }
  
   .formDiv{
