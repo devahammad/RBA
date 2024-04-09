@@ -909,3 +909,367 @@ margin-right: auto;
 
 
 
+.supportHead{
+  color: white;
+  text-align: center;
+  padding-top: 0px;
+  font-size: 4vw;
+  text-shadow: 0 0 10px #fff;
+}
+
+.supportPara{
+  color: white;
+  text-align: center;
+  padding-top: 0px;
+  font-size: 1.4rem;
+  font-family: einaLight;
+  margin-top: -1rem;
+}
+
+.parentSupport{
+  background: white;
+  height: 35rem;
+  width: 80vw;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+}
+
+.contactDiv{
+  background: black;
+  height: 34.78rem;
+  width: 40vw;
+  border-radius: 30px;
+  margin-top: 0rem;
+  margin-left: 7rem;
+  border: 2px solid white;
+}
+
+
+.formDiv{
+  width: 40%;
+  padding: 10px;
+  display: flex;
+  height: 33rem;
+  
+}
+
+form{
+  margin-left: 1.5rem;
+  margin-top: 1.5rem;
+  font-size: 2vw;
+  font-family: sans-serif;
+  
+}
+form input{
+  margin-top: 10px;
+  height: 2rem;
+  width: 18vw;
+  margin-bottom: 1rem;
+  border-radius: 5px;
+  font-size: 1.5vw;
+  padding: 4px;
+  border: 1px solid #818589;
+  transition: 0.3s; 
+}
+form textarea{
+  margin-top: 10px;
+  height: 6rem;
+  width: 28vw;
+  margin-bottom: 1rem;
+  resize: none;
+  border-radius: 5px;
+  border: 1px solid #818589;
+  padding: 4px;
+  font-size: 1vw;
+  transition: 0.3s; 
+}
+
+
+form input:focus{
+  border:1px solid #4D90FE !important;
+  box-shadow:0 1px 2px rgba(0, 0, 0, 0.3) inset !important;
+  box-shadow:0 1px 2px rgba(0, 0, 0, 0.3) inset !important;
+  box-shadow:0 1px 2px rgba(0, 0, 0, 0.3) inset !important;
+  outline: none !important;
+}
+
+form textarea:focus{
+  border:1px solid #4D90FE !important;
+  box-shadow:0 1px 2px rgba(0, 0, 0, 0.3) inset !important;
+  box-shadow:0 1px 2px rgba(0, 0, 0, 0.3) inset !important;
+  box-shadow:0 1px 2px rgba(0, 0, 0, 0.3) inset !important;
+  outline: none !important;
+}
+
+.submitBtn{
+  height: 3rem;
+  width: 12vw;
+  border: 2px solid black;
+  background-color: black;
+  color: white;
+  border-radius: 25px;
+  transition: 0.5s;
+}
+
+.submitBtn:hover{
+  box-shadow: 0 0px 10px black;
+  cursor: pointer;
+  text-shadow: 0 0 3px #fff;
+}
+
+
+.contactHead{
+  color: white;
+  margin-left: 2rem;
+  font-size: 4.5vw;
+}
+
+.emailDiv{
+  
+  height: 5rem;
+  color: white;
+  width: 30vw;
+  margin-left: 2.3rem;
+  margin-top: -1rem;
+  font-size: 1.2vw;
+}
+
+.phoneDiv{
+  
+  height: 5rem;
+  color: white;
+  width: 30vw;
+  margin-left: 2.3rem;
+  font-size: 1.2vw;
+  margin-top: -1rem;
+}
+
+.emailDiv figcaption{
+  padding-top: 0.3rem;
+  font-size:1vw ;
+  color: #ccc;
+  transition: 0.4s;
+}
+
+.phoneDiv figcaption{
+  padding-top: 0.3rem;
+  font-size:1vw ;
+  color: #ccc;
+  transition: 0.4s;
+}
+
+.emailDiv figcaption:hover{
+  text-shadow: 0 0 2px white;
+  cursor: pointer;
+}
+
+.phoneDiv figcaption:hover{
+  text-shadow: 0 0 2px white;
+  cursor: pointer;
+}
+
+.sm-btnDiv{
+  margin-left: 2.2rem;
+  margin-top: 1.5rem;
+  display: flex;
+  gap: 2em;
+}
+
+.sm-btnDiv button{
+  height: 3.5rem;
+  width: 3.5rem;
+  border-radius: 100px;
+  border: none;
+  background-color: white;
+  transition: 0.3s;
+}
+
+.sm-btnDiv button:hover{
+  box-shadow: 0 0 8px white;
+  cursor: pointer;
+}
+
+@media (min-width:800px){
+  .labelF-email{
+    margin-top:1rem;
+    display:inline-block;
+  }
+  .labelF-message{
+    margin-top:1rem;
+    display:inline-block;
+  }
+}
+
+@media (min-width:800px){
+  .lapPara{
+    display: block;
+  }
+  .mobPara{
+    display: none;
+  }
+}
+
+@media (max-width:800px){
+  .lapPara{
+    display: none;
+  }
+  .mobPara{
+    display: block;
+  }
+}
+
+@media (max-width:800px){
+  .supportPara{
+    color: white;
+    text-align: center;
+    margin-top: 0rem;
+    font-size: 3.5vw;
+    font-family: PSansLight;
+  }
+  .supportHead{
+    color: white;
+    text-align: center;
+    padding-top: 0px;
+    font-size: 7vw;
+    text-shadow: 0 0 10px #fff;
+  }
+  .parentSupport{
+    background: white;
+    height: 39.5rem;
+    width: 82vw;
+    margin-left: 0;
+    display: flex;
+    justify-content: left;
+    align-items: start;
+    
+  }
+  .contactDiv{
+    background: black;
+    height: 18.5rem;
+    width: 81.2vw;
+    border-radius: 30px;
+    margin-top: 20.9rem;
+    margin-left: -17.47rem;
+    border: none;
+  }
+ 
+  .formDiv{
+    width: 80%;
+    padding: 15px;
+    height: 40%;
+    justify-content: start;
+    margin-left: 0.3rem;
+    margin-top: 0.3rem;
+  }
+  
+
+  textarea{
+    width: 100%;
+  }
+  form{
+    margin: 0;
+    font-size: 5vw;
+  }
+  form input{
+    margin-top: 5px;
+    height: 1.3rem;
+    width: 45vw;
+    margin-bottom: 1rem;
+    border-radius: 5px;
+    border: 1px solid #818589;
+    font-size: 4vw;
+  }
+  form textarea{
+    margin-top: 5px;
+    height: 3.5rem;
+    width: 55vw;
+    margin-bottom: 1rem;
+    resize: none;
+    border-radius: 5px;
+    border: 1px solid #818589;
+    font-size: 3vw;
+    font-family: sans-serif;
+  }
+
+  .submitBtn{
+    height: 2.5rem;
+    width: 30vw;
+    font-size: 1rem;
+    border: 2px solid black;
+    background-color: black;
+    color: white;
+    border-radius: 20px;
+    transition: 0.5s;
+    margin-top: -0.3rem;
+  }
+
+  .contactHead{
+    color: white;
+    margin-left: 1rem;
+    font-size: 10vw;
+  }
+
+  .emailDiv{
+    height: 3rem;
+    color: white;
+    width: 60vw;
+    margin-left: 1.5rem;
+    margin-top: -1rem;
+    font-size: 3.2vw;
+  }
+  
+  .phoneDiv{
+    height: 3rem;
+    color: white;
+    width: 60vw;
+    margin-left: 1.5rem;
+    font-size: 3.2vw;
+    margin-top: -1rem;
+  }
+  
+  .emailDiv figcaption{
+    padding-top: 0.3rem;
+    font-size:2.3vw ;
+    color: #ccc;
+  }
+  
+  .phoneDiv figcaption{
+    padding-top: 0.3rem;
+    font-size:2.3vw ;
+    color: #ccc;
+  }
+
+  .emailDiv div{
+    border-top: 1px solid lightgray !important; 
+    margin-top: -0.65rem !important; 
+  }
+
+  .phoneDiv div{
+    border-top: 1px solid lightgray !important; 
+    margin-top: -0.65rem !important; 
+  }
+
+
+  .sm-btnDiv{
+    margin-left: 1.5rem;
+    margin-top: 1.5rem;
+    display: flex;
+    gap: 1.5em;
+  }
+  
+  .sm-btnDiv button{
+    height: 2.25rem;
+    width: 2.25rem;
+    border-radius: 100px;
+    border: none;
+    background-color: white;
+    transition: 0.3s;
+  }
+  
+  .sm-btnDiv button:hover{
+    box-shadow: 0 0 8px white;
+    cursor: pointer;
+  }
+
+}
