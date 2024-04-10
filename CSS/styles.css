@@ -1061,6 +1061,11 @@ padding-right: 1em;
   color: black;
   font-size: 15px;
   bottom: 1em;
+  transition: 0.5s ease;
+}
+.btn:hover{
+  background-color: black;
+  color: white;
 }
 
 .finalmsg{
@@ -1171,12 +1176,6 @@ opacity: 1;
 html button{
   cursor: pointer;
 }
-
-
-
-
-
-
 
 
 
@@ -1545,4 +1544,22 @@ form textarea:focus{
     cursor: pointer;
   }
 
+}
+
+.formContent{
+  border-radius: 10px;
+  font-family: PoppinsExtraLight;
+  font-weight: 100;
+  font-size: 15px;
+  width: 70%;
+  border: none;
+  background: linear-gradient(to bottom, rgb(255, 255, 255), rgb(231, 231, 231));
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  padding-left: 10px;
+}
+
+.formContent::placeholder{
+color: rgb(171, 171, 171);
+padding-left: 5px;
 }
