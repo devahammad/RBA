@@ -1181,6 +1181,7 @@ html button{
 
 
 
+
 .supportHead{
   color: white;
   text-align: center;
@@ -1201,7 +1202,7 @@ html button{
 
 .parentSupport{
   background: white;
-  height: 32rem;
+  height: 27rem;
   width: 80vw;
   border-radius: 30px;
   display: flex;
@@ -1210,7 +1211,7 @@ html button{
 
 .contactDiv{
   background: black;
-  height: 31.78rem;
+  height: 26.78rem;
   width: 40vw;
   border-radius: 30px;
   margin-top: 0rem;
@@ -1229,11 +1230,11 @@ html button{
 
 form{
   margin-left: 1.5rem;
-  margin-top: 2rem;
+  margin-top: 4.75rem;
   font-size: 2vw;
   font-family: sans-serif;
-  
 }
+
 form input{
   margin-top: 8px;
   height: 2rem;
@@ -1246,7 +1247,7 @@ form input{
   transition: 0.3s; 
 }
 form textarea{
-  margin-top: 8px;
+  margin-top: 17px;
   height: 6rem;
   width: 28vw;
   margin-bottom: 1rem;
@@ -1256,6 +1257,10 @@ form textarea{
   padding: 4px;
   font-size: 1vw;
   transition: 0.3s; 
+}
+
+input#email{
+  margin-top: 17px;
 }
 
 
@@ -1283,12 +1288,12 @@ form textarea:focus{
   color: white;
   border-radius: 25px;
   transition: 0.5s;
+  margin-top: 1rem;
 }
 
 .submitBtn:hover{
   box-shadow: 0 0px 10px black;
   cursor: pointer;
-  text-shadow: 0 0 3px #fff;
 }
 
 
@@ -1296,7 +1301,7 @@ form textarea:focus{
   color: white;
   margin-left: -11.5rem;
   font-size: 4.5vw;
-  margin-top: 0rem;
+  margin-top: -2rem;
 }
 
 .emailDiv{
@@ -1334,18 +1339,16 @@ form textarea:focus{
 }
 
 .emailDiv figcaption:hover{
-  text-shadow: 0 0 2px white;
   cursor: pointer;
 }
 
 .phoneDiv figcaption:hover{
-  text-shadow: 0 0 2px white;
   cursor: pointer;
 }
 
 .sm-btnDiv{
   margin-left: 2.2rem;
-  margin-top: 1.5rem;
+  margin-top: 1rem;
   display: flex;
   gap: 2em;
 }
@@ -1357,6 +1360,9 @@ form textarea:focus{
   border: none;
   background-color: white;
   transition: 0.3s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .sm-btnDiv button:hover{
@@ -1365,6 +1371,33 @@ form textarea:focus{
 }
 
 
+textarea::placeholder{
+  font-family: sans-serif;
+}
+
+.sm-btn1 img{
+  margin: auto;
+  height: 3vw;
+  width: 3vw;
+}
+
+.sm-btn2 img{
+  margin: auto;
+  height: 3vw;
+  width: 3vw;  
+}
+
+.sm-btn3 img{
+  margin: auto;
+  height: 2.2vw;
+  width: 2.2vw;  
+}
+
+.sm-btn4 img{
+  margin: auto;
+  height: 3vw;
+  width: 3vw;  
+}
 
 
 @media (min-width:800px){
@@ -1413,8 +1446,8 @@ form textarea:focus{
   }
   .parentSupport{
     background: white;
-    height: 42.6rem;
-    width: 85vw;
+    height: 39.6rem;
+    width: 90vw;
     margin-left: 0;
     display: flex;
     justify-content: center;
@@ -1424,22 +1457,24 @@ form textarea:focus{
   .contactDiv{
     background: black;
     height: 20.48rem;
-    width: 84.2vw;
+    width: 89.2vw;
     border-radius: 30px;
-    margin-top: 22rem;
+    margin-top: 19rem;
     margin-left: 0rem;
     border: none;
     position: absolute;
-
+    z-index: 1;
   }
- 
+  .HeadMobi{
+    z-index: 5;
+  }
   .formDiv{
     width: 80%;
     padding: 15px;
     height: 40%;
     justify-content: start;
     margin-left: -1.5rem;
-    margin-top: 0.3rem;
+    margin-top: 0.5rem;
   }
   
 
@@ -1452,7 +1487,7 @@ form textarea:focus{
   }
   form input{
     margin-top: 5px;
-    height: 1.3rem;
+    height: 1.4rem;
     width: 45vw;
     margin-bottom: 1rem;
     border-radius: 5px;
@@ -1460,8 +1495,8 @@ form textarea:focus{
     font-size: 4vw;
   }
   form textarea{
-    margin-top: 5px;
-    height: 3.5rem;
+    margin-top: 8px;
+    height: 4rem;
     width: 55vw;
     margin-bottom: 1rem;
     resize: none;
@@ -1470,7 +1505,9 @@ form textarea:focus{
     font-size: 3vw;
     font-family: sans-serif;
   }
-
+  input#email{
+    margin-top: 8px;
+  }
   .submitBtn{
     height: 2.5rem;
     width: 30vw;
@@ -1480,7 +1517,7 @@ form textarea:focus{
     color: white;
     border-radius: 20px;
     transition: 0.5s;
-    margin-top: -0.3rem;
+    margin-top: 0rem;
   }
 
   .contactHead{
@@ -1555,13 +1592,40 @@ form textarea:focus{
     border: none;
     background-color: white;
     transition: 0.3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   
   .sm-btnDiv button:hover{
     box-shadow: 0 0 8px white;
     cursor: pointer;
   }
+    
+  .sm-btn1 img{
+    margin: auto;
+    height: 7vw;
+    width: 7vw;
+  }
 
+  .sm-btn2 img{
+    margin: auto;
+    height: 7vw;
+    width: 7vw;
+  }
+
+  .sm-btn3 img{
+    margin: auto;
+    height: 4.5vw;
+    width: 4.5vw;
+  }
+
+  .sm-btn4 img{
+    margin: auto;
+    height: 7vw;
+    width: 7vw;
+  }
+  
 }
 
 .formContent{
