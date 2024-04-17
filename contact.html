@@ -82,15 +82,15 @@
         <div class="parentSupport">
           <div class="formDiv">
             <form action="submit.php" method="POST">
-              <label for="name">Name</label><br />
-              <input type="text" id="name" name="name" required /><br />
+              
+              <input placeholder="Name" type="text" id="name" name="name" required /><br />
+              
+              
+              <input placeholder="Email Address" type="email" id="email" name="email" required /><br />
 
-              <label class="labelF-email" for="email">Email</label><br />
-              <input type="email" id="email" name="email" required /><br />
-
-              <label class="labelF-message" for="message">Anything Else?</label
-              ><br />
+              
               <textarea
+                placeholder="What are you looking for?"
                 id="message"
                 name="message"
                 rows="4"
@@ -107,20 +107,28 @@
             <div class="emailDiv">
               <p>Email</p>
               <div style="border-top: 2px solid lightgray; margin-top: -1rem">
-                <figcaption>hello@rbasoftwares.com</figcaption>
+                <figcaption><a style="text-decoration: none; color: #ccc;" href="about.html">hello@rbasoftwares.com</a></figcaption>
               </div>
             </div>
             <div class="phoneDiv">
               <p>Phone</p>
               <div style="border-top: 2px solid lightgray; margin-top: -1rem">
-                <figcaption>+971567809870</figcaption>
+                <figcaption><a style="text-decoration: none; color: #ccc;" href="about.html">+971567809870</a></figcaption>
               </div>
             </div>
             <div class="sm-btnDiv">
-              <button class="sm-btn1"></button>
-              <button class="sm-btn2"></button>
-              <button class="sm-btn3"></button>
-              <button class="sm-btn4"></button>
+              <button class="sm-btn1">
+                <img src="SVG/white_instagram.svg" alt="">
+              </button>
+              <button class="sm-btn2">
+                <img src="SVG/white_whatsapp.svg" alt="">
+              </button>
+              <button class="sm-btn3">
+                <img src="SVG/white_linkedin.svg" alt="">
+              </button>
+              <button class="sm-btn4">
+                <img src="SVG/white_youtube.svg" alt="">
+              </button>
             </div>
           </div>
         </div>
