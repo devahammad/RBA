@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,30 +6,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RBA Softwares</title>
     <link rel="stylesheet" href="CSS/styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-    <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">  
 </head>
 
 <body>            
 
 <div class="myModal" id="myModal">
 <div class="modal" style="text-align: end;">
-  <a href="javascript:void(0)"  id="closeButton" class="closebtn" onclick="closeNav()" style="font-size: 1em; right: 0; padding-right: 10px; color: black;">Close</a>
-  <hr style="border: 0.5px solid rgb(199, 199, 199);">
+  <a href="javascript:void(0)"  id="closeButton" class="closebtn" onclick="closeNav()" style="font-size: 1em; right: 0; padding-right: 10px; color: rgb(165, 165, 165);"  >Close</a>
+  <hr style="border: 0.1px solid rgb(117, 117, 117); border-radius: 10px;">
   <div class="modalContent">
-<h1>Let's merge our ideas!
-<figcaption class="spContent">
+<h1 style="color: rgb(234, 234, 234); text-shadow: 0 0 20px rgb(177, 177, 177);">Let's merge our ideas!
+<figcaption class="spContent" style="color: rgb(165, 165, 165); text-shadow: none;">
 Ready to create something? <br> Share your ideas with us, and let's turn them into reality! </figcaption></h1>
 
-<form id="contact-form">
-
-    <input type="text" class="formContent" id="username" name="username" required placeholder="Name">
-
-    <input type="email" class="formContent" id="email" name="email" required placeholder="Email Address">
-
-    <textarea class="formContent" id="message" name="message" rows="4" required placeholder="What are you looking for?"></textarea>
-
-  <button type="submit" id="submit-button" class="btn">Let's Talk</button>
+<form id="submit-form" action="" style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
+    <input type="text" class="formContent" id="fname" name="Name" required placeholder="Name">
+    <input type="email" class="formContent" id="lname" name="Email" required placeholder="Email Address">
+    <textarea class="formContent" id="subject" name="Message" rows="4" required placeholder="What are you looking for?"></textarea>
+    <label class="cBox" style="font-family: PoppinsExtraLight; font-size: 16px;">Receive offers and updates.
+    <input type="checkbox"  id="promoCheckbox" onclick="updateCheckbox()">
+    <span class="checkmark"></span>
+  </label>
+  <input type="hidden" id="promoInput" name="Promotion" value="No">
+    <input type="hidden" name="Enquiry Type" value="1A">
+  <button type="submit" value="Submit" class="btn">Let's Talk</button>
 </form>
 
 
