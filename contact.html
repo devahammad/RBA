@@ -125,55 +125,98 @@
         </p>
         <br />
         <div class="parentSupport">
-          <div class="formDiv">
-            <form action="submit.php" method="POST">
-              
-              <input placeholder="Name" type="text" id="name" name="name" required /><br />
-              
-              
-              <input placeholder="Email Address" type="email" id="email" name="email" required /><br />
-
-              
-              <textarea
-                placeholder="What are you looking for?"
-                id="message"
-                name="message"
-                rows="4"
-                cols="50"
-                required
-              ></textarea
-              ><br />
-
-              <input class="submitBtn" type="submit" value="Let's Talk" />
-            </form>
-          </div>
-          <div class="contactDiv">
-            <h1 class="contactHead">Contact Us</h1>
-            <div class="emailDiv">
-              <p>Email</p>
-              <div style="border-top: 2px solid lightgray; margin-top: -1rem">
-                <figcaption><a style="text-decoration: none; color: #ccc;" href="mailto: support@rbasoftwares.com" target="_top">support@rbasoftwares.com</a></figcaption>
-              </div>
+            <div class="formDiv">
+              <form
+                class="supportForm"
+                id="submit-form"
+                action=""
+                style="
+                  display: flex;
+                  flex-direction: column;
+                  justify-content: center;
+                  align-items: left;
+                "
+              >
+                <input
+                  type="text"
+                  class="formFill"
+                  id="fname"
+                  name="Name"
+                  required
+                  placeholder="Name"
+                />
+                <input
+                  type="email"
+                  class="formFill"
+                  id="lname"
+                  name="Email"
+                  required
+                  placeholder="Email Address"
+                />
+                <textarea
+                  id="subject"
+                  name="Message"
+                  rows="4"
+                  required
+                  placeholder="What are you looking for?"
+                ></textarea>
+                <label
+                  class="cBox"
+                  style="font-family: PoppinsExtraLight; font-size: 16px; color: white;" 
+                  >Receive offers and updates.
+                  <input
+                    type="checkbox"
+                    id="promoCheckbox"
+                    onclick="updateCheckbox()"
+                  />
+                  <span class="checkmark"></span>
+                </label>
+                <input
+                  type="hidden"
+                  id="promoInput"
+                  name="Promotion"
+                  value="No"
+                />
+                <input type="hidden" name="Enquiry Type" value="1A" />
+                <button type="submit" value="Submit" class="submitBtn">
+                  Let's Talk
+                </button>
+              </form>
             </div>
-            <div class="phoneDiv">
-              <p>Phone</p>
-              <div style="border-top: 2px solid lightgray; margin-top: -1rem">
-                <figcaption><a style="text-decoration: none; color: #ccc;" href="tel: +971565805905" target="_top">+971567809870</a></figcaption>
+            <div class="contactDiv">
+              <h1 class="contactHead">Contact Us</h1>
+              <div class="emailDiv">
+                <p>Email</p>
+                <div style="border-top: 2px solid black; margin-top: -1rem">
+                  <figcaption>
+                    <a
+                      style="text-decoration: none; color: black"
+                      href="mailto: support@rbasoftwares.com"
+                      target="_top"
+                      >support@rbasoftwares.com</a
+                    >
+                  </figcaption>
+                </div>
               </div>
-            </div>
-            <div class="sm-btnDiv">
-              <button class="sm-btn1">
-                <img src="SVG/white_instagram.svg" alt="">
-              </button>
-              <button class="sm-btn2">
-                <img src="SVG/white_whatsapp.svg" alt="">
-              </button>
-              <button class="sm-btn3">
-                <img src="SVG/white_linkedin.svg" alt="">
-              </button>
-              <button class="sm-btn4">
-                <img src="SVG/white_youtube.svg" alt="">
-              </button>
+              <div class="phoneDiv">
+                <p>Phone</p>
+                <div style="border-top: 2px solid black; margin-top: -1rem">
+                  <figcaption>
+                    <a
+                      style="text-decoration: none; color: black"
+                      href="tel: +971565805905"
+                      target="_top"
+                      >+971567809870</a
+                    >
+                  </figcaption>
+                </div>
+              </div>
+              <div class="sm-btnDiv">
+                <button onclick="location.href='https://instagram.com/rbasoftwares'" class="sm-btn"><img class="sm-btn1"  src="SVG/5279112_camera_instagram_social media_instagram logo_icon.svg" ></button>
+                <button class="sm-btn"><img class="sm-btn2"  src="SVG/5279121_call_chat_messenger_whatsapp_whatsapp logo_icon.svg" ></button>
+                <button class="sm-btn"><img class="sm-btn3"  src="SVG/5279114_linkedin_network_social network_linkedin logo_icon.svg" ></button>
+                <button class="sm-btn"><img class="sm-btn4"  src="SVG/5279120_play_video_youtube_youtuble logo_icon.svg" ></button>
+              </div>
             </div>
           </div>
         </div>
