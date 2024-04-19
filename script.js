@@ -172,6 +172,7 @@ document.addEventListener("DOMContentLoaded", function () {
 // NEW SCRIPT
 
 
+
 function isInViewport(element) {
   const rect = element.getBoundingClientRect();
   return (
@@ -211,4 +212,16 @@ window.addEventListener('scroll', function() {
 
 handleAnimation(); // Initial call to handle animation when page loads
 handleAnimation2(); // Initial call for the second set of animations
+
+function updateCheckbox() {
+  var checkbox = document.getElementById("promoCheckbox");
+  var hiddenInput = document.getElementById("promoInput");
+
+  if (checkbox.checked) {
+    hiddenInput.value = "Yes";
+  } else {
+    hiddenInput.value = "No";
+  }
+}
+
 
