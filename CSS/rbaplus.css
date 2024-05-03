@@ -82,6 +82,14 @@
         text-shadow: #FC0 5px 0 20px;
         font-size: 33px;
     }
+    .ftrs{
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        gap: 50px;
+    
+    }
 }
 
 @media (max-width:768px) {
@@ -115,6 +123,15 @@
         text-shadow: #FC0 5px 0 20px;
         font-size: 33px;
     }
+    .ftrs{
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        gap: 50px;
+        flex-direction: column;
+    
+    }
 }
 
 .gradientBox{
@@ -126,7 +143,6 @@
     margin-top: -500px;
 }
 .whydiv{
-    margin-top: ;
     display: flex;
     width: 100%;
     justify-content: center;
@@ -146,18 +162,25 @@
     color: #fff !important;
     text-decoration: none;
 }
-.ftrs{
-    display: flex;
-    width: 100%;
-    align-items: center;
-    justify-content: center;
-    gap: 50px;
 
-}
 .ftr{
     border: #ffffff3d solid 2px;
     border-radius: 40px;
     width: 300px;
     height: 400px;
     background-color: rgba(255, 255, 255, 0.055);
+}
+.pricingdiv{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    height: auto;
+    align-items: center;
+}
+.pricing{
+    width: 70%;
+    height: 400px;
+    background-color: rgba(255, 255, 255, 0.055);
+    border: #ffffff3d solid 2px;
+    border-radius: 40px;
 }
