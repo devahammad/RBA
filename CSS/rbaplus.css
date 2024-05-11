@@ -339,6 +339,7 @@
         width: 100%;
         height: auto;
         padding-bottom: 1em;
+        margin: 10px;
 
 
     }
@@ -356,5 +357,6 @@
         border-radius: 1.5em;
         border: 1px solid rgb(165, 165, 165);
         background-image: radial-gradient(circle at center center, transparent 0%, rgb(0, 0, 0) 99%), repeating-linear-gradient(0deg, rgba(163, 163, 163, 0.122) 0px, rgba(163, 163, 163, 0.473) 1px, transparent 2px, transparent 6px), repeating-linear-gradient(90deg, rgba(163, 163, 163, 0.12) 0px, rgba(163, 163, 163, 0.052) 1px, transparent 1px, transparent 6px), linear-gradient(90deg, rgba(33, 33, 33, 0.318), rgba(33, 33, 33, 0.367)) !important;
+    margin: 10px;
     }
 }
