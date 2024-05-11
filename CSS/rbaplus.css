@@ -241,7 +241,7 @@
     color: #fff;
     font-size: 28px;
     justify-content: center;
-    background-image: radial-gradient(circle at center center, transparent 0%, rgb(25, 25, 25) 99%), repeating-linear-gradient(0deg, rgba(163, 163, 163, 0.122) 0px, rgba(163, 163, 163, 0.083) 1px, transparent 2px, transparent 6px), repeating-linear-gradient(90deg, rgba(163, 163, 163, 0.12) 0px, rgba(163, 163, 163, 0.052) 1px, transparent 1px, transparent 6px), linear-gradient(90deg, rgba(33, 33, 33, 0.318), rgba(33, 33, 33, 0.367));
+    background-image: radial-gradient(circle at center center, transparent 0%, rgb(0, 0, 0) 99%), repeating-linear-gradient(0deg, rgba(163, 163, 163, 0.122) 0px, rgba(163, 163, 163, 0.473) 1px, transparent 2px, transparent 6px), repeating-linear-gradient(90deg, rgba(163, 163, 163, 0.12) 0px, rgba(163, 163, 163, 0.052) 1px, transparent 1px, transparent 6px), linear-gradient(90deg, rgba(33, 33, 33, 0.318), rgba(33, 33, 33, 0.367));
 }
 
 .pricingdiv {
@@ -250,7 +250,7 @@
     justify-content: center !important;
     height: auto !important;
     align-items: center;
-    
+
 }
 
 .pricing {
@@ -274,15 +274,17 @@
     border: none;
     border-radius: 100px;
 }
+
 @media (min-width: 600px) {
-    .pckContainerRBA{
+    .pckContainerRBA {
         width: 100%;
         height: auto;
         position: relative;
         display: flex;
         background-color: grey;
     }
-    .sectionLeftRBA{
+
+    .sectionLeftRBA {
         background-color: rgb(0, 0, 0);
         width: 60%;
         top: 0;
@@ -291,23 +293,25 @@
         align-items: center;
         justify-content: center;
     }
-    .sectionRightRBA{
+
+    .sectionRightRBA {
         background-color: rgb(0, 0, 0);
-         width: 40%; 
-         height: auto;
-         overflow-y: auto;
-         padding-bottom: 1em;
-         overflow: hidden;
-         display: flex;
-         justify-content: center;
-         align-items: center;
+        width: 40%;
+        height: auto;
+        overflow-y: auto;
+        padding-bottom: 1em;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
-    .pckInfoRBA{
-        width: 90%; 
+
+    .pckInfoRBA {
+        width: 90%;
         height: auto;
         position: sticky;
         top: 0;
-        background-image: radial-gradient(circle at center center, transparent 0%,rgb(25, 25, 25) 99%),repeating-linear-gradient(0deg, rgba(163, 163, 163, 0.122) 0px, rgba(163, 163, 163, 0.083) 1px,transparent 2px, transparent 6px),repeating-linear-gradient(90deg, rgba(163, 163, 163, 0.12) 0px, rgba(163, 163, 163, 0.052) 1px,transparent 1px, transparent 6px),linear-gradient(90deg, rgba(33, 33, 33, 0.318),rgba(33, 33, 33, 0.367));
+        background-image: radial-gradient(circle at center center, transparent 0%, rgb(25, 25, 25) 99%), repeating-linear-gradient(0deg, rgba(163, 163, 163, 0.122) 0px, rgba(163, 163, 163, 0.083) 1px, transparent 2px, transparent 6px), repeating-linear-gradient(90deg, rgba(163, 163, 163, 0.12) 0px, rgba(163, 163, 163, 0.052) 1px, transparent 1px, transparent 6px), linear-gradient(90deg, rgba(33, 33, 33, 0.318), rgba(33, 33, 33, 0.367));
         height: auto;
         padding: 1.5em;
         border-radius: 1.5em;
@@ -316,39 +320,42 @@
         top: 70;
 
     }
-  }
-  @media (max-width: 600px) {
-    .pckContainerRBA{
-      width: 100%;
-      height: auto;
-      flex-direction: column;
-      background-color: grey;
-      display: flex;
-      overflow: hidden;
-      
-  
+}
+
+@media (max-width: 600px) {
+    .pckContainerRBA {
+        width: 100%;
+        height: auto;
+        flex-direction: column;
+        background-color: grey;
+        display: flex;
+        overflow: hidden;
+
+
     }
-    .sectionLeftRBA{
-      background-color: rgb(0, 0, 0);
-      width: 100%;
-      height: auto;
-      padding-bottom: 1em;
-      
-      
-  }
-  .sectionRightRBA{
-      background-color: rgb(0, 0, 0);
-       width: 100%;
-       overflow-y: auto;
-       
-  }
-  .pckInfoRBA{
-      height: auto;
-      padding: 1.5em;
-      border-radius: 1.5em;
-      border: 1px solid rgb(165, 165, 165);
-      background-image: radial-gradient(circle at center center, transparent 0%,rgb(25, 25, 25) 99%),repeating-linear-gradient(0deg, rgba(163, 163, 163, 0.122) 0px, rgba(163, 163, 163, 0.083) 1px,transparent 2px, transparent 6px),repeating-linear-gradient(90deg, rgba(163, 163, 163, 0.12) 0px, rgba(163, 163, 163, 0.052) 1px,transparent 1px, transparent 6px),linear-gradient(90deg, rgba(33, 33, 33, 0.318),rgba(33, 33, 33, 0.367));
-      width: 95%;
-  }
-  }
-  
+
+    .sectionLeftRBA {
+        background-color: rgb(0, 0, 0);
+        width: 100%;
+        height: auto;
+        padding-bottom: 1em;
+
+
+    }
+
+    .sectionRightRBA {
+        background-color: rgb(0, 0, 0);
+        width: 100%;
+        overflow-y: auto;
+
+    }
+
+    .pckInfoRBA {
+        height: auto;
+        padding: 1.5em;
+        border-radius: 1.5em;
+        border: 1px solid rgb(165, 165, 165);
+        background-image: radial-gradient(circle at center center, transparent 0%, rgb(25, 25, 25) 99%), repeating-linear-gradient(0deg, rgba(163, 163, 163, 0.122) 0px, rgba(163, 163, 163, 0.083) 1px, transparent 2px, transparent 6px), repeating-linear-gradient(90deg, rgba(163, 163, 163, 0.12) 0px, rgba(163, 163, 163, 0.052) 1px, transparent 1px, transparent 6px), linear-gradient(90deg, rgba(33, 33, 33, 0.318), rgba(33, 33, 33, 0.367));
+        width: 95%;
+    }
+}
