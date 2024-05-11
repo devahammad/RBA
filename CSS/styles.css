@@ -1,3 +1,7 @@
+* {
+  scroll-behavior: smooth;
+}
+
 @font-face {
   font-family: einaRegular;
   src: url("Fonts/Eina01-Regular.ttf");
