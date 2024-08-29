@@ -1,0 +1,16 @@
+# Redirect HTTP to HTTPS
+RewriteEngine On
+RewriteCond %{HTTPS} off
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# Redirect non-www to www
+RewriteCond %{HTTP_HOST} ^rbasoftwares.com [NC]
+RewriteRule ^(.*)$ http://www.rbasoftwares.com/$1 [L,R=301]
+
+# Remove .html extensions
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.html -f
+RewriteRule ^(.*)$ $1.html [NC,L]
+
+# Custom 404 error page
+ErrorDocument 404 /404.html

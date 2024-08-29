@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /admin/
+Disallow: /scripts/
+Disallow: /temp/
+
+Sitemap: https://www.rbasoftwares.com/sitemap.xml
