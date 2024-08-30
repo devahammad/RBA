@@ -1186,10 +1186,14 @@ box-shadow: 0 -13.5px 32px 3px #2a2a2a;
   justify-content: center;
   align-items: center;
   margin-top: 1em;
-  gap: 10px;
 
 }
+@media (min-width: 800px) {
+  .SMicons{
+ gap: 13px;
+  }
 
+  
 .sm1 {
   width: 50px;
   border-radius: 100px;
@@ -2142,8 +2146,8 @@ transition: 0.4s;
 
 @media (max-width: 800px) {
 .textFoot{
-  font-size: 1.5em;
-  padding-top: 1.5em;
+  font-size: 1.9em;
+  padding-top: 1.2em;
 }
 .Footer2 p{
   font-size: 0.9em;
