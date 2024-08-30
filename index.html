@@ -61,8 +61,7 @@
 </head>
 
 <body>            
-
-<div class="myModal" id="myModal">
+ <div class="myModal" id="myModal">
     <div class="modal" id="modalContent" style="text-align: end;">
         <button  id="closeButton"  onclick="closeNav()" style="cursor: pointer; margin: 0.5em 0.5em 0.5em 0; border: 0; background-color: rgba(255, 0, 0, 0);"><img id="closeButton" style="width: 20px; " src="SVG/closeicon.svg" alt="Close Button"></button>
         <div class="modalContent">
@@ -73,7 +72,7 @@
             <form id="submit-form" action="" style="display: flex; flex-direction: column; justify-content: center; align-items: center; margin-top: 1em;">
                 <input type="text" class="formContent" id="fname" name="Name" required placeholder="Name">
                 <input type="email" class="formContent" id="lname" name="Email" required placeholder="Email Address">
-                <input class="formContent" id="subject" name="Message" rows="4" required placeholder="What are you looking for?"></input>
+                <input type="text" class="formContent" id="subject" name="Message" rows="4" required placeholder="What are you looking for?"></input>
                 <label class="cBox" style="font-family: PoppinsExtraLight; font-size: 14px;">
                     Receive offers and updates.
                     <input type="checkbox" id="promoCheckbox" onclick="updateCheckbox()">
@@ -107,11 +106,12 @@
                                      <!-- Loading Page code:  -->
 
 
-  <div class="starting-page">
-    <div class="logo-container">
-        <img src="SVG/RBA Logo.svg" class="logoAnim"  style=" height: 5em;" alt="Logo" >
-    </div>
-</div>
+                                     <div class="loading-page">
+                                      <div class="logo-container">
+                                        <img src="SVG/RBA Logo.svg" class="logoLOAD"  style=" height: 4em;" alt="Logo">
+                                      </div>   
+                              
+                                  </div>
 
   
 <section class="main">
@@ -184,9 +184,9 @@
 <div class="Section3" data-aos="fade-up" data-aos-duration="1500" style=" display: flex; flex-direction: column; justify-content: center; padding-bottom: 2em;">
   
 
-<h1 class="LR "  data-aos="fade-up" data-aos-duration="1500" style=" font-family: Inter;">
+<h2 class="LR "  data-aos="fade-up" data-aos-duration="1500" style=" font-family: Inter;">
 Well tailored <br> Process.
-</h1>
+</h2>
 
 <div class="Content" style="background-color: rgba(0, 0, 0, 0); height: 90%; ">
 <div class="Card caan1" style="background-color:rgba(0, 0, 0, 0); width: 100%;">
@@ -376,37 +376,43 @@ Well tailored <br> Process.
 
 
 
-<Footer>
+   <footer data-aos="fade-up" data-aos-duration="1000"  class="Footer2" style="height: auto; background-color: #111111;  padding-bottom: 1em; margin-top: 2em;">
+<div style="display: flex; \height: auto; justify-content: center; flex-direction: column; align-items: center;">
+  <h2 class="textFoot "  data-aos-duration="1500" style=" font-family: Inter;">
+    Why dream small? <br>
+    Think big with us.
+    </h2>
 
-<div class="Footer1" style="margin-top: 5em; background-color: rgb(0, 0, 0); width: 100%; height: auto; padding-top: 10em;">
-<div style="background-color: rgb(255, 255, 255); width: 100%; height: 5em; display:flex ; justify-content: center; align-items: end; padding-bottom: 5em; border-radius: 1em 1em 0 0;">
-<div class="finalmsg">
-<h2 class="footer1-head">Let's merge our ideas!
-<figcaption class="spContent">
-Ready to create something? <br> Share your ideas with us, and let's turn them into reality! </figcaption></h2>
-<button onclick="location.href='contact'" class="btn">Let's Talk</button>
+    <div class="SMicons">
+      <button onclick="location.href='https://instagram.com/rbasoftwares'" class="sm"><img class="sm1"  src="SVG/ig.svg" style="width: 3.5em;" alt="Follow us on Instagram"></button>
+  <button onclick="location.href=`https://wa.me/message/JULIKF7NSTQLH1`" class="sm"><img class="sm1"  src="SVG/wp.svg" style="width: 3.5em;" alt="Connect us on WhatsApp"></button>
+  <button onclick="location.href=`https://www.linkedin.com/company/rbasoftwares`" class="sm"><img class="sm1"  src="SVG/li.svg" style="width: 3.5em;" alt="Connect us on LinkedIn"></button>
+  <button onclick="location.href=`https://x.com/rbasoftwares_`" class="sm"><img class="sm1"  src="SVG/xx.svg" style="width: 3.5em;" alt="Follow us on X"></button>
+  <button onclick="location.href=`https://www.facebook.com/people/RBA-Softwares/61563882235935/`" class="sm"><img class="sm1"  src="SVG/fb.svg" style="width: 3.5em;" alt="Follow us on Facebook"></button>
 </div>
+
+<p style=" font-family: PoppinsExtraLight; font-weight: 100; color: rgb(255, 255, 255); text-align: center;">
+  <span>    <a 
+  href="mailto:support@rbasoftwares.com" 
+  style="
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  "
+  ><span style="color: grey;">Email at </span>info@rbasoftwares.com</a></span> <br> 
+  <span>    <a 
+    href="tel:+971544397659" 
+    style="
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    "
+    ><span style="color: grey;">Call at </span> +971544397659</a></span></p>
+
+ <p style="font-size: 12px; color: rgb(72, 72, 72);"><span><a style="text-decoration: none; color: rgb(72, 72, 72);" href="terms">Terms</a></span> <a style="text-decoration: none; color: rgb(72, 72, 72);" href="privacy"> | Privacy</a></p>
+
+ <p style="font-size: 10px; color: rgb(72, 72, 72);  margin: 0;">© 2024 RBA Softwares.</p>
 </div>
-</div>
-</Footer>
 
-   <footer class="Footer2" style="height: auto; background-color: white; width: 100%; padding-bottom: 2em;">
-      <div
-        style="display: flex; width: 100%; height: auto; justify-content: center; flex-direction: column; align-items: center;">
-        <h2 style="color: black; margin-top: 0; " class="footer2-head">Stay Connected</h2>
-        <div class="SMicons">
-          <button onclick="location.href='https://instagram.com/rbasoftwares'" class="sm"><img class="sm1"  src="SVG/5279112_camera_instagram_social media_instagram logo_icon.svg" style="width: 3.5em;" alt="Follow us on Instagram"></button>
-      <button onclick="location.href=`https://wa.me/message/JULIKF7NSTQLH1`" class="sm"><img class="sm1"  src="SVG/5279121_call_chat_messenger_whatsapp_whatsapp logo_icon.svg" style="width: 3.5em;" alt="Connect us on WhatsApp"></button>
-      <button onclick="location.href=`https://www.linkedin.com/company/rbasoftwares`" class="sm"><img class="sm1"  src="SVG/5279114_linkedin_network_social network_linkedin logo_icon.svg" style="width: 3.5em;" alt="Connect us on LinkedIn"></button>
-      <button onclick="location.href=`https://www.youtube.com/@rbasoftwares`" class="sm"><img class="sm1"  src="SVG/5279120_play_video_youtube_youtuble logo_icon.svg" style="width: 3.5em;" alt="Subscribe to our YouTube Channel"></button>
-        </div>
-        <hr style="border: 0.5px solid grey; width: 80%; margin-top: 2em;">
-        <p style="font-size: 12px; color: rgb(72, 72, 72);"><span><a style="text-decoration: none; color: rgb(72, 72, 72);" href="terms">Terms</a></span> | <a style="text-decoration: none; color: rgb(72, 72, 72);" href="privacy">Privacy</a></p>
-
-        <p style="font-size: 10px; color: rgb(72, 72, 72);">© 2024 RBA Softwares. All rights reserved.</p>
-      </div>
-
-    </footer>
+   </footer>  
 
 
 
@@ -420,8 +426,7 @@ Ready to create something? <br> Share your ideas with us, and let's turn them in
 
 <script src="script.js"></script>
 <script src="second.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
 <script>
    AOS.init();
 </script>
