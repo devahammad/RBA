@@ -91,11 +91,11 @@ function enableScroll() {
   window.scrollTo(scrollPosition, scrollPosition);
 }
 
-// Code to hide starting page after 3 seconds
+// Code to hide starting page after 2 seconds
 document.addEventListener('DOMContentLoaded', function() {
   setTimeout(function() {
     document.querySelector('.starting-page').classList.add('hide');
-  }, 3000); 
+  }, 2000); 
 });
 
 // Code to hide loading page after all content is loaded
