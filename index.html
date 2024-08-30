@@ -52,6 +52,12 @@
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <link rel="canonical" href="https://www.rbasoftwares.com/">
     <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">  
+
+     <style>
+      @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+      </style> 
+         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
+
 </head>
 
 <body>            
@@ -414,24 +420,11 @@ Ready to create something? <br> Share your ideas with us, and let's turn them in
 
 <script src="script.js"></script>
 <script src="second.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+
 <script>
-  function displayModal() {
-      var modal = document.getElementById("myModal");
-      modal.style.opacity = "1"; // Set opacity to 1
-      modal.style.visibility = "visible"; // Set display to none
-
-  }
-
-  function hideModal() {
-      var modal = document.getElementById("myModal");
-      modal.style.opacity = "0"; // Set opacity to 0
-      modal.style.visibility = "hidden"; // Set display to none
-  }
-
-  // JavaScript to handle closing the modal and fading in
-  setTimeout(displayModal, 10000);
-
-  document.getElementById("closeButton").addEventListener("click", hideModal);
+   AOS.init();
 </script>
+<script src="updates.js"></script>
 </body>
 </html>
