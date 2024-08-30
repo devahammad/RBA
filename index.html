@@ -57,39 +57,53 @@
 <body>            
 
 <div class="myModal" id="myModal">
-<div class="modal" style="text-align: end;">
-  <a href="javascript:void(0)"  id="closeButton" class="closebtn" onclick="closeNav()" style="font-size: 1em; right: 0; padding-right: 10px; color: rgb(165, 165, 165); border-bottom: 0.1px solid rgb(117, 117, 117);"  >Close</a>
-  <div class="modalContent">
-<h2 class="footer1-head" style="color: rgb(234, 234, 234); text-shadow: 0 0 20px rgb(177, 177, 177);">Let's merge our ideas!
-<figcaption class="spContent" style="color: rgb(165, 165, 165); text-shadow: none;">
-Ready to create something? <br> Share your ideas with us, and let's turn them into reality! </figcaption></h2>
+    <div class="modal" id="modalContent" style="text-align: end;">
+        <button  id="closeButton"  onclick="closeNav()" style="cursor: pointer; margin: 0.5em 0.5em 0.5em 0; border: 0; background-color: rgba(255, 0, 0, 0);"><img id="closeButton" style="width: 20px; " src="SVG/closeicon.svg" alt="Close Button"></button>
+        <div class="modalContent">
+            <h2 style="font-family: Inter; color: rgb(168, 168, 168);">
+                Let's merge <br> our ideas!
+             
+            </h2>
+            <form id="submit-form" action="" style="display: flex; flex-direction: column; justify-content: center; align-items: center; margin-top: 1em;">
+                <input type="text" class="formContent" id="fname" name="Name" required placeholder="Name">
+                <input type="email" class="formContent" id="lname" name="Email" required placeholder="Email Address">
+                <input class="formContent" id="subject" name="Message" rows="4" required placeholder="What are you looking for?"></input>
+                <label class="cBox" style="font-family: PoppinsExtraLight; font-size: 12px;">
+                    Receive offers and updates.
+                    <input type="checkbox" id="promoCheckbox" onclick="updateCheckbox()">
+                    <span class="checkmark"></span>
+                </label>
+                <input type="hidden" id="promoInput" name="Promotion" value="No">
+                <input type="hidden" name="Enquiry Type" value="1A">
+                <button class="sendbtn" type="submit" value="Submit"  ><img class="cbimg" id="closeButton" style="width: 45px; " src="SVG/sendIcon.svg" alt="Send Button"></button>
+            </form>
+        </div>
+    </div>
 
-<form id="submit-form" action="" style="display: flex; flex-direction: column; justify-content: center; align-items: center; margin-top: 1em;">
-    <input type="text" class="formContent" id="fname" name="Name" required placeholder="Name">
-    <input type="email" class="formContent" id="lname" name="Email" required placeholder="Email Address">
-    <textarea class="formContent" id="subject" name="Message" rows="4" required placeholder="What are you looking for?"></textarea>
-    <label class="cBox" style="font-family: PoppinsExtraLight; font-size: 16px;">Receive offers and updates.
-    <input type="checkbox"  id="promoCheckbox" onclick="updateCheckbox()">
-    <span class="checkmark"></span>
-  </label>
-  <input type="hidden" id="promoInput" name="Promotion" value="No">
-    <input type="hidden" name="Enquiry Type" value="1A">
-  <button type="submit" value="Submit" class="btn">Let's Talk</button>
-</form>
 
-
-
+<div class="spinner center" id="spinner" style="display: none;">
+    <div class="spinner-blade"></div>
+    <div class="spinner-blade"></div>
+    <div class="spinner-blade"></div>
+    <div class="spinner-blade"></div>
+    <div class="spinner-blade"></div>
+    <div class="spinner-blade"></div>
+    <div class="spinner-blade"></div>
+    <div class="spinner-blade"></div>
+    <div class="spinner-blade"></div>
+    <div class="spinner-blade"></div>
+    <div class="spinner-blade"></div>
+    <div class="spinner-blade"></div>
 </div>
-</div>
-</div>
-</div>     
+
+   </div>
 
                                      <!-- Loading Page code:  -->
 
 
   <div class="starting-page">
     <div class="logo-container">
-        <img src="SVG/RBA Logo.svg" class="logoAnim"  style=" height: 5em;" alt="Content is loading, please wait" >
+        <img src="SVG/RBA Logo.svg" class="logoAnim"  style=" height: 5em;" alt="Logo" >
     </div>
 </div>
 
@@ -101,7 +115,7 @@ Ready to create something? <br> Share your ideas with us, and let's turn them in
 
   <header class="HeadMobi firstHeader" style="z-index: 10;">
     <div style="display: flex; justify-content: space-between; align-items: center; padding-top: 10px; ">
-      <a href="/" style="margin-left: auto; margin-right: auto; cursor: pointer;"><img class="logo"   src="SVG/RBA Logo.svg" alt="RBA Softwares - Official Website" ></a> 
+      <a href="/"style="margin-left: auto; margin-right: auto; cursor: pointer;"><img class="logo"   src="SVG/RBA Logo.svg" ></a> 
       <span class="openbtn" style="font-size: 1em; cursor: pointer; color: #818589; right: 0;  position: absolute; padding-right: 10px;" onclick="openNav()">Menu</span>
     </div>
   </header>
@@ -132,40 +146,45 @@ Ready to create something? <br> Share your ideas with us, and let's turn them in
 
 <!--  From here Main Content Starts  -->
 
-<div class="Body1" style="padding: 6em 0.5em 0 0.5em; height:680px; z-index: -2; ">
+<div class="Body1" style="padding: 0em 0.5em 0 0.5em; height:600px; z-index: -2; ">
 
-<h1 style="text-align: center; padding-top: 20px;"class="sptext">
-Introducing <br> RBA Softwares</h1>
-<h2 style=" text-align: center; animation-delay: 4s; font-weight: 150;" class="sptext2">
-Coded by passion, fueled by your dreams.</h2>
-
+<h1 style=" font-weight: 600; text-align: center;  "class="sptext sptextDesk">
+  Great websites don’t just <br> happen, We create them.</h1>
+  <h1 style=" font-weight: 600; text-align: center;  "class="sptext sptextMob">
+    Great websites don’t just happen,<br> We create them.</h1>
+<p style=" text-align: center; " class="sptext2 sptextDesk">
+  RBA Softwares build unique, high-quality websites and digital <br>solutions for businesses of all sizes.</p>
+  <p style=" text-align: center; " class="sptext2 sptextMob">
+    RBA Softwares build unique, high-quality websites and digital solutions for businesses of all sizes.</p>
+  
 </div>
 
-
-<div class="Body2" style="text-align: center; background-color: rgb(255, 255, 255); padding-bottom: 2em; ">
-
-<div class="animated-text" style="margin-left: 0.5em;">
-We build well <br> tailored <span></span>
+<div class="Body2" data-aos="fade-in" style="text-align: center; padding-bottom: 2em; background-image: url(Images/bgcircleblur.png);">
+  <h2 data-aos="fade-up" data-aos-duration="1000">Our Well Tailored <br> Services</h2>
+  <div class="scrollable-content" id="scrollable-content">
+      <div style="margin-left: 1.2em;" data-aos="fade-left" data-aos-duration="900" data-aos-delay="250" class="card">Web <br> Designing</div>
+      <div data-aos="fade-left" data-aos-duration="900" data-aos-delay="300" class="card">Web <br> Development</div>
+      <div data-aos="fade-left" data-aos-duration="900" data-aos-delay="350" class="card">E-Commerce <br> Development</div>  
+      <div data-aos="fade-left" data-aos-duration="900" data-aos-delay="450" class="card">Search Engine<br> Optimization</div>
+      <div data-aos="fade-left" data-aos-duration="900" data-aos-delay="400" class="card">Mobile App <br> Development</div>
+  </div>
 </div>
 
-<p class="p2" style="  line-height: 25px;"> <span style="font-size: 20px; font-weight: 250; font-family: PoppinsRegular; ">Hey, what's happening? </span><br>Welcome to RBA Softwares, where your online dreams become a reality! We specialize in custom website design, development, and mobile app creation, tailored to meet your unique needs. Whether you're a small startup, local business, or large enterprise, we bring your vision to life with premium quality at affordable prices. Let's chat and explore how we can create a stunning and functional online presence for you. Contact us today to get started!
-</p>
+  <!-- Add more cards as needed -->
+</div>
+    </div>                       
 
-
-</div>                                    
-
-<div class="Body3" style=" display: flex; color: white; background-color: rgb(255, 255, 255); flex-direction: column; height: auto; padding-bottom: 2em;">
-<div class="Section3" style="background-color: black; border-radius: 20px; display: flex; flex-direction: column; justify-content: center; padding-bottom: 2em;">
+<div class="Body3" data-aos="fade-in" style=" display: flex; color: white; flex-direction: column; height: auto; padding-bottom: 2em;">
+<div class="Section3" data-aos="fade-up" data-aos-duration="1500" style=" display: flex; flex-direction: column; justify-content: center; padding-bottom: 2em;">
   
 
-<h2 class="LR" style="text-shadow: 0 0 20px rgb(177, 177, 177);">
-Wondering how we do it? 
-<br>Explore our Process
-</h2>
+<h1 class="LR "  data-aos="fade-up" data-aos-duration="1500" style=" font-family: Inter;">
+Well tailored <br> Process.
+</h1>
 
-<div class="Content" style="background-color: rgb(0, 0, 0); height: 90%; ">
-<div class="Card caan1" style="background-color:rgb(0, 0, 0); width: 100%;">
-<img src="SVG/svg1.svg" class="vector" alt="Consultation with clients to understand their needs" >
+<div class="Content" style="background-color: rgba(0, 0, 0, 0); height: 90%; ">
+<div class="Card caan1" style="background-color:rgba(0, 0, 0, 0); width: 100%;">
+<img src="SVG/svg1.svg" class="vector">
 <div class="textcontent">
 <h2 >Exploring Your Needs
 <figcaption>
@@ -187,8 +206,8 @@ Wondering how we do it?
 
 
 
-<div class="Content" style="background-color: rgb(0, 0, 0); height: 90%; ">
-<div class="Card2 caan2" style="background-color:rgb(0, 0, 0); width: 100%;">
+<div class="Content" style="background-color: rgba(0, 0, 0, 0); height: 90%; ">
+<div class="Card2 caan2" style="background-color:rgba(0, 0, 0, 0); width: 100%;">
 <div class="textcontent2">
 <h2 >Designing and Deciding
 
@@ -198,7 +217,7 @@ Wondering how we do it?
 </figcaption>
 </h2>
 </div>
-  <img src="SVG/svg2.svg" class="vector" alt="Designing a customized solution based on client requirements" >
+  <img src="SVG/svg2.svg" class="vector">
 </div>
 <div class="angle1 timeline2">
 <div class="step1" id="step1"></div>
@@ -209,9 +228,9 @@ Wondering how we do it?
 
 
   
-<div class="Content" style="background-color: rgb(0, 0, 0); height: 90%;">
-<div class="Card caan3" style="background-color:rgb(0, 0, 0); width: 100%;">
-<img src="SVG/svg3.svg" class="vector" alt="Developing and coding the solution according to the design specifications" >
+<div class="Content" style="background-color: rgba(0, 0, 0, 0); height: 90%;">
+<div class="Card caan3" style="background-color:rgba(0, 0, 0, 0); width: 100%;">
+<img src="SVG/svg3.svg" class="vector">
 <div class="textcontent">
 <h2 >Building it Up!
 
@@ -232,8 +251,8 @@ Wondering how we do it?
 
 
 
-<div class="Content" style="background-color: rgb(0, 0, 0);  height: 90%;">
-  <div class="Card2 caan4" style="background-color:rgb(0, 0, 0); width: 100%;">
+<div class="Content" style="background-color: rgba(0, 0, 0, 0);  height: 90%;">
+  <div class="Card2 caan4" style="background-color:rgba(0, 0, 0, 0); width: 100%;">
   <div class="textcontent2">
   <h2>Perfecting & Launching
 
@@ -245,7 +264,7 @@ Wondering how we do it?
   </h2>
  
   </div>
-    <img src="SVG/svg4.svg" class="vector" alt="Launching the final product and providing ongoing support to clients" >
+    <img src="SVG/svg4.svg" class="vector">
   </div>
   </div>
   
@@ -258,102 +277,93 @@ Wondering how we do it?
 
 <div class="Body4" style="height: auto; width: 100%;">
 
-    <section class="sectionPro">
-      <div class="container">
-        <h2 class="faq" style="color: rgb(255, 255, 255); font-size: 50px; ">FAQ </h2>
-
-        <div class="accordion" >
+  <section class="sectionPro">
+    <div class="container">
+      <h1 class="faq" style="color: rgb(255, 255, 255); font-size: 50px;">FAQ</h1>
+      <div class="accordion">
   
-          <div class="accordion-item" id="question1">
-            <a class="accordion-link" href="#question1">
-              <div class="flex">
-                <h3>Why does my business need a website anyway?</h3>
-              </div>
-              <i class="icon ion-md-arrow-forward"></i>
-              <i class="icon ion-md-arrow-down"></i>
-            </a>
-            <div class="answer">
-              <p> Think of your website as your online storefront, open 24/7! It's a place to showcase your products or services, share important information, and connect with potential customers. In today's digital world, having a website establishes credibility and makes it easier for people to find you.</p>
+        <div class="accordion-item" id="question1">
+          <a class="accordion-link" href="#">
+            <div class="flex">
+              <h3>Why does my business need a website anyway?</h3>
             </div>
-            <hr>
+            <i class="icon ion-md-arrow-forward"></i>
+          </a>
+          <div class="answer">
+            <p>Think of your website as your online storefront, open 24/7! It's a place to showcase your products or services, share important information, and connect with potential customers. In today's digital world, having a website establishes credibility and makes it easier for people to find you.</p>
+          </div>
+          <hr>
         </div>
   
-          <div class="accordion-item" id="question2">
-            <a class="accordion-link" href="#question2">
-              <div class="flex">
-                <h3>How long will it take to build my website?</h3>
-              </div>
-              <i class="icon ion-md-arrow-forward"></i>
-              <i class="icon ion-md-arrow-down"></i>
-            </a>
-            <div class="answer">
-              <p>The timeline depends on the complexity of your website.  Simpler sites can be built in a few weeks, while more intricate ones might take longer. We'll work closely with you to set realistic expectations.</p>
+        <div class="accordion-item" id="question2">
+          <a class="accordion-link" href="#">
+            <div class="flex">
+              <h3>How long will it take to build my website?</h3>
             </div>
-            <hr>
+            <i class="icon ion-md-arrow-forward"></i>
+          </a>
+          <div class="answer">
+            <p>The timeline depends on the complexity of your website. Simpler sites can be built in a few weeks, while more intricate ones might take longer. We'll work closely with you to set realistic expectations.</p>
+          </div>
+          <hr>
         </div>
-
+  
         <div class="accordion-item" id="question3">
-          <a class="accordion-link" href="#question3">
+          <a class="accordion-link" href="#">
             <div class="flex">
               <h3>How much will it cost to build a website?</h3>
             </div>
             <i class="icon ion-md-arrow-forward"></i>
-            <i class="icon ion-md-arrow-down"></i>
           </a>
           <div class="answer">
-            <p>The timeline depends on the complexity of your website.  Simpler sites can be built in a few weeks, while more intricate ones might take longer. We'll work closely with you to set realistic expectations.</p>
+            <p>The cost of building a website depends on its complexity. A simple site might be relatively affordable, while more complex sites with additional features will cost more. We'll provide a detailed quote after understanding your needs.</p>
           </div>
           <hr>
-      </div>
-         
-      <div class="accordion-item" id="question4">
-        <a class="accordion-link" href="#question4">
-          <div class="flex">
-            <h3>Will my website work on all device?</h3>
+        </div>
+  
+        <div class="accordion-item" id="question4">
+          <a class="accordion-link" href="#">
+            <div class="flex">
+              <h3>Will my website work on all devices?</h3>
+            </div>
+            <i class="icon ion-md-arrow-forward"></i>
+          </a>
+          <div class="answer">
+            <p>Absolutely! We prioritize responsive design to ensure optimal performance and appearance across phones, tablets, laptops, and more. Your website will be accessible and user-friendly on any device.</p>
           </div>
-          <i class="icon ion-md-arrow-forward"></i>
-          <i class="icon ion-md-arrow-down"></i>
-        </a>
-        <div class="answer">
-          <p>
-            Absolutely! We prioritize responsive design to ensure optimal performance and appearance across phones, tablets, laptops, and more. Your website will be accessible and user-friendly on any device.</p>
+          <hr>
         </div>
-        <hr>
-    </div>
-
-
-    <div class="accordion-item" id="question5">
-      <a class="accordion-link" href="#question5">
-        <div class="flex">
-          <h3>Is my website future-proof?</h3>
+  
+        <div class="accordion-item" id="question5">
+          <a class="accordion-link" href="#">
+            <div class="flex">
+              <h3>Is my website future-proof?</h3>
+            </div>
+            <i class="icon ion-md-arrow-forward"></i>
+          </a>
+          <div class="answer">
+            <p>You bet! We make sure to use flexible technologies that can roll with the punches as your business grows and the digital world evolves. Plus, we've got maintenance plans to keep your site up-to-date and kicking in the long run.</p>
+          </div>
+          <hr>
         </div>
-        <i class="icon ion-md-arrow-forward"></i>
-        <i class="icon ion-md-arrow-down"></i>
-      </a>
-      <div class="answer">
-        <p>You bet! We make sure to use flexible technologies that can roll with the punches as your business grows and the digital world evolves. Plus, we've got maintenance plans to keep your site up-to-date and kicking in the long run.</p>
+  
+        <div class="accordion-item" id="question6">
+          <a class="accordion-link" href="#">
+            <div class="flex">
+              <h3>What happens if I'm not feeling the final product?</h3>
+            </div>
+            <i class="icon ion-md-arrow-forward"></i>
+          </a>
+          <div class="answer">
+            <p>We believe in open communication and collaboration throughout the website development process. If there's anything you're not happy with, we'll work with you to refine it until you love your website!</p>
+          </div>
+          <hr>
+        </div>
+  
       </div>
-      <hr>
-  </div>
-
-  <div class="accordion-item" id="question6">
-    <a class="accordion-link" href="#question6">
-      <div class="flex">
-        <h3>What happens if I'm not feeling the final product?</h3>
-      </div>
-      <i class="icon ion-md-arrow-forward"></i>
-      <i class="icon ion-md-arrow-down"></i>
-    </a>
-    <div class="answer">
-      <p>We believe in open communication and collaboration throughout the website development process. If there's anything you're not happy with, we'll work with you to refine it until you love your website!</p>
     </div>
-    <hr>
-</div>
-
-       </div>
-      </div>
-      
-    </section>
+  </section>
+  
 
 
 </div>
