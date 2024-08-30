@@ -1836,8 +1836,8 @@ transform: rotate(20deg);
   position: absolute;
   top: 0;
   left: 0;
-  height: 14px;
-  width: 14px;
+  height: 15px;
+  width: 15px;
   background-color: #1d1d1d;
   transition: 0.2s;
   border-radius: 4px;
@@ -1870,8 +1870,8 @@ transform: rotate(20deg);
 
 /* Style the checkmark/indicator */
 .cBox .checkmark:after {
-  left: 4px;
-  top: 1px;
+  left: 4.5px;
+  top: 1.5px;
   width: 3.5px;
   height: 7px;
   border: solid rgb(92, 92, 92);
