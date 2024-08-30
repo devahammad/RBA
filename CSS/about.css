@@ -1,0 +1,227 @@
+@font-face {
+  font-family: encodeSans;
+  src: url("Fonts/EncodeSans-VariableFont_wdth,wght.ttf");
+}
+
+@media (min-width: 600px) {
+  .pplRow1,
+  .pplRow2 {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+    gap: 50px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+  .data {
+    margin-top: 20px;
+    color: #ffffff;
+    text-align: center;
+    font-size: larger;
+    width: 80%;
+  }
+  .master {
+    color: rgba(255, 255, 255, 0.473);
+    font-size: 80px;
+    margin-top: 100px;
+    font-family: einaRegular;
+    font-weight: bold;
+  }
+  .img {
+    display: flex;
+    justify-content: baseline;
+    align-items: end;
+    position: relative;
+    aspect-ratio: 3/4;
+    width: 400px;
+    border-radius: 25px;
+    overflow: hidden;
+    margin: 20px;
+  }
+  .behind {
+    color: rgb(255, 255, 255);
+    font-size: 50px;
+    font-style: italic;
+    font-family: einaRegularLight;
+    margin-top: -40px;
+  }
+}
+@media (max-width: 768px) {
+  .pplRow1,
+  .pplRow2 {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    gap: 50px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    align-items: center;
+  }
+  .data {
+    margin-top: 20px;
+    color: #ffffff;
+    text-align: center;
+    font-size: medium;
+    width: 90%;
+  }
+  .master {
+    color: rgba(255, 255, 255, 0.473);
+    font-size: 50px;
+    margin-top: 100px;
+    font-family: einaRegular;
+    font-weight: bold;
+  }
+  .img {
+    display: flex;
+    justify-content: baseline;
+    align-items: end;
+    position: relative;
+    aspect-ratio: 3/4;
+    border-radius: 25px;
+    overflow: hidden;
+    margin: 20px;
+  }
+  .behind {
+    color: rgb(255, 255, 255);
+    font-size: 40px;
+    font-style: italic;
+    font-family: einaRegularLight;
+    margin-top: -30px;
+  }
+}
+
+.mainTitle {
+  display: flex;
+  height: auto;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+}
+
+.people {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.pplRow1,
+.pplRow2 {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 25px; /* Ensure the image corners match the div corners */
+}
+
+.desig {
+  margin: 20px;
+  color: #ffffff;
+  position: absolute;
+  font-family: encodeSans;
+  font-weight: 900;
+  font-size: 50px;
+  z-index: 100;
+  bottom: 0px;
+  transition: bottom 0.3s ease, opacity 0.3s ease;
+}
+
+.name {
+  display: none; /* Ensure the name is displayed inline */
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  font-weight: 450;
+  font-size: 25px;
+  margin-left: 2px;
+  margin-top: -20px;
+  font-style: italic;
+  font-family: einaRegularLight;
+  color: #fff;
+}
+
+.overlayCard {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+  color: #fff;
+  display: flex;
+  justify-content: baseline;
+  align-items: end;
+  transition: height 0.3s ease, opacity 0.3s ease;
+  pointer-events: none; /* Prevent the overlay from interfering with mouse events */
+  opacity: 0; /* Initially hide the overlay */
+}
+
+.img:hover .overlayCard {
+  height: 100%;
+  opacity: 1; /* Show the overlay when hovering */
+}
+
+.img:hover .desig {
+  bottom: 10px; /* Move the designation up */
+}
+
+.img:hover .name {
+  display: block; /* Show the name */
+  opacity: 1;
+}
+
+.img:hover .desig,
+.img:hover {
+  color: rgba(255, 255, 255, 0.39); /* Change text color to white on hover */
+}
+.boxBlck {
+  background-color: rgb(31, 31, 31);
+  width: 87.5%;
+  height: auto;
+  display: flex;
+  padding: 20px;
+  border-radius: 50px;
+  flex-direction: column;
+  border: #818181 solid 2px;
+  margin-bottom: 50px;
+}
+.abtUs {
+  height: auto;
+  width: 100%;
+  color: #fff;
+  font-size: 80px;
+  font-family: encodeSans;
+  font-weight: 900;
+  margin-left: 5px;
+  margin-bottom: 10px;
+    margin-top: 10px;
+
+}
+.boxWht {
+  height: auto;
+  width: 100%;
+  background-color: rgb(255, 255, 255);
+  border-radius: 25px;
+  color: #000000;
+  font-size: 24px;
+  font-family: encodeSans;
+  font-weight: 900;
+}
+.abtText {
+  font-weight: 200;
+  font-family: PoppinsRegular;
+  margin: 20px;
+}
+
+...
+

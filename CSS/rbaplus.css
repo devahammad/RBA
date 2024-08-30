@@ -1,0 +1,628 @@
+* {
+  scroll-behavior: smooth;
+}
+.FadeVP{
+  opacity: 0;
+  transition: 1s ease;
+
+}
+.FadeVP.in-viewport {
+  opacity: 1;
+}
+.PullupVP{
+  transition: 1s ease;
+  transform: translateY(40px);
+
+}
+.PullupVP.in-viewport {
+  transform: translateY(0px);
+}
+
+.rba {
+  background-image: linear-gradient(to right,black,rgb(36, 0, 0), #390000, #560000,rgb(139, 0, 0), #da0000);
+  color: transparent;
+  -webkit-background-clip: text; /* Edge, Chrome */
+  background-clip: text; /* Safari, FF */
+  animation: gradientAnimation 2s linear forwards;
+  animation-direction: alternate;
+  background-size: 300% 100%;
+animation-delay:0.4s ;
+  text-align: center;
+  transition: 2s;
+text-align: center;  
+  font-family: cFont;
+  font-size: 120px;
+      -webkit-font-smoothing: antialiased;
+    font-weight: normal;
+}
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0;
+  }
+  to {
+    background-position: 100%;
+  }
+}
+.sub {
+  margin-top: 1%;
+  color: rgb(165, 165, 165);
+text-align: center;
+  font-family: poppinsExtraLight;
+  font-size: 20px;
+  line-height: 90%;
+}
+
+@media (min-width: 600px) {
+  .titles {
+    width: 100%;
+    margin-top: 140px;
+  }
+
+  .scrollMenu {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    height: 80px;
+    overflow: hidden;
+    width: 100%;
+  }
+
+  .line {
+    color: #ffffff;
+    width: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: cFont;
+    font-weight: 100;
+    font-size: 30px;
+    transition: 1s;
+  }
+
+  .line1 {
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    transition: 0.5s;
+    /* Set the height to fill the scrollMenu */
+  }
+
+  .line2 {
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-left: 1px solid #ffffff;
+    font-weight: bold;
+    font-size: 30px;
+    transition: 0.5s;
+    /* Set the height to fill the scrollMenu */
+  }
+
+  .line3 {
+    border-left: 1px solid #ffffff;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 30px;
+    transition: 0.5s;
+    /* Set the height to fill the scrollMenu */
+  }
+
+  .line:hover {
+text-shadow: 0 0 10px rgb(92, 0, 0);
+font-size: 34px;
+color: rgba(198, 0, 0, 0.56);
+
+  }
+
+  .ftrs {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+  }
+
+  .imgWhy {
+    height: 100%;
+    width: 40%;
+  }
+
+  .why {
+    display: flex;
+    width: 100%;
+    height: auto;
+    background-color: rgba(255, 255, 255, 0.055);
+    border: #ffffff3d solid 2px;
+    border-radius: 40px;
+    color: #fff;
+    font-size: 22px;
+    text-align: center;
+    align-items: center;
+    padding: 35px;
+    background-color: rgba(66, 66, 66, 0.682);
+    background-image: radial-gradient(circle at center center, transparent 0%,rgb(25, 25, 25) 99%),repeating-linear-gradient(0deg, rgba(163, 163, 163, 0.122) 0px, rgba(163, 163, 163, 0.083) 1px,transparent 2px, transparent 6px),repeating-linear-gradient(90deg, rgba(163, 163, 163, 0.12) 0px, rgba(163, 163, 163, 0.052) 1px,transparent 1px, transparent 6px),linear-gradient(90deg, rgba(33, 33, 33, 0.318),rgba(33, 33, 33, 0.367));
+    margin-right: 1em;    
+  }
+}
+
+@media (max-width: 768px) {
+  .titles {
+    width: 100%;
+    margin-top: 120px;
+  }
+
+  .scrollMenu {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    height: auto;
+    overflow: hidden;
+    width: 100%;
+  }
+
+  .line {
+    border-left: 1px solid #ffffff;
+    border-right: 1px solid #ffffff;
+    color: #ffffff;
+    width: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: cFont;
+    font-weight: 100;
+    font-size: 30px;
+    transition: 0.5s;
+  }
+
+  .line:hover {
+    text-shadow: 0 0 10px rgb(92, 0, 0);
+    font-size: 34px;
+    color: rgba(198, 0, 0, 0.56);
+    
+      }
+
+  .ftrs {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    flex-direction: column;
+  }
+
+  .imgWhy {
+    height: 0%;
+    width: 0%;
+    display: none;
+  }
+
+  .why {
+    display: flex;
+    width: 85%;
+    height: auto;
+    font-family: PoppinsExtraLight;
+    border: #ffffff3d solid 2px;
+    border-radius: 40px;
+    color: #fff;
+    font-size: 22px;
+    text-align: center;
+    align-items: center;
+    padding: 20px;
+    background-color: rgba(66, 66, 66, 0.682);
+    background-image: radial-gradient(circle at center center, transparent 0%,rgb(25, 25, 25) 99%),repeating-linear-gradient(0deg, rgba(163, 163, 163, 0.122) 0px, rgba(163, 163, 163, 0.083) 1px,transparent 2px, transparent 6px),repeating-linear-gradient(90deg, rgba(163, 163, 163, 0.12) 0px, rgba(163, 163, 163, 0.052) 1px,transparent 1px, transparent 6px),linear-gradient(90deg, rgba(33, 33, 33, 0.318),rgba(33, 33, 33, 0.367));
+  }
+}
+
+.gradientBox {
+  position: inherit;
+  width: 100%;
+  height: 720px;
+  z-index: -1;
+  background: linear-gradient(#ffffff00 15%, rgba(255, 0, 0, 0.205), #ffffff00);
+  margin-top: -530px;
+}
+
+.whydiv {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  height: auto;
+  align-items: center;
+}
+
+.wLink {
+  justify-self: center !important;
+  width: auto;
+  color: #fff !important;
+  text-decoration: none;
+}
+
+.ftr {
+  border: #ffffff3d solid 2px;
+  border-radius: 40px;
+  width: 80%;
+  height: auto;
+  background-color: rgba(255, 255, 255, 0.055);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 0.4em;
+  padding: 1em 0.2em 1em 0.2em;
+  color: #fff;
+  font-size: 28px;
+  background-image: radial-gradient(
+      circle at center center,
+      transparent 0%,
+      rgb(0, 0, 0) 99%
+    ),
+    repeating-linear-gradient(
+      0deg,
+      rgba(163, 163, 163, 0.122) 0px,
+      rgba(163, 163, 163, 0.473) 1px,
+      transparent 2px,
+      transparent 6px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      rgba(163, 163, 163, 0.12) 0px,
+      rgba(163, 163, 163, 0.052) 1px,
+      transparent 1px,
+      transparent 6px
+    ),
+    linear-gradient(90deg, rgba(33, 33, 33, 0.318), rgba(33, 33, 33, 0.367));
+}
+
+.pricingdiv {
+  display: flex !important;
+  width: 100%;
+  justify-content: center !important;
+  height: auto !important;
+  align-items: center;
+}
+
+.pricing {
+  width: 70%;
+  height: 400px;
+  background-color: rgba(255, 255, 255, 0.055);
+  border: #ffffff3d solid 2px;
+  border-radius: 40px;
+}
+
+.fHeading {
+  width: auto;
+}
+
+.bline {
+  margin: 0%;
+  background-color: #ffffff49;
+  color: #000000;
+  width: 100%;
+  height: 2px;
+  border: none;
+  border-radius: 100px;
+}
+
+@media (min-width: 600px) {
+  .pckContainerRBA {
+    width: 100%;
+    height: auto;
+    position: relative;
+    display: flex;
+    background-color: grey;
+  }
+
+  .sectionLeftRBA {
+    background-color: rgb(0, 0, 0);
+    width: 60%;
+    top: 0;
+    padding-bottom: 1em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .sectionRightRBA {
+    background-color: rgb(0, 0, 0);
+    width: 40%;
+    height: auto;
+    overflow-y: auto;
+    padding-bottom: 1em;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .pckInfoRBA {
+    width: 90%;
+    height: auto;
+    position: sticky;
+    top: 0;
+    background-image: radial-gradient(
+        circle at center center,
+        transparent 0%,
+        rgb(0, 0, 0) 99%
+      ),
+      repeating-linear-gradient(
+        0deg,
+        rgba(163, 163, 163, 0.122) 0px,
+        rgba(163, 163, 163, 0.083) 1px,
+        transparent 2px,
+        transparent 6px
+      ),
+      repeating-linear-gradient(
+        90deg,
+        rgba(163, 163, 163, 0.12) 0px,
+        rgba(163, 163, 163, 0.052) 1px,
+        transparent 1px,
+        transparent 6px
+      ),
+      linear-gradient(90deg, rgba(33, 33, 33, 0.318), rgba(33, 33, 33, 0.367)) !important;
+    height: auto;
+    padding: 1.5em;
+    border-radius: 1.5em;
+    border: 1px solid rgb(165, 165, 165);
+    padding-bottom: 1em;
+    top: 70;
+  }
+}
+
+@media (max-width: 600px) {
+  .pckContainerRBA {
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+    background-color: grey;
+    display: flex;
+    overflow: hidden;
+  }
+
+  .sectionLeftRBA {
+    background-color: rgb(0, 0, 0);
+    width: 100%;
+    height: auto;
+    padding-bottom: 1em;
+  }
+
+  .sectionRightRBA {
+    background-color: rgb(0, 0, 0);
+    width: 100%;
+    overflow-y: auto;
+  }
+
+  .pckInfoRBA {
+    height: auto;
+    padding: 1.5em;
+    border-radius: 1.5em;
+    border: 1px solid rgb(165, 165, 165);
+    background-image: radial-gradient(
+        circle at center center,
+        transparent 0%,
+        rgb(0, 0, 0) 99%
+      ),
+      repeating-linear-gradient(
+        0deg,
+        rgba(163, 163, 163, 0.122) 0px,
+        rgba(163, 163, 163, 0.473) 1px,
+        transparent 2px,
+        transparent 6px
+      ),
+      repeating-linear-gradient(
+        90deg,
+        rgba(163, 163, 163, 0.12) 0px,
+        rgba(163, 163, 163, 0.052) 1px,
+        transparent 1px,
+        transparent 6px
+      ),
+      linear-gradient(90deg, rgba(33, 33, 33, 0.318), rgba(33, 33, 33, 0.367)) !important;
+    margin: 10px;
+  }
+}
+
+
+@media (max-width: 600px) {
+  .lH {
+    background-color: rgb(0, 0, 0);
+    width: 100%;
+    top: 0;
+    padding-bottom: 1em;
+  }
+  .rC {
+    background-color: rgb(0, 0, 0);
+    width: 100%;
+    overflow-y: auto;
+    padding-bottom: 1em;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+  }
+
+  .ftrContainer {
+    width: 100%;
+    height: auto;
+    position: relative;
+    display: flex;
+    background-color: grey;
+    flex-direction: column;
+  }
+}
+@media (min-width: 600px) {
+  .lH {
+    background-color: rgb(0, 0, 0);
+    width: 40%;
+    position: sticky;
+    top: 0;
+    padding-bottom: 1em;
+  }
+  .rC {
+    background-color: rgb(0, 0, 0);
+    width: 60%;
+    overflow-y: auto;
+    padding-bottom: 1em;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+  }
+  .fetrTitle {
+    width: 90%;
+    height: auto;
+    position: sticky;
+    top: 0;
+  }
+
+  .ftrContainer {
+    width: 100%;
+    height: auto;
+    position: relative;
+    display: flex;
+    background-color: grey;
+  }
+}
+.ftrs {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  gap: 50px;
+  flex-direction: column;
+}
+
+.ftr {
+  border: #ffffff3d solid 2px;
+  border-radius: 40px;
+  width: 80%;
+  height: auto;
+  background-color: rgba(255, 255, 255, 0.055);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 0.4em;
+  padding: 1em 0.2em 1em 0.2em;
+  color: #fff;
+  font-size: 28px;
+  background-image: radial-gradient(
+      circle at center center,
+      transparent 0%,
+      rgb(0, 0, 0) 99%
+    ),
+    repeating-linear-gradient(
+      0deg,
+      rgba(163, 163, 163, 0.122) 0px,
+      rgba(163, 163, 163, 0.473) 1px,
+      transparent 2px,
+      transparent 6px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      rgba(163, 163, 163, 0.12) 0px,
+      rgba(163, 163, 163, 0.052) 1px,
+      transparent 1px,
+      transparent 6px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(33, 33, 33, 0.318),
+      rgba(33, 33, 33, 0.367)
+    );
+}
+
+.bline {
+  margin: 0%;
+  background-color: #ffffff49;
+  color: #000000;
+  width: 100%;
+  height: 2px;
+  border: none;
+  border-radius: 100px;
+}
+
+.pckInfo1 {
+  margin-top: 3em;
+  background-color: white;
+  width: 100%;
+  height: auto;
+  transition: 1;
+}
+
+.t3R{
+  font-style: italic;
+  padding-top: 5px;
+  color: rgb(235, 0, 0);
+  font-size: 12px;
+  text-shadow: 0 0 10px rgb(221, 0, 0);
+  text-decoration: dotted;
+  }
+
+  .pckInfoP {
+    margin-top: 3em;
+    background-color: white;
+    width: 95%;
+    height: auto;
+    transition: 1;
+}
+.sectionLeft{
+  background-color: rgb(0, 0, 0);
+  width: 100%;
+  height: auto;
+  padding-bottom: 1em;
+  
+}
+
+
+@media (min-width: 600px) {
+  .pckInfoP {
+    margin-top: 3em;
+    background-color: white;
+    width: 95%;
+    height: auto;
+    transition: 1;
+}
+.sectionLeft{
+  background-color: rgb(0, 0, 0);
+  width: 100%;
+  height: auto;
+  padding-bottom: 1em;
+   
+}
+.pckInfo{
+  height: auto;
+  padding: 1.5em;
+  border-radius: 1.5em;
+  border: 1px solid rgb(165, 165, 165);
+  background-image: radial-gradient(circle at center center, transparent 0%,rgb(25, 25, 25) 99%),repeating-linear-gradient(0deg, rgba(163, 163, 163, 0.122) 0px, rgba(163, 163, 163, 0.083) 1px,transparent 2px, transparent 6px),repeating-linear-gradient(90deg, rgba(163, 163, 163, 0.12) 0px, rgba(163, 163, 163, 0.052) 1px,transparent 1px, transparent 6px),linear-gradient(90deg, rgba(33, 33, 33, 0.318),rgba(33, 33, 33, 0.367));
+}
+}
+
+@media (max-width: 600px) {
+  .pckInfoP {
+    margin-top: 3em;
+    background-color: white;
+    width: 100%;
+    height: auto;
+    transition: 1;
+}
+.sectionLeft{
+  background-color: rgb(0, 0, 0);
+  width: 100%;
+  height: auto;
+  padding-bottom: 1em;
+  display: flex;
+  justify-content: center;
+}
+.pckInfo{
+  width: 80%;
+  height: auto;
+  padding: 1.5em;
+  border-radius: 1.5em;
+  border: 1px solid rgb(165, 165, 165);
+  background-image: radial-gradient(circle at center center, transparent 0%,rgb(25, 25, 25) 99%),repeating-linear-gradient(0deg, rgba(163, 163, 163, 0.122) 0px, rgba(163, 163, 163, 0.083) 1px,transparent 2px, transparent 6px),repeating-linear-gradient(90deg, rgba(163, 163, 163, 0.12) 0px, rgba(163, 163, 163, 0.052) 1px,transparent 1px, transparent 6px),linear-gradient(90deg, rgba(33, 33, 33, 0.318),rgba(33, 33, 33, 0.367));
+}
+}
