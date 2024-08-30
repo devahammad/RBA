@@ -2121,32 +2121,38 @@ flex-direction: column;
 
 .Footer2{
   border-radius: 3em 3em 0 0;
+
 }
 
+.Footer2 a{
+transition: 0.4s;
+}
 .textFoot{
   text-align: center;
   transition: 1s ease-out;
   font-weight: 800;
   background: #FFFFFF;
-  background: linear-gradient(to bottom, #FFFFFF 0%, #505050 100%);
+  background: linear-gradient(to bottom right, #FFFFFF 38%, #ababab 69%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;  
   padding-top: 1em;
   margin: 0;
+  line-height: 95%;
 }
 
 @media (max-width: 800px) {
 .textFoot{
-  font-size: 2em;
+  font-size: 1.5em;
+  padding-top: 1.5em;
 }
 .Footer2 p{
-  font-size: 1em;
+  font-size: 0.9em;
         }
   }
 
   @media (min-width: 800px) {
     .textFoot{
-      font-size: 3.5em;
+      font-size: 3em;
     }
     .Footer2 p{
       font-size: 1.1em;
@@ -2156,4 +2162,12 @@ flex-direction: column;
       .Footer2 p{
     line-height: 200%;
     margin: 1em 0 0 0 ;
+              }
+
+              .Footer2 i{
+                transform: rotate(180deg);
+              }
+
+              .Footer2 a:hover{
+opacity: 0.5;
               }
