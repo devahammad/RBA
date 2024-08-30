@@ -1190,10 +1190,9 @@ box-shadow: 0 -13.5px 32px 3px #2a2a2a;
 }
 @media (min-width: 800px) {
   .SMicons{
- gap: 13px;
+ gap: 10px;
   }
-
-  
+}
 .sm1 {
   width: 50px;
   border-radius: 100px;
