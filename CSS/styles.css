@@ -292,6 +292,7 @@ body {
 
 .logo {
   height: 3em;
+  width: auto;
   animation: F-R 1s ease;
   padding-top: 3px;
   padding-bottom: 3px;
@@ -786,6 +787,7 @@ box-shadow: 0 -13.5px 32px 3px #2a2a2a;
 
 .vector {
   width: 50px;
+  height: auto;
 }
 
 @media (max-width: 1024px) {
