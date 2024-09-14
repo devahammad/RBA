@@ -518,6 +518,9 @@ html img {
 }
 
 @media (min-width: 600px) {
+  .Body1{
+    height:680px;
+    }
   .animated-text {
     font-size: 60px;
   }
@@ -540,6 +543,9 @@ html img {
 }
 
 @media (max-width: 600px) {
+  .Body1{
+    height:600px;
+    }
   .animated-text {
     font-size: 35px;
   }
@@ -1804,7 +1810,7 @@ form textarea:focus {
   border-radius: 100px;
   font-family: PoppinsExtraLight;
   font-weight: 100;
-  font-size: 15px;
+  font-size: 16px;
   width: 90%;
   border: none;
   background-color: rgba(36, 36, 36, 0.446);
@@ -1813,7 +1819,7 @@ form textarea:focus {
   -webkit-backdrop-filter: blur(7px);
   padding-left: 15px;
   color: rgb(255, 255, 255);
-  height: 30px;
+  height: 32px;
 }
 
 .formContent::placeholder {
@@ -1848,7 +1854,7 @@ transform: rotate(20deg);
   display: block;
   position: relative;
   padding-left: 25px;
-  margin-bottom: 15px;
+  margin-bottom: 8px;
   cursor: pointer;
   -webkit-user-select: none;
   -moz-user-select: none;
