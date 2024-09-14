@@ -542,7 +542,7 @@ html img {
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 550px) {
   .Body1{
     height:600px;
     }
