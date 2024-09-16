@@ -41,7 +41,7 @@ function closeNav() {
   var closeBtns = document.querySelectorAll('.closebtn');
 
   if (isNavOpen) {
-    navElement.style.transform = "translateY(-200%)"; // Slide the menu out of view
+    navElement.style.transform = "translateY(-110%)"; // Slide the menu out of view
     isNavOpen = false;
     
     // Show the open button and hide the close button
