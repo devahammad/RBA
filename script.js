@@ -9,24 +9,28 @@ function openNav() {
   var closeBtns = document.querySelectorAll('.closebtn');
 
   if (!isNavOpen) {
-    navElement.style.height = "100%";
+    navElement.style.transform = "translateY(0%)"; // Slide the menu in from top
     isNavOpen = true;
     for (var i = 0; i < overlayContent.length; i++) {
       overlayContent[i].style.opacity = "1";
       overlayContent[i].style.paddingTop = "1em";
     }
+    // Hide the open button and show the close button
     for (var i = 0; i < openBtns.length; i++) {
+      openBtns[i].style.transform = "translateY(1.5em)";
       openBtns[i].style.opacity = "0";
-      openBtns[i].style.paddingTop = "1.5em";
+      openBtns[i].style.visibility = "hidden";
+      
     }
     for (var i = 0; i < closeBtns.length; i++) {
+      closeBtns[i].style.transform = "translateY(0em)";
       closeBtns[i].style.opacity = "1";
-      closeBtns[i].style.paddingTop = "1em";
+      closeBtns[i].style.visibility = "visible";
     }
 
     // Disable scrolling when nav is open
     disableScroll();
-  }z
+  }
 }
 
 // Function to close the navigation
@@ -35,26 +39,58 @@ function closeNav() {
   var overlayContent = document.querySelectorAll('.spNav');
   var openBtns = document.querySelectorAll('.openbtn');
   var closeBtns = document.querySelectorAll('.closebtn');
+
   if (isNavOpen) {
-    navElement.style.height = "0%";
+    navElement.style.transform = "translateY(-200%)"; // Slide the menu out of view
     isNavOpen = false;
-    for (var i = 0; i < overlayContent.length; i++) {
-      overlayContent[i].style.opacity = "0";
-      overlayContent[i].style.paddingTop = "5px";
-    }
+    
+    // Show the open button and hide the close button
     for (var i = 0; i < openBtns.length; i++) {
+      openBtns[i].style.transform = "translateY(0em)";
       openBtns[i].style.opacity = "1";
-      openBtns[i].style.paddingTop = "0em";
+      openBtns[i].style.visibility = "visible";
     }
     for (var i = 0; i < closeBtns.length; i++) {
+      closeBtns[i].style.transform = "translateY(-1em)";
       closeBtns[i].style.opacity = "0";
-      closeBtns[i].style.paddingTop = "0em";
+      closeBtns[i].style.visibility = "hidden";
     }
 
     // Enable scrolling when nav is closed
     enableScroll();
   }
 }
+
+
+// Helper functions to disable/enable scroll (for full-page navigation)
+function disableScroll() {
+  document.body.style.overflow = 'hidden';
+}
+
+function enableScroll() {
+  document.body.style.overflow = 'auto';
+}
+
+// Function to disable scrolling (example implementation)
+function disableScroll() {
+  document.body.style.overflow = 'hidden';
+}
+
+// Function to enable scrolling (example implementation)
+function enableScroll() {
+  document.body.style.overflow = 'auto';
+}
+
+// Function to disable scrolling
+function disableScroll() {
+  document.body.style.overflow = 'hidden';
+}
+
+// Function to enable scrolling
+function enableScroll() {
+  document.body.style.overflow = '';
+}
+
 
 // Function to disable scrolling
 function disableScroll() {
@@ -91,7 +127,7 @@ function enableScroll() {
   window.scrollTo(scrollPosition, scrollPosition);
 }
 
-// Code to hide starting page after 2 seconds
+// Code to hide starting page after 3 seconds
 document.addEventListener('DOMContentLoaded', function() {
   setTimeout(function() {
     document.querySelector('.starting-page').classList.add('hide');
@@ -223,5 +259,7 @@ function updateCheckbox() {
     hiddenInput.value = "No";
   }
 }
+
+
 
 
