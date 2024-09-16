@@ -13,7 +13,7 @@ function openNav() {
     isNavOpen = true;
     for (var i = 0; i < overlayContent.length; i++) {
       overlayContent[i].style.opacity = "1";
-      overlayContent[i].style.paddingTop = "1em";
+      overlayContent[i].style.transform = "translateY(1em)";
     }
     // Hide the open button and show the close button
     for (var i = 0; i < openBtns.length; i++) {
@@ -41,9 +41,12 @@ function closeNav() {
   var closeBtns = document.querySelectorAll('.closebtn');
 
   if (isNavOpen) {
-    navElement.style.transform = "translateY(-110%)"; // Slide the menu out of view
+    navElement.style.transform = "translateY(-120%)"; // Slide the menu out of view
     isNavOpen = false;
-    
+    for (var i = 0; i < overlayContent.length; i++) {
+      overlayContent[i].style.opacity = "0";
+      overlayContent[i].style.transform = "translateY(0em)";
+    }
     // Show the open button and hide the close button
     for (var i = 0; i < openBtns.length; i++) {
       openBtns[i].style.transform = "translateY(0em)";
@@ -259,6 +262,7 @@ function updateCheckbox() {
     hiddenInput.value = "No";
   }
 }
+
 
 
 
