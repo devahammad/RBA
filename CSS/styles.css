@@ -64,7 +64,7 @@ body  p{
   backdrop-filter: blur(15px);
   -webkit-backdrop-filter: blur(15px);
   z-index: 999;
-  transform: translateY(-110%);
+  transform: translateY(-120%);
   margin-top: 3em;
 }
 
@@ -77,19 +77,17 @@ body  p{
   overflow: hidden;
   backdrop-filter: blur(15px);
   -webkit-backdrop-filter: blur(15px);
-  
+  background-color: rgb(0, 0, 0);
 }
 .overlay-content a {
   font-size: 100px;
 }
 
 .overlay a {
-  padding: 8px;
   text-decoration: none;
   font-size: 36px;
   color: #818589;
   display: block;
-  transition: 0.3s;
 }
 
 .overlay a:hover,
@@ -173,7 +171,7 @@ body  p{
     padding-right: 12px;  
   }
   .closebtn{
-    padding-right: 12px;
+    padding-right: 10px;
   }
   .logofix{
     margin-left: 2em;
@@ -315,9 +313,12 @@ mix-blend-mode: difference;
 
 .spNav {
   padding-top: 1em;
-  transition: 5s;
+  transition: opacity 1.5s ease, transform 0.8s ease;
   font-family: cFont;
+  opacity: 0;
+  transform: translateY(0em);
 }
+
 
 
 .themes {
@@ -2233,6 +2234,53 @@ transition: 0.4s;
           display: none;
         }
   }
+
+  @media (min-width: 800px) {
+    .mb3{
+      display: block;
+    }
+    .mb4{
+      display: none;
+    }
+    .mb5{
+      display: none;
+    }
+    .mb6{
+      text-align: start;
+    }
+     .Footer2{
+      padding: 3em 3em 0 3em;
+    }
+    .textFoot{
+      font-size: 3em;
+    }
+    .Footer2 h2, p{
+      text-align: start;
+     }
+    .Footer2 p{
+      font-size: 1.1em;
+            }
+      }
+
+      .Footer2 p{
+    line-height: 200%;
+    margin: 0.5em 0 0 0 ;
+              }
+
+              .Footer2 i{
+                transform: rotate(180deg);
+              }
+
+              .Footer2 a:hover{
+opacity: 0.5;
+              }
+
+
+ .side2 p{
+  color: white;
+  text-align: end;
+  margin: 0;
+ }            
 
   @media (min-width: 800px) {
     .mb3{
