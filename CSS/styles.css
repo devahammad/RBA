@@ -64,7 +64,7 @@ body  p{
   backdrop-filter: blur(15px);
   -webkit-backdrop-filter: blur(15px);
   z-index: 999;
-  transform: translateY(-200%);
+  transform: translateY(-110%);
   margin-top: 3em;
 }
 
