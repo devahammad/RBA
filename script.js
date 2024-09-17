@@ -1,33 +1,36 @@
-// Variable to track if the navigation is open
-var isNavOpen = false;
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+    document.getElementById("header").style.background = "linear-gradient(to bottom, #000000, rgba(0, 0, 0, 0.39))";
+    document.getElementById("header").style.backdropFilter = "blur(5px)";
+    document.getElementById("header").style.borderBottom = " 0.2px solid rgb(60, 60, 60)";
+
+  } else {
+    document.getElementById("header").style.background = "linear-gradient( transparent, transparent";
+    document.getElementById("header").style.backdropFilter = "blur(0px)";
+    document.getElementById("header").style.borderBottom = "0px solid";
+
+  }
+}
+
+
+
+const menuContainer = document.querySelector(".menu-container");
+const navElement = document.getElementById("myNav");
+const overlayContent = document.querySelectorAll('.spNav');
+let menu = false; // Variable to track menu state
 
 // Function to open the navigation
 function openNav() {
-  var navElement = document.getElementById("myNav");
-  var overlayContent = document.querySelectorAll('.spNav');
-  var openBtns = document.querySelectorAll('.openbtn');
-  var closeBtns = document.querySelectorAll('.closebtn');
-
-  if (!isNavOpen) {
+  if (!menu) {
+    navElement.style.opacity = "1"; 
     navElement.style.transform = "translateY(0%)"; // Slide the menu in from top
-    isNavOpen = true;
-    for (var i = 0; i < overlayContent.length; i++) {
+    menu = true;
+    for (let i = 0; i < overlayContent.length; i++) {
       overlayContent[i].style.opacity = "1";
-      overlayContent[i].style.transform = "translateY(1em)";
+      overlayContent[i].style.transform = "translateY(2em)";
     }
-    // Hide the open button and show the close button
-    for (var i = 0; i < openBtns.length; i++) {
-      openBtns[i].style.transform = "translateY(1.5em)";
-      openBtns[i].style.opacity = "0";
-      openBtns[i].style.visibility = "hidden";
-      
-    }
-    for (var i = 0; i < closeBtns.length; i++) {
-      closeBtns[i].style.transform = "translateY(0em)";
-      closeBtns[i].style.opacity = "1";
-      closeBtns[i].style.visibility = "visible";
-    }
-
     // Disable scrolling when nav is open
     disableScroll();
   }
@@ -35,34 +38,42 @@ function openNav() {
 
 // Function to close the navigation
 function closeNav() {
-  var navElement = document.getElementById("myNav");
-  var overlayContent = document.querySelectorAll('.spNav');
-  var openBtns = document.querySelectorAll('.openbtn');
-  var closeBtns = document.querySelectorAll('.closebtn');
-
-  if (isNavOpen) {
+  if (menu) {
+    navElement.style.opacity = "0"; 
     navElement.style.transform = "translateY(-120%)"; // Slide the menu out of view
-    isNavOpen = false;
-    for (var i = 0; i < overlayContent.length; i++) {
+    menu = false;
+    for (let i = 0; i < overlayContent.length; i++) {
       overlayContent[i].style.opacity = "0";
       overlayContent[i].style.transform = "translateY(0em)";
     }
-    // Show the open button and hide the close button
-    for (var i = 0; i < openBtns.length; i++) {
-      openBtns[i].style.transform = "translateY(0em)";
-      openBtns[i].style.opacity = "1";
-      openBtns[i].style.visibility = "visible";
-    }
-    for (var i = 0; i < closeBtns.length; i++) {
-      closeBtns[i].style.transform = "translateY(-1em)";
-      closeBtns[i].style.opacity = "0";
-      closeBtns[i].style.visibility = "hidden";
-    }
-
     // Enable scrolling when nav is closed
     enableScroll();
   }
 }
+
+// Event listener for menuContainer click
+menuContainer.addEventListener("click", () => {
+  menuContainer.classList.toggle("active");
+
+  if (menuContainer.classList.contains("active")) {
+    openNav();
+  } else {
+    closeNav();
+  }
+
+  console.log("Menu active:", menu); // Log the menu state
+});
+
+// Function to disable scrolling
+function disableScroll() {
+  document.body.style.overflow = 'hidden';
+}
+
+// Function to enable scrolling
+function enableScroll() {
+  document.body.style.overflow = '';
+}
+
 
 
 // Helper functions to disable/enable scroll (for full-page navigation)
