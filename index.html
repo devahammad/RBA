@@ -63,7 +63,7 @@
 <body>            
   <div class="myModal" id="myModal">
     <div class="modal" id="modalContent" style="text-align: end;">
-        <button  id="closeButton"  onclick="closeNav()" style="cursor: pointer; margin: 0.5em 0.5em 0.5em 0; border: 0; background-color: rgba(255, 0, 0, 0);"><img id="closeButton" style="width: 20px; " src="SVG/closeicon.svg" alt="Close Button"></button>
+        <button  id="closeButton"  style="cursor: pointer; margin: 0.5em 0.5em 0.5em 0; border: 0; background-color: rgba(255, 0, 0, 0);"><img id="closeButton" style="width: 20px; " src="SVG/closeicon.svg" alt="Close Button"></button>
         <div class="modalContent">
             <h2 style="font-family: Inter Tight; color: rgb(168, 168, 168);">
                 Let's merge <br> our ideas!
@@ -117,11 +117,17 @@
                                                 <!-- Header Starts From here   -->
 
 
-<header class="HeadMobi firstHeader" style="z-index: 50;">
+<header id="header" class="HeadMobi firstHeader" style="z-index: 50; ">
   <div style="display: flex; justify-content: space-between; align-items: center; padding: 5px 0 5px 0;">
     <a class="logofix" href="/" style="cursor: pointer;"><img class="logo" src="SVG/RBA Logo.svg"></a>
-    <span class="openbtn"  onclick="openNav()">Menu</span>
-    <span class="closebtn" onclick="closeNav()">Close</span>
+    <div class="menu-container">
+      <div class="line line-1">
+        <div class="line-inner line-inner-1"></div>
+      </div>
+      <div class="line line-2">
+        <div class="line-inner line-inner-2"></div>
+      </div>
+    </div>
   </div>
 </header>
 
@@ -129,13 +135,16 @@
 
     
 <div id="myNav" class="overlay">
-<div class="overlay-content">
-<a href="/" Class="spNav" style="color: white; transition-delay: 100ms;">Home</a>
-<a href="about" Class="spNav" style="transition-delay: 200ms;">About</a>
-<a href="packages" Class="spNav" style="transition-delay: 300ms;">Packages</a>
-<a href="contact" Class="spNav" style="transition-delay: 400ms;">Contact</a>
-<a href="rbaplus" Class="spNav" style="transition-delay: 500ms;">RBA+</a>
-</div>
+  <div class="overlay-content">
+    <a href="/" Class="spNav" style="color: white; transition-delay: 150ms;">Home</a>
+    <a href="about" Class="spNav" style="transition-delay: 250ms;">About</a>
+    <a href="packages" Class="spNav" style="transition-delay: 350ms;">Packages</a>
+    <a href="contact" Class="spNav" style="transition-delay: 450ms;">Contact</a>
+    <a href="rbaplus" Class="spNav" style="transition-delay: 550ms;">RBA+</a>    
+
+
+    </div>
+
 </div>
 
 <!--  From here Main Content Starts  -->
@@ -156,11 +165,11 @@
 <div class="Body2" data-aos="fade-in" style="text-align: center; padding-bottom: 2em; background-image: url(Images/bgcircleblur.png);">
   <h2 data-aos="fade-up" data-aos-duration="1000">Our Well Tailored <br> Services</h2>
   <div class="scrollable-content" id="scrollable-content">
-      <div style="margin-left: 1.2em;" data-aos="fade-left" data-aos-duration="900" data-aos-delay="250" class="card">Web <br> Designing</div>
-      <div data-aos="fade-left" data-aos-duration="900" data-aos-delay="300" class="card">Web <br> Development</div>
-      <div data-aos="fade-left" data-aos-duration="900" data-aos-delay="350" class="card">E-Commerce <br> Development</div>  
-      <div data-aos="fade-left" data-aos-duration="900" data-aos-delay="450" class="card">Search Engine<br> Optimization</div>
-      <div data-aos="fade-left" data-aos-duration="900" data-aos-delay="400" class="card">Mobile App <br> Development</div>
+      <div style="margin-left: 1.2em;" data-aos="fade-left" data-aos-duration="900" class="card">Web <br> Designing</div>
+      <div data-aos="fade-left" data-aos-duration="900"  class="card">Web <br> Development</div>
+      <div data-aos="fade-left" data-aos-duration="900"  class="card">E-Commerce <br> Development</div>  
+      <div data-aos="fade-left" data-aos-duration="900"  class="card">Search Engine<br> Optimization</div>
+      <div data-aos="fade-left" data-aos-duration="900"  class="card">Mobile App <br> Development</div>
   </div>
 </div>
 
