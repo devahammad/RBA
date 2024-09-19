@@ -4,6 +4,25 @@
     <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-VMRQVXQX7F"></script>
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <script>
+        function validateForm(event) {
+            var response = grecaptcha.getResponse();
+            var submitButton = document.getElementById("submitBtn");
+
+            if (response.length === 0) {
+                // Change button color to red
+                submitButton.classList.add("error");
+                // Add shaking effect
+                submitButton.classList.add("shake");
+                // Remove the shake effect after animation
+                setTimeout(function() {
+                    submitButton.classList.remove("shake");
+                }, 500);
+                return false;  // Prevent form submission
+            }
+            return true;  // Allow form submission if CAPTCHA is checked
+        }
+    </script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
