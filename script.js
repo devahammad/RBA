@@ -2,13 +2,9 @@ window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {
   if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
-    document.getElementById("header").style.background = "linear-gradient(to bottom, #000000, rgba(0, 0, 0, 0.39))";
-    document.getElementById("header").style.backdropFilter = "blur(5px)";
     document.getElementById("header").style.borderBottom = " 0.2px solid rgb(60, 60, 60)";
 
   } else {
-    document.getElementById("header").style.background = "linear-gradient( transparent, transparent";
-    document.getElementById("header").style.backdropFilter = "blur(0px)";
     document.getElementById("header").style.borderBottom = "0px solid";
 
   }
@@ -273,7 +269,6 @@ function updateCheckbox() {
     hiddenInput.value = "No";
   }
 }
-
 
 
 
