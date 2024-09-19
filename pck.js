@@ -13,7 +13,20 @@ $("#submit-form").submit((e) => {
         }
     });
 });
-
+$("#submit-form2").submit((e) => {
+    e.preventDefault();
+    $.ajax({
+        url: "https://script.google.com/macros/s/AKfycbyjM-rWP8IUAzOqSWLARHrHvA0FfduZNRsWPP6w46AFuEw2oA_Ww7iPWi5hJSLlGrkouA/exec",
+        data: $("#submit-form2").serialize(),
+        method: "post",
+        success: function(response) {
+            $("#submit-form2")[0].reset();
+        },
+        error: function(err) {
+            alert("Something Error");
+        }
+    });
+});
 $("#submit-form3").submit((e) => {
     e.preventDefault();
     $.ajax({
