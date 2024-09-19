@@ -98,7 +98,51 @@ body  p{
   text-shadow: 0 0 2px white;
   cursor: pointer;
 }
+.Cbtn{
+  height: 2.5em;
+  position: absolute;
+right: 0;
+top: 0;
+height: 100%;
+display: flex;
+align-items: center;
+animation: F-R 1s ease;
+}
+.childCbtn{
+background-color: #1e1e1e;
+  height: 2.2em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100px;
+  padding: 0 1em 0 1em;
+  transition: 0.5s ease-in-out;
+  opacity: 1;
+  margin-right: 3em;
+  border: 1px solid rgb(103, 103, 103);
 
+}
+
+.childCbtn:hover{
+  border: 1px solid rgb(255, 255, 255);
+
+}
+
+.childCbtn:hover{
+opacity: 0.8;
+}
+
+.childCbtn a{
+  text-decoration: none;
+  color: rgb(222, 222, 222);
+  font-family: PoppinsExtraLight;
+}
+.menuItems{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 5em;
+}
 @media (max-height: 768px) {
   .overlay {
     overflow-y: auto;
@@ -109,32 +153,35 @@ body  p{
     right: 35px;
     z-index: 1;
   }
+
+
 }
 @media (min-width: 968px) {
-  .openbtn{
-    margin-right: 5em;
-  }
-  .closebtn{
-    padding-right: 5em;
-  }
-  .logofix{
-    margin-left: 5em;
-  }
 
+  .logofix{
+    margin-left: 3em;
+  }
+  .menu-container{
+    display: none;
+      }
   .navI{
     display: flex;
-    margin-right: 2em;
   }
   .NavItDesk {
-    display: block;
+    display: flex;
   }
   .HeadMobi {
     position: sticky;
     top: 0;
   }
 
+.NavItDesk{
+  margin-left: auto;
+margin-right: auto;
+}
 
 
+}
   @keyframes example {
     from {
       opacity: 0;
@@ -145,8 +192,6 @@ body  p{
       gap: 7em;
     }
   }
-}
-
 @media (max-width: 968px) {
   .openbtn{
     padding-right: 12px;  
@@ -168,6 +213,9 @@ body  p{
     position: sticky;
     top: 0;
   }
+  .menu-container{
+    display: block;
+      }
   }
 
   
@@ -197,40 +245,6 @@ body  p{
   z-index: 1;
 }
 
-.openbtn {
-  transition: 1s ease;
-  animation: 2s upop ease;
-  font-family: PoppinsExtraLight;
-  font-size: 1em; 
-  cursor: pointer;
-   color: #ffffff;
-    right: 0; 
-    position: absolute; 
-    visibility: visible;
-    mix-blend-mode: difference;
-    
-}
-
-.openbtn:hover{
-  color:rgb(130, 130, 130) ;
-}
-.closebtn:hover{
-  color:rgb(130, 130, 130) ;
-}
-.closebtn{
-  font-size: 1em;
-cursor: pointer;
-color: rgb(255, 255, 255);
-right: 0px;
-position: absolute;
-font-family: PoppinsExtraLight;
-transition: 1.2s ease;
-transform: translateY(-1.5em);
-opacity: 0;
-visibility: hidden;
-z-index: 99999;
-mix-blend-mode: difference;
-}
 
 .spNav {
   padding-top: 1em;
@@ -270,8 +284,8 @@ padding-bottom: 0.2;
   width: 100%;
   height: 100%;
   background: linear-gradient(to bottom, #000000, rgba(0, 0, 0, 0.338));
-  backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   z-index: 999;
 }
 .secondHeader {
@@ -2156,16 +2170,6 @@ transition: 0.4s;
         .side2{
           display: none;
         }
-        .menu-container{
-          margin-right: 2em;
-        }
-
-        .menu-container .line {
-          width: 22px;
-        }
-        .menu-container .line-inner {
-          width: 25px;
-        }
   }
 
   @media (min-width: 800px) {
@@ -2194,15 +2198,8 @@ transition: 0.4s;
       font-size: 1.1em;
             }
 
-            .menu-container{
-              margin-right: 5em;
-            }
-            .menu-container .line {
-              width: 26px;
-            }
-            .menu-container .line-inner {
-              width: 29px;
-            }
+       
+        
       }
 
       .Footer2 p{
@@ -2239,13 +2236,17 @@ opacity: 0.5;
    cursor: pointer;
    position: absolute;
 right: 0;
+margin-right: 2em;
  }
  
  .menu-container .line {
    height: 30px;
    position: absolute;
    transition: transform 200ms ease-in-out;
+   width: 22px;
  }
+
+
  
  .menu-container .line-inner {
    height: 1px;
@@ -2254,6 +2255,7 @@ right: 0;
    position: absolute;
    transition: transform 200ms ease-in-out;
    transition-delay: 80ms;
+   width: 25px;
  }
  
 .menu-container:hover{
@@ -2286,3 +2288,4 @@ right: 0;
    transition-delay: 200ms;
  }
  
+
