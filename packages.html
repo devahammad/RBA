@@ -3,6 +3,45 @@
   <head>
       <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-VMRQVXQX7F"></script>
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+<script>
+    function validateForm(event) {
+        var response = grecaptcha.getResponse();
+        var submitButton = document.getElementById("submitBtn");
+
+        if (response.length === 0) {
+            // Change button color to red
+            submitButton.classList.add("error");
+            // Add shaking effect
+            submitButton.classList.add("shake");
+            // Remove the shake effect after animation
+            setTimeout(function() {
+                submitButton.classList.remove("shake");
+            }, 500);
+            return false;  // Prevent form submission
+        }
+        return true;  // Allow form submission if CAPTCHA is checked
+    }
+</script>
+<style>
+    /* Shake animation */
+    @keyframes shake {
+        0% { transform: translateX(0); }
+        25% { transform: translateX(-5px); }
+        50% { transform: translateX(5px); }
+        75% { transform: translateX(-5px); }
+        100% { transform: translateX(0); }
+    }
+    /* Red color for the button */
+    .error {
+        background-color: red;
+        color: white;
+    }
+    /* Shake effect */
+    .shake {
+        animation: shake 0.5s;
+    }
+</style>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -235,6 +274,7 @@
                       ></textarea>
                    
                       <input type="hidden" name="Package type" value="Lite" />
+                      <div class="g-recaptcha" data-sitekey="6Lc5h0kqAAAAAMrUon0SeW0opgjGn_wN5F8s7vQC"></div><br>
                       <button type="submit" value="Submit" class="submitBtn">
                         Click to Order
                       </button>
@@ -383,6 +423,7 @@
                 ></textarea>
              
                 <input type="hidden" name="Package type" value="Standard" />
+                <div class="g-recaptcha" data-sitekey="6Lc5h0kqAAAAAMrUon0SeW0opgjGn_wN5F8s7vQC"></div><br>
                 <button type="submit" value="Submit" class="submitBtn">
                   Click to Order
                 </button>
@@ -526,6 +567,7 @@
                 ></textarea>
              
                 <input type="hidden" name="Package type" value="Premium" />
+                <div class="g-recaptcha" data-sitekey="6Lc5h0kqAAAAAMrUon0SeW0opgjGn_wN5F8s7vQC"></div><br>
                 <button type="submit" value="Submit" class="submitBtn">
                   Click to Order
                 </button>
