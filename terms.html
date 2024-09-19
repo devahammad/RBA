@@ -74,34 +74,35 @@
   <section class="main2">
 
 
-    <header class="HeadMobi firstHeader" style="z-index: 50;">
-      <div style="display: flex; justify-content: space-between; align-items: center; padding: 5px 0 5px 0; ">
-        <a class="logofix" href="/"style=" cursor: pointer;"><img class="logo"   src="SVG/RBA Logo.svg" ></a> 
-        <span class="openbtn" style="font-size: 1em; cursor: pointer; color: #818589; right: 0;  position: absolute; padding-right: 10px;" onclick="openNav()">Menu</span>
-  
-        <div class="navI" style=" gap: 8em; justify-content: center; align-items: center; padding-left: 15px; padding-bottom: 10px; padding-top: 5px;" >
-          <a  href="/" >Home</a>
-          <a  href="about">About</a>
-          <a  href="packages">Packages</a>
-          <a  href="contact">Contact</a>
-          <a  href="rbaplus">RBA+</a>
-         </div>
-  
+    <header id="header" class="HeadMobi firstHeader" style="z-index: 50; ">
+      <div style="display: flex; justify-content: space-between; align-items: center; padding: 5px 0 5px 0;">
+        <a class="logofix" href="/" style="cursor: pointer;"><img class="logo" src="SVG/RBA Logo.svg"></a>
+        <div class="menu-container">
+          <div class="line line-1">
+            <div class="line-inner line-inner-1"></div>
+          </div>
+          <div class="line line-2">
+            <div class="line-inner line-inner-2"></div>
+          </div>
+        </div>
       </div>
     </header>
     
-  
       
-  <div id="myNav" class="overlay">
-  <a href="javascript:void(0)"  class="closebtn" onclick="closeNav()" style="font-size: 1em; right: 0; padding-right: 10px; color: #ffffff;">Close</a>
-  <div class="overlay-content">
-  <a href="/" Class="spNav" >Home</a>
-  <a href="about" Class="spNav">About</a>
-  <a href="packages" Class="spNav">Packages</a>
-  <a href="contact" Class="spNav">Contact</a>
-  <a href="rbaplus" Class="spNav">RBA+</a>
-  </div>
-  </div>
+    
+        
+    <div id="myNav" class="overlay">
+      <div class="overlay-content">
+        <a href="/" Class="spNav" style=" transition-delay: 150ms;">Home</a>
+        <a href="about" Class="spNav" style="transition-delay: 250ms;">About</a>
+        <a href="packages" Class="spNav" style="transition-delay: 350ms;">Packages</a>
+        <a href="contact" Class="spNav" style="transition-delay: 450ms;">Contact</a>
+        <a href="rbaplus" Class="spNav" style="transition-delay: 550ms;">RBA+</a>    
+    
+    
+        </div>
+    
+    </div>
 
     <!--  From here Main Content Starts  -->
 
