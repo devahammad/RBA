@@ -67,7 +67,7 @@ text-align: center;
     width: 100%;
   }
 
-  .line {
+  .lines {
     color: #ffffff;
     width: 300px;
     display: flex;
@@ -169,7 +169,7 @@ color: rgba(198, 0, 0, 0.56);
     width: 100%;
   }
 
-  .line {
+  .lines {
     border-left: 1px solid #ffffff;
     border-right: 1px solid #ffffff;
     color: #ffffff;
