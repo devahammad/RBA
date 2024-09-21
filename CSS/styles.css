@@ -2387,6 +2387,16 @@ margin-right: 2em;
   cursor: pointer;
 }
 
+.error-message {
+  color: red;
+  font-size: 12px;
+  margin-top: 5px;
+  display: block;
+  text-align: start;
+  width: 100%;
+  font-family: PoppinsRegular;
+}
+
 .pkg-options .pkg-item.active{
   background: #292929;
 }
