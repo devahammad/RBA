@@ -2,72 +2,143 @@
 <html lang="en">
 
 <head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-VMRQVXQX7F"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-VMRQVXQX7F');
+  </script>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Privacy</title>
-  <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "ProfessionalService", 
-      "url": "https://www.rbasoftwares.com/",
-      "logo": "https://www.rbasoftwares.com/Images/rbaLB.png",
-      "name": "RBA Softwares",
-      "description": "RBA Softwares offers premium quality web design and development services in UAE and India. Get your custom websites and SEO services at the most affordable rates.",
-      "sameAs": [
-        "https://www.facebook.com/rbasoftwares",
-        "https://twitter.com/rbasoftwares",
-        "https://www.linkedin.com/company/rbasoftwares"
-      ],
-      "contactPoint": [{
-        "@type": "ContactPoint",
-        "telephone": "+971544397659",
-        "contactType": "Customer Service",
-        "email": "info@rbasoftwares.com"
-      }]
-    }
-    </script>
-    <style>
-      @import url('https://fonts.googleapis.com/css2?family=Inter+Tight:wght@100..900&display=swap');
-      </style>
-  <link rel="stylesheet" href="CSS/styles.css">
-  <link rel="stylesheet" href="CSS/terms.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="icon" href="Images/RBA round.png">
-  <link rel="canonical" href="https://www.rbasoftwares.com/privacy">
-  <link href="https://fonts.googleapis.com/css2?family=Encode+Sans:wght@100..900&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Best Web Design & Development in UAE | RBA Softwares</title>
+  <meta name="keywords"
+    content="RBA Softwares, RBA Software, RBA, Best web design company in UAE,Best web design company in India, affordable web design UAE, custom website development UAE, unique website design, web design, web development, custom websites, eCommerce development, SEO services, mobile app development, affordable web design, unique design styles, UAE, Middle East, India">
+  <meta name="description"
+    content="RBA Softwares offers premium quality web design and development services in UAE and India. Get your custom websites and SEO services at the most affordable rates.">
+
+  <meta property="og:title" content="Best Web Design & Development Company in UAE | RBA Softwares" />
+  <meta property="og:description"
+    content="RBA Softwares specializes in premium web design, custom website development, eCommerce solutions, and SEO services. Serving the Middle East and India, we offer high-quality, affordable digital solutions. Contact us for unique, professional, and aesthetically pleasing websites." />
+  <meta property="og:url" content="https://www.rbasoftwares.com/" />
+  <meta property="og:image" content="https://www.rbasoftwares.com/Images/rbaLB.png" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="RBA Softwares" />
+  <link rel="canonical" href="https://www.rbasoftwares.com/">
+
+
+  <!-- Schema.org Structured Data -->
+  <script type="application/ld+json">
+     {
+       "@context": "https://schema.org",
+       "@type": "ProfessionalService", 
+       "url": "https://www.rbasoftwares.com/",
+       "logo": "https://www.rbasoftwares.com/Images/rbaLB.png",
+       "name": "RBA Softwares",
+       "description": "RBA Softwares offers premium quality web design and development services in UAE and India. Get your custom websites and SEO services at the most affordable rates.",
+       "sameAs": [
+         "https://www.facebook.com/rbasoftwares",
+         "https://twitter.com/rbasoftwares",
+         "https://www.linkedin.com/company/rbasoftwares"
+       ],
+       "contactPoint": [{
+         "@type": "ContactPoint",
+         "telephone": "+971544397659",
+         "contactType": "Customer Service",
+         "email": "info@rbasoftwares.com"
+       }]
+     }
+     </script>
+
+  <link rel="stylesheet" href="CSS/terms.css">
+  <link rel="stylesheet" href="CSS/styles.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter+Tight:wght@100..900&display=swap');
+  </style>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
+
 </head>
 
 <body>
+  <div class="myModal" id="myModal">
+    <div class="modal" id="modalContent" style="text-align: end;">
+      <button id="closeButton"
+        style="cursor: pointer; margin: 0.5em 0.5em 0.5em 0; border: 0; background-color: rgba(255, 0, 0, 0);"><img
+          id="closeButton" style="width: 20px; " src="SVG/closeicon.svg" alt="Close Button"></button>
+      <div class="modalContent">
+        <h2 style="font-family: Inter Tight; color: rgb(168, 168, 168);">
+          Let's merge <br> our ideas!
+
+        </h2>
+        <form id="submit-form" action=""
+          style="display: flex; flex-direction: column; justify-content: center; align-items: center; margin-top: 1em;">
+          <input type="text" class="formContent" id="fname" name="Name" required placeholder="Name">
+          <input type="email" class="formContent" id="lname" name="Email" required placeholder="Email Address">
+          <input type="text" class="formContent" id="subject" name="Message" rows="4" required
+            placeholder="What are you looking for?"></input>
+          <label class="cBox" style="font-family: PoppinsExtraLight; font-size: 14px;">
+            Receive offers and updates.
+            <input type="checkbox" id="promoCheckbox" onclick="updateCheckbox()">
+            <span class="checkmark"></span>
+          </label>
+          <input type="hidden" id="promoInput" name="Promotion" value="No">
+          <input type="hidden" name="Enquiry Type" value="1A">
+          <button class="sendbtn" type="submit" value="Submit"><img class="cbimg" id="closeButton" style="width: 45px; "
+              src="SVG/sendIcon.svg" alt="Send Button"></button>
+        </form>
+      </div>
+    </div>
+
+
+    <div class="spinner center" id="spinner" style="display: none;">
+      <div class="spinner-blade"></div>
+      <div class="spinner-blade"></div>
+      <div class="spinner-blade"></div>
+      <div class="spinner-blade"></div>
+      <div class="spinner-blade"></div>
+      <div class="spinner-blade"></div>
+      <div class="spinner-blade"></div>
+      <div class="spinner-blade"></div>
+      <div class="spinner-blade"></div>
+      <div class="spinner-blade"></div>
+      <div class="spinner-blade"></div>
+      <div class="spinner-blade"></div>
+    </div>
+
+  </div>
 
   <!-- Loading Page code:  -->
 
-   <div class="loading-page">
+  <div class="loading-page">
     <div class="logo-container">
       <img src="SVG/RBA Logo.svg" class="logoLOAD" style=" height: 4em;" alt="Content is loading, please wait">
     </div>
 
   </div>
 
+  <section class="main">
 
-  <!-- Header Starts From here   -->
-  <section class="main2">
-
+    <!-- Header Starts From here   -->
 
     <div id="myNav" class="overlay">
       <div class="overlay-content">
-        <a href="/" Class="spNav" style=" transition-delay: 150ms;">Home</a>
+        <a href="/" Class="spNav" style="color: white; transition-delay: 150ms;">Home</a>
         <a href="about" Class="spNav" style="transition-delay: 250ms;">About</a>
         <a href="packages" Class="spNav" style="transition-delay: 350ms;">Packages</a>
         <a href="contact" Class="spNav" style="transition-delay: 450ms;">Contact</a>
-        <a href="rbaplus" Class="spNav" style="transition-delay: 550ms;">RBA+</a>    
-        </div>
-      
+        <a href="rbaplus" Class="spNav" style="transition-delay: 550ms;">RBA+</a>
       </div>
-    
+
     </div>
-    <header id="header" class="HeadMobi firstHeader" >
+
+    </div>
+    <header id="header" class="HeadMobi firstHeader">
       <div style="display: flex; justify-content: space-between; align-items: center; padding: 5px 0 5px 0;">
         <a class="logofix" href="/" style="cursor: pointer;"><img class="logo" src="SVG/RBA Logo.svg"></a>
         <div class="menu-container">
@@ -80,12 +151,12 @@
         </div>
         <div class="NavItDesk">
           <div class="menuItems">
-            <div class="navI" style="display: flex; gap: 4em; justify-content: center; align-items: center; " >
-              <a href="/" >Home</a>
+            <div class="navI" style="display: flex; gap: 4em; justify-content: center; align-items: center; ">
+              <a href="/" style="color: white;">Home</a>
               <a href="about">About</a>
               <a href="packages">Packages</a>
               <a href="rbaplus">RBA+</a>
-             </div>
+            </div>
           </div>
           <div class="Cbtn">
             <div class="childCbtn">
@@ -96,265 +167,213 @@
       </div>
     </header>
 
+
+
+
+
+
     <!--  From here Main Content Starts  -->
+    <div class="bdy">
+      <div class="Heading">Privacy<div style="font-size: 50%;">RBA Softwares</div>
+      </div>
+
+      <div class="PP">
+        <div style="margin: 20px;">
+          <h2 class="terms-heading">Privacy Policy:</h2>
+
+          <h3 class="heading">1. Information We Collect:</h3>
+          <p class="paragraph">
+            We may collect the following types of information:
+          </p>
+          <p class="paragraph bullet-point">• Personal Information: When you register for an account or use our Service,
+            we may collect your name, email address, payment information, and other personal details.</p>
+
+          <h3 class="heading">2. How We Use Your Information:</h3>
+          <p class="paragraph">
+            We may use the information we collect for the following purposes:
+          </p>
+          <p class="paragraph bullet-point">• To provide, operate, and maintain the Service.</p>
+          <p class="paragraph bullet-point">• To process payments and manage billing.</p>
+          <p class="paragraph bullet-point">• To communicate with you about updates, promotions, or support.</p>
+          <p class="paragraph bullet-point">• To improve and customize our Service based on user feedback and analytics.
+          </p>
+          <p class="paragraph bullet-point">• To comply with legal obligations.</p>
+
+          <h3 class="heading">3. Cookies and Tracking Technologies:</h3>
+          <p class="paragraph">
+            We use cookies and similar technologies to enhance your user experience, analyze traffic, and improve the
+            Service. You can manage your cookie preferences through your browser settings, though disabling cookies may
+            affect your ability to use certain features of the Service.
+          </p>
+
+          <h3 class="heading">4. Sharing of Information:</h3>
+          <p class="paragraph">
+            We do not sell, rent, or trade your personal information to third parties. We may share your information
+            with trusted service providers who assist in operating our platform, such as payment processors or hosting
+            providers, under strict confidentiality agreements. We may also disclose your information if required by
+            law, such as in response to a subpoena, or if we believe disclosure is necessary to protect our rights or
+            users.
+          </p>
+
+          <h3 class="heading">5. Data Security:</h3>
+          <p class="paragraph">
+            We implement industry-standard security measures to protect your personal data from unauthorized access,
+            disclosure, or alteration. However, no system is entirely secure, and we cannot guarantee the absolute
+            security of your data.
+          </p>
+
+          <h3 class="heading">6. User Rights:</h3>
+          <p class="paragraph">
+            You have the following rights regarding your personal information:
+          </p>
+          <p class="paragraph bullet-point">• Accessing the data we hold about you.</p>
+          <p class="paragraph bullet-point">• Correcting or updating inaccurate information.</p>
+          <p class="paragraph bullet-point">• Deleting your data upon request ("right to be forgotten").</p>
+          <p class="paragraph bullet-point">• Objecting to or restricting certain types of data processing.</p>
+
+          <h3 class="heading">7. Data Retention:</h3>
+          <p class="paragraph">
+            We retain your personal information for as long as necessary to provide our services or comply with legal
+            obligations. You may request the deletion of your account and data at any time, but we may retain some
+            information as required by law or for legitimate business purposes.
+          </p>
+          <h3 class="heading">8. Use of Google Analytics:</h3>
+          <p class="paragraph">
+            We use Google Analytics, a web analytics service provided by Google, Inc. (“Google”). Google Analytics uses
+            cookies—small text files stored on your device—to help us analyze how users interact with the Service.
+          </p>
+          <h3 class="heading">9. Changes to This Privacy Policy:</h3>
+          <p class="paragraph">
+            We may update this Privacy Policy from time to time. We will notify users of any significant changes by
+            posting the revised policy on our website. Your continued use of the Service after the changes become
+            effective constitutes your acceptance of the new policy.
+          </p>
 
 
-    <div
-      style="background-color: rgb(0, 0, 0); height: auto; display: flex; justify-content: center; align-items: center; flex-direction: row;">
-      <div style="display: flex; flex-direction: column; align-items: center; width: 70%; justify-content: center;">
-        <div class="mainHead">RBA Softwares <br> Terms of Service <span style="font-size: 2rem; color: grey;">Last
-            updated:
-            May 20, 2024</span></div>
-        <hr style="margin: 10px; width: 100%; margin-bottom: 50px;">
-        <div style="font-size: 1.5rem; color: grey; display: flex;
-        flex-direction: column;
-        align-items: center; margin-bottom: 50px;">Please read these privacy carefully before using Our
-          Service.</div>
-        <h2>WHAT INFORMATION DO WE COLLECT?</h2>
-
-        <h3>Personal information you disclose to us</h3>
-
-        <p>In Short:
-          We collect personal information that you provide to us.</p>
-
-        <p>We collect personal information that you voluntarily provide to us when you register on the Services, express
-          an interest in obtaining information about us or our products and Services, when you participate in activities
-          on the Services, or otherwise when you contact us.</p>
-        <p>Sensitive Information.
-          We do not process sensitive information.</p>
-        <p>All personal information that you provide to us must be true, complete, and accurate, and you must notify us
-          of any changes to such personal information.</p>
-        <h3>Information automatically collected</h3>
-        <p>In Short:
-          Some information — such as your Internet Protocol (IP) address and/or browser and device characteristics — is
-          collected automatically when you visit our Services.</p>
-        <p>We automatically collect certain information when you visit, use, or navigate the Services. This information
-          does not reveal your specifi c identity (like your name or contact information) but may include device and
-          usage information, such as your IP address, browser and device characteristics, operating system, language
-          preferences, referring URLs, device name, country, location, information about how and when you use our
-          Services, and other technical information. This information is primarily needed to maintain the security and
-          operation of our Services, and for our internal analytics and reporting purposes.</p>
-        <p>Like many businesses, we also collect information through cookies and similar technologies.</p>
-        <h2>HOW DO WE PROCESS YOUR INFORMATION?</h2>
-        <p>In Short:
-          We process your information to provide, improve, and administer our Services, communicate with you, for
-          security and fraud prevention, and to comply with law. We may also process your information for other purposes
-          with your consent.</p>
-        <p>We process your personal information for a variety of reasons, depending on how you interact with our
-          Services, including:</p>
-        <h2>WHEN AND WITH WHOM DO WE SHARE YOUR PERSONAL INFORMATION?</h2>
-        <p>In Short:
-          We may share information in specifi c situations described in this section and/or with the following third
-          parties.</p>
-        <p>We may need to share your personal information in the following situations: <br>
-        <ul>
-
-          <li>Business Transfers.
-            We may share or transfer your information in connection with, or during negotiations of, any merger, sale of
-            company assets, fi nancing, or acquisition of all or a portion of our business to another company.</li>
-          <li>Affiliates.
-            We may share your information with our affi liates, in which case we will require those affi liates to honor
-            this privacy notice. Affi liates include our parent company and any subsidiaries, joint venture partners, or
-            other companies that we control or that are under common control with us.</li>
-          <li>Business Partners.
-            We may share your information with our business partners to off er you certain products, services, or
-            promotions.</li>
-        </ul>
-        <h2>DO WE USE COOKIES AND OTHER TRACKING TECHNOLOGIES?</h2>
-        <p>In Short:
-          We may use cookies and other tracking technologies to collect and store your information.</p>
-        <p>We may use cookies and similar tracking technologies (like web beacons and pixels) to gather information when
-          you interact with our Services. Some online tracking technologies help us maintain the security of our
-          Services, prevent crashes, fi x bugs, save your preferences, and assist with basic site functions.</p>
-        <p>We also permit third parties and service providers to use online tracking technologies on our Services for
-          analytics and advertising, including to help manage and display advertisements, to tailor advertisements to
-          your interests, or to send abandoned shopping cart reminders (depending on your communication preferences).
-          The third parties and service providers use their technology to provide advertising about products and
-          services tailored to your interests which may appear either on our Services or on other websites.</p>
-        <p>Specific information about how we use such technologies and how you can refuse certain cookies is set out in
-          our Cookie Notice.</p>
-        <h2>HOW DO WE HANDLE YOUR SOCIAL LOGINS?</h2>
-        <p>In Short:
-          If you choose to register or log in to our Services using a social media account, we may have access to
-          certain information about you.</p>
-        <p>Our servers are located in. If you are accessing our Services from outside, please be aware that your
-          information may be transferred to, stored, and processed by us in our facilities and by those third parties
-          with whom we may share your personal information (see "
-          WHEN AND WITH WHOM DO WE SHARE YOUR PERSONAL INFORMATION?
-          " above), in and other countries.</p>
-        <p>If you are a resident in the European Economic Area (EEA), United Kingdom (UK), or Switzerland, then these
-          countries may not necessarily have data protection laws or other similar laws as comprehensive as those in
-          your country. However, we will take all necessary measures to protect your personal information in accordance
-          with this privacy notice and applicable law.</p>
-        <h2>HOW LONG DO WE KEEP YOUR INFORMATION?</h2>
-        <p>In Short:
-          We keep your information for as long as necessary to fulfi ll the purposes outlined in this privacy notice
-          unless otherwise required by law.</p>
-        <p>We will only keep your personal information for as long as it is necessary for the purposes set out in this
-          privacy notice, unless a longer retention period is required or permitted by law (such as tax, accounting, or
-          other legal requirements).</p>
-        <p>When we have no ongoing legitimate business need to process your personal information, we will either delete
-          or anonymize such information, or, if this is not possible (for example, because your personal information has
-          been stored in backup archives), then we will securely store your personal information and isolate it from any
-          further processing until deletion is possible.</p>
-        <h2>DO WE COLLECT INFORMATION FROM MINORS?</h2>
-        <p>In Short:
-          We do not knowingly collect data from or market to children under 18 years of age.</p>
-        <p>Withdrawing your consent:
-          If we are relying on your consent to process your personal information, which may be express and/or implied
-          consent depending on the applicable law, you have the right to withdraw your consent at any time. You can
-          withdraw your consent at any time by contacting us by using the contact details provided in the section "
-          HOW CAN YOU CONTACT US ABOUT THIS NOTICE?
-          " below.</p>
-        <p>However, please note that this will not aff ect the lawfulness of the processing before its withdrawal nor,
-          when applicable law allows, will it aff ect the processing of your personal information conducted in reliance
-          on lawful processing grounds other than consent.</p>
-        <h3>Account Information</h3>
-        <p>If you would at any time like to review or change the information in your account or terminate your account,
-          you can:</p>
-        <p>Upon your request to terminate your account, we will deactivate or delete your account and information from
-          our active databases. However, we may retain some information in our fi les to prevent fraud, troubleshoot
-          problems, assist with any investigations, enforce our legal terms and/or comply with applicable legal
-          requirements.</p>
-        <h2>CONTROLS FOR DO-NOT-TRACK FEATURES</h2>
-        <p>Most web browsers and some mobile operating systems and mobile applications include a Do-Not-Track ("DNT")
-          feature or setting you can activate to signal your privacy preference not to have data about your online
-          browsing activities monitored and collected. At this stage, no uniform technology standard for recognizing and
-          implementing DNT signals has been fi nalized. As such, we do not currently respond to DNT browser signals or
-          any other mechanism that automatically communicates your choice not to be tracked online. If a standard for
-          online tracking is adopted that we must follow in the future, we will inform you about that practice in a
-          revised version of this privacy notice.</p>
-        <h2>DO WE MAKE UPDATES TO THIS NOTICE?</h2>
-        <p>In Short:
-          Yes, we will update this notice as necessary to stay compliant with relevant laws.</p>
-        <p>We may update this privacy notice from time to time. The updated version will be indicated by an updated
-          "Revised" date at the top of this privacy notice. If we make material changes to this privacy notice, we may
-          notify you either by prominently posting a notice of such changes or by directly sending you a notifi cation.
-          We encourage you to review this privacy notice frequently to be informed of how we are protecting your
-          information.</p>
-        <h2>HOW CAN YOU CONTACT US ABOUT THIS NOTICE?</h2>
-        <p>If you have questions or comments about this notice, you may contact us by post at:</p>
-        <h1>HOW CAN YOU REVIEW, UPDATE, OR DELETE THE DATA WE COLLECT FROM YOU?</h1>
-        <p>Based on the applicable laws of your country, you may have the right to request access to the personal
-          information we collect from you, details about how we have processed it, correct inaccuracies, or delete your
-          personal information. You may also have the right to withdraw your consent to our processing of your personal
-          information. These rights may be limited in some circumstances by applicable law. To request to review,
-          update, or delete your personal information, please fill out and submit a
-          data subject access request
-          .</p>
-
-
-
-
-
-
-        <a style="text-decoration: none; color: green; "
-          href="mailto:contact@rbasoftwares.com">contact@rbasoftwares.com</a>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        </div>
 
       </div>
+
+      <div class="Contact">
+        <div style="margin: 20px;">
+          <h2 class="terms-heading" style="margin-bottom: 10px;">Contact Us</h2>
+          <p class="paragraph">
+            If you have any questions about this Privacy Policy or how we handle your data, please contact us at <a href="mailto:info@rbasoftwares.com" style="color: #707070; text-decoration: underline; text-decoration-color: white; text-shadow: 0 0 5px white;">info@rbasoftwares.com</a>
+          </p>
+          
+
+
+        </div>
+
+      </div>
+      
+
+
     </div>
 
 
 
-
-
-
-
-
-    <footer data-aos="fade-in"  data-aos-duration="1000" data-aos-delay="200"   class="Footer2" >
+    <footer data-aos="fade-in" data-aos-duration="1000" data-aos-delay="200" class="Footer2">
       <div style="display: flex; height: auto; justify-content: center;  align-items: center;">
-        
+
         <div class="side1" style=" width: 100%;">
-            
-        <h2 class="textFoot "  data-aos-duration="1500" style=" font-family: Inter Tight; font-weight: 600; text-align: start;">
-          Drop us a <br> line at,</h2>
-      
-          <p style="text-align: start; font-family: PoppinsExtraLight; font-weight: 100; color: rgb(255, 255, 255);" class="mb6"> 
-            <span>    
-              <a href="mailto:support@rbasoftwares.com" 
-            style="
-            text-decoration: none;
-            color: rgb(255, 255, 255);
-            "
-            >support@rbasoftwares.com <ion-icon name="arrow-forward-outline" style="transform: rotate(-50deg); "></ion-icon></a></span> <br> 
-            <span>    
-              <a 
-              href="tel:+971544397659" 
-              style="
-              text-decoration: none;
-              color: rgb(255, 255, 255);
-              "
-              >+971544397659 <ion-icon name="arrow-forward-outline" style="transform: rotate(-50deg); "></ion-icon></a></span></p>
-      
-                <div class="SMicons mb5" style="justify-content: start; gap: 10px; margin-top: 0.5em;">
-             <a href="https://instagram.com/rbasoftwares"> <img class="sm1 "  src="SVG/ig.svg" style="width: 1.6em;" alt="Follow us on Instagram"></a>
-             <a href="https://wa.me/message/JULIKF7NSTQLH1"> <img class="sm1 "  src="SVG/wp.svg" style="width: 1.6em;" alt="Follow us on Instagram"></a>
-             <a href="https://www.linkedin.com/company/rbasoftwares"> <img class="sm1 "  src="SVG/li.svg" style="width: 1.6em;" alt="Follow us on Instagram"></a>
-             <a href="https://x.com/rbasoftwares_"> <img class="sm1 "  src="SVG/xx.svg" style="width: 1.6em;" alt="Follow us on Instagram"></a>
-             <a href="https://www.facebook.com/people/RBA-Softwares/61562.888222.8592.85/"> <img class="sm1 "  src="SVG/fb.svg" style="width: 1.6em;" alt="Follow us on Instagram"></a>
-      
-            </div> 
-      
-              <p class="mb4" style=" font-size: 14px; color: rgb(148, 148, 148); text-align: start;"><span><a style=" text-decoration: none; color: rgb(100, 100, 100); " href="terms">Terms </a></span>&nbsp;|&nbsp;<a style="text-decoration: none; color: rgb(100, 100, 100); padding-right: 5px;" href="privacy"> Privacy</a></p>
-              <p class="mb4" style="font-size: 12px; color: rgb(72, 72, 72);  margin: 0; text-align: start; padding: 0 0 1em 0" >© 2024 RBA Softwares.</p>
-      
+
+          <h2 class="textFoot " data-aos-duration="1500"
+            style=" font-family: Inter Tight; font-weight: 600; text-align: start;">
+            Drop us a <br> line at </h2>
+
+          <p style="text-align: start; font-family: PoppinsExtraLight; font-weight: 100; color: rgb(255, 255, 255);"
+            class="mb6">
+            <span>
+              <a href="mailto:support@rbasoftwares.com" style="
+      text-decoration: none;
+      color: rgb(255, 255, 255);
+      ">support@rbasoftwares.com <ion-icon name="arrow-forward-outline"
+                  style="transform: rotate(-50deg); "></ion-icon></a></span> <br>
+            <span>
+              <a href="tel:+971544397659" style="
+        text-decoration: none;
+        color: rgb(255, 255, 255);
+        ">+971544397659 <ion-icon name="arrow-forward-outline"
+                  style="transform: rotate(-50deg); "></ion-icon></a></span>
+          </p>
+
+          <div class="SMicons mb5" style="justify-content: start; gap: 10px; margin-top: 0.5em;">
+            <a href="https://instagram.com/rbasoftwares"> <img class="sm1 " src="SVG/ig.svg" style="width: 1.6em;"
+                alt="Follow us on Instagram"></a>
+            <a href="https://wa.me/message/JULIKF7NSTQLH1"> <img class="sm1 " src="SVG/wp.svg" style="width: 1.6em;"
+                alt="Follow us on Instagram"></a>
+            <a href="https://www.linkedin.com/company/rbasoftwares"> <img class="sm1 " src="SVG/li.svg"
+                style="width: 1.6em;" alt="Follow us on Instagram"></a>
+            <a href="https://x.com/rbasoftwares_"> <img class="sm1 " src="SVG/xx.svg" style="width: 1.6em;"
+                alt="Follow us on Instagram"></a>
+            <a href="https://www.facebook.com/people/RBA-Softwares/61562.888222.8592.85/"> <img class="sm1 "
+                src="SVG/fb.svg" style="width: 1.6em;" alt="Follow us on Instagram"></a>
+
+          </div>
+
+          <p class="mb4" style=" font-size: 14px; color: rgb(148, 148, 148); text-align: start;"><span><a
+                style=" text-decoration: none; color: rgb(100, 100, 100); " href="terms">Terms
+              </a></span>&nbsp;|&nbsp;<a style="text-decoration: none; color: rgb(100, 100, 100); padding-right: 5px;"
+              href="privacy"> Privacy</a></p>
+          <p class="mb4"
+            style="font-size: 12px; color: rgb(72, 72, 72);  margin: 0; text-align: start; padding: 0 0 1em 0">© 2024
+            RBA Softwares.</p>
+
         </div>
-      
-      
-        <div class="side2" style=" width: 100%; margin-top: 2em;">
+
+
+        <div class="side2" style=" width: 100%; margin-top: 3em;">
           <p>UAE, India</p>
-          <div class="SMicons" >
-            <a href="https://instagram.com/rbasoftwares"> <img class="sm1 "  src="SVG/ig.svg" style="width: 2em" alt="Follow us on Instagram"></a>
-            <a href="https://wa.me/message/JULIKF7NSTQLH1"> <img class="sm1 "  src="SVG/wp.svg" style="width: 2em" alt="Follow us on Instagram"></a>
-            <a href="https://www.linkedin.com/company/rbasoftwares"> <img class="sm1 "  src="SVG/li.svg" style="width: 2em" alt="Follow us on Instagram"></a>
-            <a href="https://x.com/rbasoftwares_"> <img class="sm1 "  src="SVG/xx.svg" style="width: 2em" alt="Follow us on Instagram"></a>
-            <a href="https://www.facebook.com/people/RBA-Softwares/61562.888222.8592.85/"> <img class="sm1 "  src="SVG/fb.svg" style="width: 2em" alt="Follow us on Instagram"></a>
-      
-           </div> 
-          
-          <p style="padding-top: 0.4em; font-size: 14px; color: rgb(148, 148, 148);"><span><a style=" text-decoration: none; color: rgb(100, 100, 100); " href="terms">Terms </a></span>&nbsp;|&nbsp;<a style="text-decoration: none; color: rgb(100, 100, 100); " href="privacy"> Privacy</a></p>
-      
+          <div class="SMicons">
+            <a href="https://instagram.com/rbasoftwares"> <img class="sm1 " src="SVG/ig.svg" style="width: 2em"
+                alt="Follow us on Instagram"></a>
+            <a href="https://wa.me/message/JULIKF7NSTQLH1"> <img class="sm1 " src="SVG/wp.svg" style="width: 2em"
+                alt="Follow us on Instagram"></a>
+            <a href="https://www.linkedin.com/company/rbasoftwares"> <img class="sm1 " src="SVG/li.svg"
+                style="width: 2em" alt="Follow us on Instagram"></a>
+            <a href="https://x.com/rbasoftwares_"> <img class="sm1 " src="SVG/xx.svg" style="width: 2em"
+                alt="Follow us on Instagram"></a>
+            <a href="https://www.facebook.com/people/RBA-Softwares/61562.888222.8592.85/"> <img class="sm1 "
+                src="SVG/fb.svg" style="width: 2em" alt="Follow us on Instagram"></a>
+
+          </div>
+
+          <p style="padding-top: 0.4em; font-size: 14px; color: rgb(148, 148, 148);"><span><a
+                style=" text-decoration: none; color: rgb(100, 100, 100); " href="terms">Terms
+              </a></span>&nbsp;|&nbsp;<a style="text-decoration: none; color: rgb(100, 100, 100); " href="privacy">
+              Privacy</a></p>
+
         </div>
-      
-      
-      
-      
+
+
+
+
       </div>
-       <p class="mb3" style="font-size: 12px; color: rgb(72, 72, 72);  margin: 0; text-align: center; padding: 3em 0 1.5em 0" >© 2024 RBA Softwares.</p>
-         </footer>
+      <p class="mb3"
+        style="font-size: 12px; color: rgb(72, 72, 72);  margin: 0; text-align: center; padding: 3em 0 1.5em 0">© 2024
+        RBA Softwares.</p>
+    </footer>
+
+
+
+
+
 
   </section>
 
 
   <!-- Content Ends Here -->
 
-
-  <script src="script.js"> </script>
+  <script src="script.js"></script>
+  <script src="second.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
   <script>
-     AOS.init();
+    AOS.init();
   </script>
+  <script src="updates.js"></script>
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
 
 </html>
