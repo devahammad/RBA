@@ -219,13 +219,15 @@
 
 
             <div class="pckContact">
-                <h2 style="color: white; text-align: center; font-size: 25px;">
+                <div class="form-border">
+                  <h2 style="color: white; text-align: start; 
+                  font-size: 25px; margin: 0; width: 100%; padding-left: 60px; padding-top: 15px;">
 
                     Take your First Step! <br>
                     Submit Your Details Here
 
                 </h2>
-                    <form
+                  <form
                       class="supportForm"
                       id="submit-form"
                       action=""
@@ -236,6 +238,7 @@
                         display: flex;
                         padding-top: 2em;"
                     >
+                    
                       <input
                         type="text"
                         class="formFill"
@@ -259,27 +262,39 @@
                       required
                       placeholder="Your Phone Number"
                     />
-                      <textarea
-                        id="subject"
-                        name="Type of Website"
-                        rows="4"
-                        required
-                        placeholder="What type of website are you looking to create?"
-                      ></textarea>
-                      <textarea
-                        id="subject"
-                        name="Main usage"
-                        rows="4"
-                        required
-                        placeholder="What are your main goals or requirements for this website?"
-                      ></textarea>
-                   
+                    <div class="pkg-select-container">
+                      <button class="pkg-select" name="select" type="button" value="options">options</button>
+                      <div class="pkg-options">
+                          <p class="pkg-item active">Personal Website</p>
+                          <p class="pkg-item">Business Website</p>
+                          <p class="pkg-item">E-commerce Website</p>
+                          <p class="pkg-item">Educational Website</p>
+                          <p class="pkg-item">Health & Fitness Website</p>
+                          <p class="pkg-item">Portfolio Website</p>
+                          <p class="pkg-item">Blogs</p>
+                          <p class="pkg-item">News and Magazine Website</p>
+                          <p class="pkg-item">Charity Website</p>
+                          <p class="pkg-item">Home & Lifestyle Website</p>
+                          <p class="pkg-item">Entertainment Website</p>
+                          
+                      </div>
+                  </div>
+                      
+                      
+                  <input
+                  type="text"
+                  class="formFill"
+                  name="notes"
+                  required
+                  placeholder="Extra Notes"
+                />
                       <input type="hidden" name="Package type" value="Lite" />
-                      <div class="g-recaptcha" data-sitekey="6Lc5h0kqAAAAAMrUon0SeW0opgjGn_wN5F8s7vQC"></div><br>
+                      <div class="g-recaptcha" data-theme="dark" data-sitekey="6Lc5h0kqAAAAAMrUon0SeW0opgjGn_wN5F8s7vQC" style="margin-top: 2rem; "></div><br>
                       <button type="submit" value="Submit" class="submitBtn">
                         Click to Order
                       </button>
-                    </form>
+                    </form></div>
+                    
       
                  
             </div>
@@ -369,66 +384,81 @@
 
 
             <div class="pckContact">
-                <h2 style="color: white; text-align: center; font-size: 25px;">
+              <div class="form-border">
+                <h2 style="color: white; text-align: start; 
+                font-size: 25px; margin: 0; width: 100%; padding-left: 60px; padding-top: 15px;">
 
-                    Take your First Step! <br>
-                    Submit Your Details Here
-                </h2>
+                  Take your First Step! <br>
+                  Submit Your Details Here
+
+              </h2>
                 <form
-                class="supportForm"
-                id="submit-form2"
-                action=""
-                style="
-                  flex-direction: column;
-                  justify-content: center;
-                  align-items: center;
-                  display: flex;
-                  padding-top: 2em;"
-              >
+                    class="supportForm"
+                    id="submit-form"
+                    action=""
+                    style="
+                      flex-direction: column;
+                      justify-content: center;
+                      align-items: center;
+                      display: flex;
+                      padding-top: 2em;"
+                  >
+                  
+                    <input
+                      type="text"
+                      class="formFill"
+                      id="fname"
+                      name="Name"
+                      required
+                      placeholder="Your Name"
+                    />
+                    <input
+                      type="email"
+                      class="formFill"
+                      id="lname"
+                      name="Email"
+                      required
+                      placeholder="Your Email Address"
+                    />
+                    <input
+                    type="tel"
+                    class="formFill"
+                    name="Phone"
+                    required
+                    placeholder="Your Phone Number"
+                  />
+                  <div class="pkg-select-container">
+                    <button class="pkg-select" name="select" type="button" value=""></button>
+                    <div class="pkg-options">
+                        <p class="pkg-item active">Personal Website</p>
+                        <p class="pkg-item active">Business Website</p>
+                        <p class="pkg-item">E-commerce Website</p>
+                        <p class="pkg-item">Educational Website</p>
+                        <p class="pkg-item">Health & Fitness Website</p>
+                        <p class="pkg-item">Portfolio Website</p>
+                        <p class="pkg-item">Blogs</p>
+                        <p class="pkg-item">News and Magazine Website</p>
+                        <p class="pkg-item">Charity Website</p>
+                        <p class="pkg-item">Home & Lifestyle Website</p>
+                        <p class="pkg-item">Entertainment Website</p>
+                        
+                    </div>
+                </div>
+                    
+                    
                 <input
-                  type="text"
-                  class="formFill"
-                  id="fname"
-                  name="Name"
-                  required
-                  placeholder="Your Name"
-                />
-                <input
-                  type="email"
-                  class="formFill"
-                  id="lname"
-                  name="Email"
-                  required
-                  placeholder="Your Email Address"
-                />
-                <input
-                type="tel"
+                type="text"
                 class="formFill"
-                name="Phone"
+                name="notes"
                 required
-                placeholder="Your Phone Number"
+                placeholder="Extra Notes"
               />
-                <textarea
-                  id="subject"
-                  name="Type of Website"
-                  rows="4"
-                  required
-                  placeholder="What type of website are you looking to create?"
-                ></textarea>
-                <textarea
-                  id="subject"
-                  name="Main usage"
-                  rows="4"
-                  required
-                  placeholder="What are your main goals or requirements for this website?"
-                ></textarea>
-             
-                <input type="hidden" name="Package type" value="Standard" />
-                <div class="g-recaptcha" data-sitekey="6Lc5h0kqAAAAAMrUon0SeW0opgjGn_wN5F8s7vQC"></div><br>
-                <button type="submit" value="Submit" class="submitBtn">
-                  Click to Order
-                </button>
-              </form>
+                    <input type="hidden" name="Package type" value="Lite" />
+                    <div class="g-recaptcha" data-theme="dark" data-sitekey="6Lc5h0kqAAAAAMrUon0SeW0opgjGn_wN5F8s7vQC" style="margin-top: 2rem; "></div><br>
+                    <button type="submit" value="Submit" class="submitBtn">
+                      Click to Order
+                    </button>
+                  </form></div>
       
                  
             </div>
@@ -512,67 +542,81 @@
 
 
             <div class="pckContact">
-                <h2 style="color: white; text-align: center; font-size: 25px;">
+              <div class="form-border">
+                <h2 style="color: white; text-align: start; 
+                font-size: 25px; margin: 0; width: 100%; padding-left: 60px; padding-top: 15px;">
 
-                    Take your First Step! <br>
-                    Submit Your Details Here
+                  Take your First Step! <br>
+                  Submit Your Details Here
 
-                </h2>
+              </h2>
                 <form
-                class="supportForm"
-                id="submit-form3"
-                action=""
-                style="
-                  flex-direction: column;
-                  justify-content: center;
-                  align-items: center;
-                  display: flex;
-                  padding-top: 2em;"
-              >
+                    class="supportForm"
+                    id="submit-form"
+                    action=""
+                    style="
+                      flex-direction: column;
+                      justify-content: center;
+                      align-items: center;
+                      display: flex;
+                      padding-top: 2em;"
+                  >
+                  
+                    <input
+                      type="text"
+                      class="formFill"
+                      id="fname"
+                      name="Name"
+                      required
+                      placeholder="Your Name"
+                    />
+                    <input
+                      type="email"
+                      class="formFill"
+                      id="lname"
+                      name="Email"
+                      required
+                      placeholder="Your Email Address"
+                    />
+                    <input
+                    type="tel"
+                    class="formFill"
+                    name="Phone"
+                    required
+                    placeholder="Your Phone Number"
+                  />
+                  <div class="pkg-select-container">
+                    <button class="pkg-select" name="select" type="button" value=""></button>
+                    <div class="pkg-options">
+                        <p class="pkg-item active">Personal Website</p>
+                        <p class="pkg-item">Business Website</p>
+                        <p class="pkg-item">E-commerce Website</p>
+                        <p class="pkg-item">Educational Website</p>
+                        <p class="pkg-item">Health & Fitness Website</p>
+                        <p class="pkg-item">Portfolio Website</p>
+                        <p class="pkg-item">Blogs</p>
+                        <p class="pkg-item">News and Magazine Website</p>
+                        <p class="pkg-item">Charity Website</p>
+                        <p class="pkg-item">Home & Lifestyle Website</p>
+                        <p class="pkg-item">Entertainment Website</p>
+                        
+                    </div>
+                </div>
+                    
+                    
                 <input
-                  type="text"
-                  class="formFill"
-                  id="fname"
-                  name="Name"
-                  required
-                  placeholder="Your Name"
-                />
-                <input
-                  type="email"
-                  class="formFill"
-                  id="lname"
-                  name="Email"
-                  required
-                  placeholder="Your Email Address"
-                />
-                <input
-                type="tel"
+                type="text"
                 class="formFill"
-                name="Phone"
+                name="notes"
                 required
-                placeholder="Your Phone Number"
+                placeholder="Extra Notes"
               />
-                <textarea
-                  id="subject"
-                  name="Type of Website"
-                  rows="4"
-                  required
-                  placeholder="What type of website are you looking to create?"
-                ></textarea>
-                <textarea
-                  id="subject"
-                  name="Main usage"
-                  rows="4"
-                  required
-                  placeholder="What are your main goals or requirements for this website?"
-                ></textarea>
-             
-                <input type="hidden" name="Package type" value="Premium" />
-                <div class="g-recaptcha" data-sitekey="6Lc5h0kqAAAAAMrUon0SeW0opgjGn_wN5F8s7vQC"></div><br>
-                <button type="submit" value="Submit" class="submitBtn">
-                  Click to Order
-                </button>
-              </form>
+                    <input type="hidden" name="Package type" value="Lite" />
+                    <div class="g-recaptcha" data-theme="dark" data-sitekey="6Lc5h0kqAAAAAMrUon0SeW0opgjGn_wN5F8s7vQC" style="margin-top: 2rem; "></div><br>
+                    <button type="submit" value="Submit" class="submitBtn">
+                      Click to Order
+                    </button>
+                  </form></div>
       
                  
             </div>
@@ -673,6 +717,57 @@ document.querySelectorAll(".pckInfo").forEach(pckInfo => {
     pckInfo.style.top = `${topValue}px`;
 });
 
+
+//select dropdown js code
+
+const select = document.querySelector('.pkg-select');
+const optionBox = document.querySelector('.pkg-options');
+const options = [...document.querySelectorAll('.pkg-options .pkg-item')];
+
+let activeOption = 0; // default should be 0
+
+window.onclick = (e) => {
+    if(!e.target.className.includes('select')){
+        select.classList.remove('active');
+        optionBox.classList.remove('active');
+    } else{
+        select.classList.toggle('active');
+        optionBox.classList.toggle('active');
+    }
+}
+
+options.forEach((item, i) => {
+    item.onmousemove = () => {
+        hoverOptions(i);
+    }
+})
+
+const hoverOptions = (i) => {
+    options[activeOption].classList.remove('active');
+    options[i].classList.add('active');
+    activeOption = i;
+    setValue();
+}
+
+window.onkeydown = (e) => {
+    if(select.className.includes('active')){
+        e.preventDefault();
+        if(e.key === 'ArrowDown' && activeOption < options.length - 1){
+            hoverOptions(activeOption + 1);
+        } else if(e.key === 'ArrowUp' && activeOption > 0){
+            hoverOptions(activeOption - 1);
+        } else if(e.key === 'Enter'){
+            select.classList.remove('active');
+            optionBox.classList.remove('active');
+        }
+    }
+}
+
+const setValue = () => {
+    select.innerHTML = select.value = options[activeOption].innerHTML;
+}
+
+setValue();
     </script>
 
 
