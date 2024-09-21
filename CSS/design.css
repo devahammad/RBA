@@ -161,10 +161,13 @@
         border: 1px solid rgb(165, 165, 165);
         padding-bottom: 1em;
         top: 70;
-        margin-left: 1em;
+    
     }
   }
 
+  .pckInfo{
+    margin: 0 auto 0 auto;
+  }
 .InfoH1{
     font-size: 30px;
     font-family: Arial, Helvetica, sans-serif;
