@@ -2365,14 +2365,16 @@ margin-right: 2em;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
   overflow: hidden;
-  display: none;
+  visibility: hidden;
+  opacity: 0;
   z-index: 99;
   backdrop-filter: blur(10px);
   border: 0.5px solid grey;
 }
 
 .pkg-options.active{
-  display: block;
+  opacity: 1;
+  visibility: visible;
 }
 
 .pkg-options .pkg-item{
