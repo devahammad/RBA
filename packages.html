@@ -228,6 +228,7 @@
 
                 </h2>
                   <form
+                  novalidate
                       class="supportForm"
                       id="submit-form"
                       action=""
@@ -247,6 +248,8 @@
                         required
                         placeholder="Your Name"
                       />
+                      <span class="error-message" id="name-error"></span>
+
                       <input
                         type="email"
                         class="formFill"
@@ -255,13 +258,18 @@
                         required
                         placeholder="Your Email Address"
                       />
+                      <span class="error-message" id="email-error"></span>
+
                       <input
                       type="tel"
                       class="formFill"
                       name="Phone"
+                      id="phone"
                       required
                       placeholder="Your Phone Number"
                     />
+                    <span class="error-message" id="phone-error"></span>
+
                     <div class="pkg-select-container">
                       <button class="pkg-select" name="select" type="button" value="options">options</button>
                       <div class="pkg-options">
@@ -285,9 +293,12 @@
                   type="text"
                   class="formFill"
                   name="notes"
+                  id="notes"
                   required
                   placeholder="Extra Notes"
                 />
+                <span class="error-message" id="notes-error"></span>
+
                       <input type="hidden" name="Package type" value="Lite" />
                       <div class="g-recaptcha" data-theme="dark" data-sitekey="6Lc5h0kqAAAAAMrUon0SeW0opgjGn_wN5F8s7vQC" style="margin-top: 2rem; "></div><br>
                       <button type="submit" value="Submit" class="submitBtn">
@@ -393,6 +404,7 @@
 
               </h2>
                 <form
+                novalidate
                     class="supportForm"
                     id="submit-form"
                     action=""
@@ -412,6 +424,7 @@
                       required
                       placeholder="Your Name"
                     />
+                    <span class="error-message" id="name-error"></span>
                     <input
                       type="email"
                       class="formFill"
@@ -420,13 +433,16 @@
                       required
                       placeholder="Your Email Address"
                     />
+                    <span class="error-message" id="email-error"></span>
                     <input
                     type="tel"
                     class="formFill"
                     name="Phone"
+                    id="phone"
                     required
                     placeholder="Your Phone Number"
                   />
+                  <span class="error-message" id="phone-error"></span>
                   <div class="pkg-select-container">
                     <button class="pkg-select" name="select" type="button" value=""></button>
                     <div class="pkg-options">
@@ -450,10 +466,12 @@
                 type="text"
                 class="formFill"
                 name="notes"
+                id="notes"
                 required
                 placeholder="Extra Notes"
               />
-                    <input type="hidden" name="Package type" value="Lite" />
+              <span class="error-message" id="notes-error"></span>
+                    <input type="hidden" name="Package type" value="Premium" />
                     <div class="g-recaptcha" data-theme="dark" data-sitekey="6Lc5h0kqAAAAAMrUon0SeW0opgjGn_wN5F8s7vQC" style="margin-top: 2rem; "></div><br>
                     <button type="submit" value="Submit" class="submitBtn">
                       Click to Order
@@ -551,6 +569,7 @@
 
               </h2>
                 <form
+                novalidate
                     class="supportForm"
                     id="submit-form"
                     action=""
@@ -570,6 +589,8 @@
                       required
                       placeholder="Your Name"
                     />
+                    <span class="error-message" id="name-error"></span>
+
                     <input
                       type="email"
                       class="formFill"
@@ -578,17 +599,23 @@
                       required
                       placeholder="Your Email Address"
                     />
+                    <span class="error-message" id="email-error"></span>
+
                     <input
                     type="tel"
                     class="formFill"
                     name="Phone"
+                    id="phone"
                     required
                     placeholder="Your Phone Number"
                   />
+                  <span class="error-message" id="phone-error"></span>
+
                   <div class="pkg-select-container">
                     <button class="pkg-select" name="select" type="button" value=""></button>
                     <div class="pkg-options">
-                        <p class="pkg-item active">Personal Website</p>
+                      <p class="pkg-item active">Choose your website type</p>
+                        <p class="pkg-item">Personal Website</p>
                         <p class="pkg-item">Business Website</p>
                         <p class="pkg-item">E-commerce Website</p>
                         <p class="pkg-item">Educational Website</p>
@@ -608,9 +635,12 @@
                 type="text"
                 class="formFill"
                 name="notes"
+                id="notes"
                 required
                 placeholder="Extra Notes"
               />
+              <span class="error-message" id="notes-error"></span>
+
                     <input type="hidden" name="Package type" value="Lite" />
                     <div class="g-recaptcha" data-theme="dark" data-sitekey="6Lc5h0kqAAAAAMrUon0SeW0opgjGn_wN5F8s7vQC" style="margin-top: 2rem; "></div><br>
                     <button type="submit" value="Submit" class="submitBtn">
@@ -791,6 +821,96 @@ window.onkeydown = (e) => {
         }
     });
 };
+
+
+document.getElementById('submit-form').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent form submission
+
+    // Get form input values
+    const name = document.getElementById('fname').value;
+    const email = document.getElementById('lname').value;
+    const phone = document.getElementById('phone').value;
+    const notes = document.getElementById('notes').value;
+    
+    // Clear previous error styles
+    const inputs = document.querySelectorAll('.formFill');
+    inputs.forEach(input => {
+        input.classList.remove('error'); // Remove error class
+    });
+
+    // Custom validation logic
+    let isValid = true;
+
+    if (!name) {
+        document.getElementById('fname').classList.add('error-custom');
+        isValid = false;
+    }
+    if (!email) {
+        document.getElementById('lname').classList.add('error-custom');
+        isValid = false;
+    }
+    if (!phone) {
+        document.getElementById('phone').classList.add('error-custom');
+        isValid = false;
+    }
+    if (!notes) {
+        document.getElementById('notes').classList.add('error-custom');
+        isValid = false;
+    }
+
+    // If valid, submit the form programmatically
+    
+});
+
+document.getElementById('submit-form').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent form submission
+
+    // Get form input values
+    const name = document.getElementById('fname').value;
+    const email = document.getElementById('lname').value;
+    const phone = document.getElementById('phone').value;
+    const notes = document.getElementById('notes').value;
+
+    // Clear previous error messages and error styles
+    const inputs = document.querySelectorAll('.formFill');
+    const errorMessages = document.querySelectorAll('.error-message');
+    inputs.forEach(input => {
+        input.classList.remove('error');
+    });
+    errorMessages.forEach(message => {
+        message.textContent = '';
+    });
+
+    // Custom validation logic
+    let isValid = true;
+
+    if (!name) {
+        document.getElementById('fname').classList.add('error-custom');
+        document.getElementById('name-error').textContent = 'Fill This Field';
+        isValid = false;
+    }
+    if (!email) {
+        document.getElementById('lname').classList.add('error-custom');
+        document.getElementById('email-error').textContent = 'Fill This Field';
+        isValid = false;
+    }
+    if (!phone) {
+        document.getElementById('phone').classList.add('error-custom');
+        document.getElementById('phone-error').textContent = 'Fill This Field';
+        isValid = false;
+    }
+    if (!notes) {
+        document.getElementById('notes').classList.add('error-custom');
+        document.getElementById('notes-error').textContent = 'Fill This Field';
+        isValid = false;
+    }
+
+    // If valid, submit the form programmatically
+    if (isValid) {
+        this.submit(); // Submit the form if all fields are valid
+    }
+});
+
     </script>
 
 
