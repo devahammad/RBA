@@ -66,36 +66,6 @@
 </head>
 
 <body>
-  <div class="myModal" id="myModal">
-    <div class="modal" id="modalContent" style="text-align: end;">
-      <button id="closeButton"
-        style="cursor: pointer; margin: 0.5em 0.5em 0.5em 0; border: 0; background-color: rgba(255, 0, 0, 0);"><img
-          id="closeButton" style="width: 20px; " src="SVG/closeicon.svg" alt="Close Button"></button>
-      <div class="modalContent">
-        <h2 style="font-family: Inter Tight; color: rgb(168, 168, 168);">
-          Let's merge <br> our ideas!
-
-        </h2>
-        <form id="submit-form" action=""
-          style="display: flex; flex-direction: column; justify-content: center; align-items: center; margin-top: 1em;">
-          <input type="text" class="formContent" id="fname" name="Name" required placeholder="Name">
-          <input type="email" class="formContent" id="lname" name="Email" required placeholder="Email Address">
-          <input type="text" class="formContent" id="subject" name="Message" rows="4" required
-            placeholder="What are you looking for?"></input>
-          <label class="cBox" style="font-family: PoppinsExtraLight; font-size: 14px;">
-            Receive offers and updates.
-            <input type="checkbox" id="promoCheckbox" onclick="updateCheckbox()">
-            <span class="checkmark"></span>
-          </label>
-          <input type="hidden" id="promoInput" name="Promotion" value="No">
-          <input type="hidden" name="Enquiry Type" value="1A">
-          <button class="sendbtn" type="submit" value="Submit"><img class="cbimg" id="closeButton" style="width: 45px; "
-              src="SVG/sendIcon.svg" alt="Send Button"></button>
-        </form>
-      </div>
-    </div>
-
-
     <div class="spinner center" id="spinner" style="display: none;">
       <div class="spinner-blade"></div>
       <div class="spinner-blade"></div>
