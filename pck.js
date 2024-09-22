@@ -1,4 +1,5 @@
 
+
 $("#submit-form").submit((e) => {
     e.preventDefault();
     $.ajax({
@@ -62,94 +63,127 @@ $("#submit-form4").submit((e) => {
 
 // For error finder
 
-
- document.addEventListener("DOMContentLoaded", function () {
-  // Select multiple forms by their ID using querySelectorAll
-  const forms = document.querySelectorAll("#submit-form, #submit-form2, #submit-form3, #submit-form4");
-
-  // Function to validate the form and show error messages
-  function validateForm(event, form) {
-    let isValid = true;
+document.addEventListener("DOMContentLoaded", function () {
     
-    // Name validation
-    const nameField = form.querySelector("#fname");
-    const nameError = form.querySelector("#name-error");
-    if (!nameField.value.trim()) {
-      nameError.textContent = "Please enter your name.";
-      isValid = false;
-    } else {
-      nameError.textContent = ""; // Clear error message
+    const forms = document.querySelectorAll("#submit-form, #submit-form2, #submit-form3, #submit-form4");
+  
+    // List of restricted words (case-insensitive)
+    const restrictedWords = ["ikka", "fafa", "faisal ikka", "faizal ikka", "randathani", "A plus", "plus", "Aplus"];
+  
+    // Function to check if a value contains restricted words
+    function containsRestrictedWords(value) {
+      const lowerCaseValue = value.toLowerCase();
+      return restrictedWords.some(word => lowerCaseValue.includes(word));
     }
-
-    // Email validation
-    const emailField = form.querySelector("#lname");
-    const emailError = form.querySelector("#email-error");
-    if (!emailField.value.trim()) {
-      emailError.textContent = "Please enter your email address.";
-      isValid = false;
-    } else if (!emailField.checkValidity()) {
-      emailError.textContent = "Please enter a valid email address.";
-      isValid = false;
-    } else {
-      emailError.textContent = ""; // Clear error message
+  
+    // Function to check if the name is gibberish (e.g., random letters)
+    function isGibberish(name) {
+      return /^[a-zA-Z]{2,}$/.test(name) && /([a-zA-Z])\1{2,}/.test(name);
     }
-
-    // Phone validation
-    const phoneField = form.querySelector("#phone");
-    const phoneError = form.querySelector("#phone-error");
-    const phoneValue = phoneField.value.trim();
-
-    if (!phoneValue) {
-      phoneError.textContent = "Please enter your phone number.";
-      isValid = false;
-    } else if (!/^\d+$/.test(phoneValue)) {
-      phoneError.textContent = "Phone number must contain only digits.";
-      isValid = false;
-    } else if (phoneValue.length < 9 || phoneValue.length > 10) {
-      phoneError.textContent = "Phone number must be 9 or 10 digits long.";
-      isValid = false;
-    } else {
-      phoneError.textContent = ""; // Clear error message
-    }
-
-    // Website Type validation
-    const websiteTypeField = form.querySelector("#notes");
-    const websiteTypeError = form.querySelector("#notes-error");
-    if (!websiteTypeField.value.trim()) {
-      websiteTypeError.textContent = "Please complete this";
-      isValid = false;
-    } else {
-      websiteTypeError.textContent = ""; // Clear error message
-    }
-
-    // CAPTCHA validation
-    const captchaResponse = grecaptcha.getResponse();
-    const captchaError = form.querySelector("#captcha-error");
-    if (captchaResponse.length === 0) {
-      captchaError.textContent = "Please complete the CAPTCHA.";
-      isValid = false;
-    } else {
-      captchaError.textContent = ""; // Clear error message
-    }
-
-    // Prevent submission if the form is invalid
-    if (!isValid) {
-      event.preventDefault(); // Prevent form submission
-    }
-
-    return isValid; // Return whether the form is valid
-  }
-
-  // Loop through each form and add the validation listener
-  forms.forEach((form) => {
-    form.addEventListener("submit", function (event) {
-      // Validate form fields and prevent submission if invalid
-      if (!validateForm(event, form)) {
-        event.preventDefault(); // Prevent default form submission behavior
+  
+    // Function to validate names
+    function validateName(nameValue) {
+      const trimmedName = nameValue.trim();
+  
+      // Check if the first letter of the first name is capitalized
+      const firstLetterCapitalRegex = /^[A-Z][a-zA-Z]*(?:\s[a-zA-Z]+)?$/;
+  
+      if (!trimmedName || !firstLetterCapitalRegex.test(trimmedName) || containsRestrictedWords(trimmedName) || isGibberish(trimmedName)) {
+        return false;
       }
+  
+      return true;
+    }
+  
+    function validateForm(event, form) {
+      let isValid = true;
+  
+      // Name validation
+      const nameField = form.querySelector("#fname");
+      const nameError = form.querySelector("#name-error");
+      const nameValue = nameField.value;
+  
+      if (!validateName(nameValue)) {
+        nameError.textContent = "Please enter a valid name. ( First letter of the  name must be capitalized, no special characters)";
+        isValid = false;
+      } else {
+        nameError.textContent = "";
+      }
+  
+  
+      // Email validation
+      const emailField = form.querySelector("#lname");
+      const emailError = form.querySelector("#email-error");
+      const emailValue = emailField.value.trim();
+      const validEmailDomains = [
+        "gmail.com", "yahoo.com", "outlook.com", "hotmail.com", "aol.com", "live.com",
+        "icloud.com", "mail.com", "zoho.com", "protonmail.com", "yandex.com", "gmx.com"
+      ];
+  
+      if (!emailValue) {
+        emailError.textContent = "Please enter your email address.";
+        isValid = false;
+      } else if (!emailValue.includes("@") || !validEmailDomains.some(domain => emailValue.endsWith(domain)) || containsRestrictedWords(emailValue)) {
+        emailError.textContent = "Please enter a valid email address from a standard provider.";
+        isValid = false;
+      } else {
+        emailError.textContent = "";
+      }
+  
+      // Phone validation: allow +, - and ensure length is 9-15 characters
+      const phoneField = form.querySelector("#phone");
+      const phoneError = form.querySelector("#phone-error");
+      const phoneValue = phoneField.value.trim();
+  
+      if (!phoneValue) {
+        phoneError.textContent = "Please enter your phone number.";
+        isValid = false;
+      } else if (!/^[+\-0-9]+$/.test(phoneValue) || containsRestrictedWords(phoneValue)) {
+        phoneError.textContent = "Phone number must contain only digits, '+' or '-' and no restricted words.";
+        isValid = false;
+      } else if (phoneValue.length < 9 || phoneValue.length > 15) {
+        phoneError.textContent = "Phone number must be 9 to 15 characters long.";
+        isValid = false;
+      } else {
+        phoneError.textContent = "";
+      }
+  
+      // Website Type validation
+      const websiteTypeField = form.querySelector("#notes");
+      const websiteTypeError = form.querySelector("#notes-error");
+      const websiteTypeValue = websiteTypeField.value.trim();
+  
+      if (!websiteTypeValue) {
+        websiteTypeError.textContent = "Please complete this.";
+        isValid = false;
+      } else if (containsRestrictedWords(websiteTypeValue)) {
+        websiteTypeError.textContent = "Give valid type or duration";
+        isValid = false;
+      } else {
+        websiteTypeError.textContent = "";
+      }
+  
+      // Block submission if form is invalid
+      if (!isValid) {
+        event.preventDefault();
+        form.querySelector(".submitBtn").disabled = true;
+      } else {
+        form.querySelector(".submitBtn").disabled = false;
+      }
+    }
+  
+    forms.forEach((form) => {
+      form.addEventListener("submit", function (event) {
+        validateForm(event, form);
+        if (!event.defaultPrevented) {
+          form.querySelector(".submitBtn").disabled = false;
+        }
+      });
+  
+      form.addEventListener("input", function (event) {
+        validateForm(event, form);
+      });
     });
   });
-});
-
-
+  
 
