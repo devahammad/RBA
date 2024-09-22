@@ -63,10 +63,9 @@ $("#submit-form4").submit((e) => {
 // For error finder
 
 
-  document.addEventListener("DOMContentLoaded", function () {
+ document.addEventListener("DOMContentLoaded", function () {
   // Select multiple forms by their ID using querySelectorAll
   const forms = document.querySelectorAll("#submit-form, #submit-form2, #submit-form3, #submit-form4");
-  const submitBtns = document.querySelectorAll(".submitBtn"); // Select all submit buttons if you have multiple
 
   // Function to validate the form and show error messages
   function validateForm(event, form) {
@@ -95,7 +94,7 @@ $("#submit-form4").submit((e) => {
       emailError.textContent = ""; // Clear error message
     }
 
-    // Phone validation: ensure the phone number is numeric and contains 9-10 characters
+    // Phone validation
     const phoneField = form.querySelector("#phone");
     const phoneError = form.querySelector("#phone-error");
     const phoneValue = phoneField.value.trim();
@@ -123,52 +122,33 @@ $("#submit-form4").submit((e) => {
       websiteTypeError.textContent = ""; // Clear error message
     }
 
-    // Block submission if form is invalid
+    // CAPTCHA validation
+    const captchaResponse = grecaptcha.getResponse();
+    const captchaError = form.querySelector("#captcha-error");
+    if (captchaResponse.length === 0) {
+      captchaError.textContent = "Please complete the CAPTCHA.";
+      isValid = false;
+    } else {
+      captchaError.textContent = ""; // Clear error message
+    }
+
+    // Prevent submission if the form is invalid
     if (!isValid) {
       event.preventDefault(); // Prevent form submission
-      form.querySelector(".submitBtn").disabled = true; // Disable submit button if invalid
-    } else {
-      form.querySelector(".submitBtn").disabled = false; // Enable the submit button if valid
     }
+
+    return isValid; // Return whether the form is valid
   }
 
   // Loop through each form and add the validation listener
   forms.forEach((form) => {
     form.addEventListener("submit", function (event) {
-      validateForm(event, form); // Validate form fields
-      if (!event.defaultPrevented) {
-        // If the form is valid, allow submission
-        form.querySelector(".submitBtn").disabled = false;
-        // Continue with the existing submission code
+      // Validate form fields and prevent submission if invalid
+      if (!validateForm(event, form)) {
+        event.preventDefault(); // Prevent default form submission behavior
       }
     });
-
-    // Validate inputs on input change to re-enable the button if the form becomes valid
-    form.addEventListener("input", function (event) {
-      validateForm(event, form);
-    });
   });
-
-
-
-
-      function submitForm(event) {
-  event.preventDefault();
-
-  // Clear previous CAPTCHA error
-  document.getElementById('captcha-error').textContent = '';
-
-  // Check if the reCAPTCHA is completed
-  const captchaResponse = grecaptcha.getResponse();
-  if (captchaResponse.length === 0) {
-    document.getElementById('captcha-error').textContent = 'Please complete the CAPTCHA';
-    return; // Stop form submission
-  }
-
-  // Proceed with form submission if CAPTCHA is valid
-  console.log("CAPTCHA is valid. Proceed with form submission.");
-}
-
 });
 
 
