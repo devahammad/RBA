@@ -24,25 +24,7 @@
         return true;  // Allow form submission if CAPTCHA is checked
     }
 </script>
-<style>
-    /* Shake animation */
-    @keyframes shake {
-        0% { transform: translateX(0); }
-        25% { transform: translateX(-5px); }
-        50% { transform: translateX(5px); }
-        75% { transform: translateX(-5px); }
-        100% { transform: translateX(0); }
-    }
-    /* Red color for the button */
-    .error {
-        background-color: red;
-        color: white;
-    }
-    /* Shake effect */
-    .shake {
-        animation: shake 0.5s;
-    }
-</style>
+
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -360,7 +342,7 @@
           <span class="error-message" id="notes-error"></span>
 
                 <input type="hidden" name="Product type" value="RBA+" />
-                <div class="g-recaptcha" data-theme="dark" data-sitekey="6LfdbUgqAAAAANSxbsfUqGtJE2Wd8Di_w7zSd-xO" style="margin-top: 2rem; "></div><br>
+                 <div id="captcha" data-callback="onCaptchaSuccess" class="g-recaptcha" data-theme="dark" data-sitekey="6Ldk80sqAAAAAAwdm_7CMtVwcLBUJGjeNJc-JioW" style="margin-top: 2rem; "></div><br>
                 <button type="submit" value="Submit" class="submitBtn">
                   Click to Order
                 </button>
