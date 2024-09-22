@@ -1289,9 +1289,8 @@ html button {
 .supportHead {
   color: white;
   text-align: center;
-  padding-top: 0px;
+ margin: 1em 0 0.4em 0;
   font-size: 4vw;
-  text-shadow: 0 0 10px #fff;
 }
 
 .supportPara {
@@ -1299,34 +1298,36 @@ html button {
   text-align: center;
   padding-top: 0px;
   font-size: 1.4rem;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+font-family: PoppinsExtraLight;
   margin-top: -1rem;
 }
 
 .parentSupport {
-  background: linear-gradient(to bottom, rgb(0, 0, 0), rgba(42, 42, 42, 0.689));
+  background-color: rgb(23, 23, 23);
   height: auto;
   width: 80vw;
   border-radius: 30px;
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid rgb(165, 165, 165);
-  box-shadow: 0 0px 15px rgb(65, 65, 65);
+  box-shadow: 0 0px 15px rgb(57, 57, 57);
+  border: 0.5px solid rgb(61, 61, 61);
+  background-image: repeating-linear-gradient(45deg, transparent, transparent 14px, rgba(20, 20, 20, 0.7) 14px, rgba(20, 20, 20, 0.7) 28px);
 }
 
 .contactDiv {
-  background: white;
+  background: rgba(52, 52, 52, 0.231);
   height: 100%;
   width: 50%;
   border-radius: 30px;
   margin-top: 0rem;
-  border: 1px solid rgb(165, 165, 165);
+  border: 1px solid rgb(137, 137, 137);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
 }
 
 .formDiv {
@@ -1559,23 +1560,16 @@ form textarea:focus {
   .supportPara {
     color: white;
     text-align: center;
-    margin-top: 0rem;
-    font-size: 3.5vw;
-    font-family: PSansLight;
+    font-size: 20px;
+    font-family: PoppinsExtraLight;
   }
   .supportHead {
     color: white;
     text-align: center;
     padding-top: 0px;
-    font-size: 7vw;
-    text-shadow: 0 0 10px #fff;
+    font-size: 2em;
   }
   .parentSupport {
-    background: linear-gradient(
-      to right,
-      rgb(0, 0, 0),
-      rgba(42, 42, 42, 0.689)
-    );
     height: auto;
     width: 90%;
     margin-left: 0;
@@ -1586,10 +1580,9 @@ form textarea:focus {
     flex-direction: column;
   }
   .contactDiv {
-    background: rgb(255, 255, 255);
     width: 100%;
     border-radius: 30px;
-    border: none;
+
     z-index: 1;
     display: flex;
     justify-content: center;
@@ -2271,6 +2264,7 @@ margin-right: 2em;
   border: 1px solid rgb(45, 45, 45);
   align-items: center;
   width: 80%;
+  margin: 1em 0 1em 0;
 }
 
 .error-message {
@@ -2287,4 +2281,5 @@ margin-right: 2em;
   background: #292929;
 }
  
+
 
