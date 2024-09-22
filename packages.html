@@ -201,7 +201,6 @@
                         align-items: center;
                         display: flex;
                         padding-top: 1.5em;"
-                        onsubmit="submitForm(event)"
                     >
                     
                       <input
@@ -248,9 +247,7 @@
                 <span class="error-message" id="notes-error"></span>
 
                       <input type="hidden" name="Package type" value="Lite" />
-                      <div class="g-recaptcha" data-theme="dark" data-sitekey="6LemwUsqAAAAAHxAD5YQYuTFcjVzF3F0KsyAd9d4" style="margin-top: 2rem; "></div>
-                      <span class="error-message" id="captcha-error"></span>
-                      <br>
+                      <div class="g-recaptcha" data-theme="dark" data-sitekey="6Lc5h0kqAAAAAMrUon0SeW0opgjGn_wN5F8s7vQC" style="margin-top: 2rem; "></div><br>
                       <button type="submit" value="Submit" class="submitBtn">
                         Click to Order
                       </button>
@@ -351,50 +348,53 @@
                   Submit Your Details Here
 
               </h2>
-              <form
-              novalidate
-              class="supportForm"
-              id="submit-form2"
-              action=""
-              onsubmit="submitForm(event)"  <!-- Attach the onsubmit event handler here -->
-              style="
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                display: flex;
-                padding-top: 1.5em;"
-            >
-              <input
-                type="text"
-                class="formFill"
-                id="fname"
-                name="Name"
-                required
-                placeholder="Your Name"
-              />
-              <span class="error-message" id="name-error"></span>
-            
-              <input
-                type="email"
-                class="formFill"
-                id="lname"
-                name="Email"
-                required
-                placeholder="Your Email Address"
-              />
-              <span class="error-message" id="email-error"></span>
-            
-              <input
-                type="tel"
-                class="formFill"
-                name="Phone"
-                id="phone"
-                required
-                placeholder="Your Phone Number"
-              />
-              <span class="error-message" id="phone-error"></span>
-            
-              <input
+                <form
+                novalidate
+                    class="supportForm"
+                    id="submit-form2"
+                    action=""
+                    style="
+                      flex-direction: column;
+                      justify-content: center;
+                      align-items: center;
+                      display: flex;
+                      padding-top: 1.5em;"
+                  >
+                  
+                    <input
+                      type="text"
+                      class="formFill"
+                      id="fname"
+                      name="Name"
+                      required
+                      placeholder="Your Name"
+                    />
+                    <span class="error-message" id="name-error"></span>
+
+                    <input
+                      type="email"
+                      class="formFill"
+                      id="lname"
+                      name="Email"
+                      required
+                      placeholder="Your Email Address"
+                    />
+                    <span class="error-message" id="email-error"></span>
+
+                    <input
+                    type="tel"
+                    class="formFill"
+                    name="Phone"
+                    id="phone"
+                    required
+                    placeholder="Your Phone Number"
+                  />
+                  <span class="error-message" id="phone-error"></span>
+
+           
+                    
+                    
+                <input
                 type="text"
                 class="formFill"
                 name="Website Type"
@@ -403,19 +403,13 @@
                 placeholder="Type of website"
               />
               <span class="error-message" id="notes-error"></span>
-            
-              <input type="hidden" name="Package type" value="Standard" />
-              <div
-                class="g-recaptcha"
-                data-theme="dark"
-                data-sitekey="6Lc5h0kqAAAAAMrUon0SeW0opgjGn_wN5F8s7vQC"
-                style="margin-top: 2rem;"
-              ></div><br>
-            
-              <button type="submit" value="Submit" class="submitBtn">
-                Click to Order
-              </button>
-            </form></div>
+
+                    <input type="hidden" name="Package type" value="Standard" />
+                    <div class="g-recaptcha" data-theme="dark" data-sitekey="6Lc5h0kqAAAAAMrUon0SeW0opgjGn_wN5F8s7vQC" style="margin-top: 2rem; "></div><br>
+                    <button type="submit" value="Submit" class="submitBtn">
+                      Click to Order
+                    </button>
+                  </form></div>
       
                  
             </div>
@@ -518,7 +512,6 @@
                       align-items: center;
                       display: flex;
                       padding-top: 1.5em;"
-                      onsubmit="submitForm(event)"
                   >
                   
                     <input
