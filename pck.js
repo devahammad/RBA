@@ -148,6 +148,27 @@ $("#submit-form4").submit((e) => {
       validateForm(event, form);
     });
   });
+
+
+
+
+      function submitForm(event) {
+  event.preventDefault();
+
+  // Clear previous CAPTCHA error
+  document.getElementById('captcha-error').textContent = '';
+
+  // Check if the reCAPTCHA is completed
+  const captchaResponse = grecaptcha.getResponse();
+  if (captchaResponse.length === 0) {
+    document.getElementById('captcha-error').textContent = 'Please complete the CAPTCHA';
+    return; // Stop form submission
+  }
+
+  // Proceed with form submission if CAPTCHA is valid
+  console.log("CAPTCHA is valid. Proceed with form submission.");
+}
+
 });
 
 
