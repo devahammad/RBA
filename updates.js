@@ -74,50 +74,139 @@ document.addEventListener('DOMContentLoaded', function () {
 
 // For MODAL // 
 
+document.addEventListener("DOMContentLoaded", function () {
+    const form = document.querySelector("#submit-form");
+    const submitButton = form.querySelector(".sendbtn");
+    const nameError = form.querySelector("#name-error");
+    const emailError = form.querySelector("#email-error");
+    const messageError = form.querySelector("#message-error");
 
- function displayModal() {
-    var modal = document.getElementById("myModal");
-    modal.style.opacity = "1";
-    modal.style.visibility = "visible";
-}
+    // List of restricted words (case-insensitive)
+    const restrictedWords = ["ikka", "fafa", "faisal ikka", "faizal ikka", "randathani", "A plus", "plus", "Aplus"];
 
-function hideModal() {
-    var modal = document.getElementById("myModal");
-    modal.style.opacity = "0";
-    modal.style.visibility = "hidden";
-}
+    function containsRestrictedWords(value) {
+        const lowerCaseValue = value.toLowerCase();
+        return restrictedWords.some(word => lowerCaseValue.includes(word));
+    }
 
-function hideModalContent() {
-    var modalContent = document.getElementById("modalContent");
-    modalContent.style.display = "none";
-}
+    function isGibberish(name) {
+        return /^[a-zA-Z]{2,}$/.test(name) && /([a-zA-Z])\1{2,}/.test(name);
+    }
 
-function showSpinner() {
-    var spinner = document.getElementById("spinner");
-    spinner.style.display = "block";
-}
+    function validateName(nameValue) {
+        const trimmedName = nameValue.trim();
+        const firstLetterCapitalRegex = /^[A-Z][a-zA-Z]*(?:\s[a-zA-Z]+)?$/;
+        return trimmedName && 
+               firstLetterCapitalRegex.test(trimmedName) && 
+               !containsRestrictedWords(trimmedName) && 
+               !isGibberish(trimmedName);
+    }
 
-function hideSpinner() {
-    var spinner = document.getElementById("spinner");
-    spinner.style.display = "none";
-}
+    function validateForm() {
+        let isValid = true;
 
-document.getElementById("submit-form").addEventListener("submit", function(event) {
-    event.preventDefault(); // Prevent the default form submission
-    hideModalContent();    // Hide only the modal content
-    showSpinner();         // Show the spinner
+        // Name validation
+        const nameField = form.querySelector("#fname");
+        const nameValue = nameField.value;
 
-    // Simulate form submission delay
-    setTimeout(function() {
-        hideSpinner();    // Hide the spinner
-        hideModal();      // Hide the entire modal after form submission
-    }, 3000); // Adjust the delay as needed
+        if (!validateName(nameValue)) {
+            nameError.textContent = "Please enter a valid name. (First letter must be capitalized, no special characters)";
+            isValid = false;
+        } else {
+            nameError.textContent = "";
+        }
+
+        // Email validation
+        const emailField = form.querySelector("#lname");
+        const emailValue = emailField.value.trim();
+        const validEmailDomains = [
+            "gmail.com", "yahoo.com", "outlook.com", "hotmail.com", "aol.com", "live.com",
+            "icloud.com", "mail.com", "zoho.com", "protonmail.com", "yandex.com", "gmx.com"
+        ];
+
+        if (!emailValue) {
+            emailError.textContent = "Please enter your email address.";
+            isValid = false;
+        } else if (!emailValue.includes("@") || !validEmailDomains.some(domain => emailValue.endsWith(domain)) || containsRestrictedWords(emailValue)) {
+            emailError.textContent = "Please enter a valid email address from a standard provider.";
+            isValid = false;
+        } else {
+            emailError.textContent = "";
+        }
+
+        // Message validation
+        const messageField = form.querySelector("#subject");
+        const messageValue = messageField.value.trim();
+
+        if (!messageValue) {
+            messageError.textContent = "Please enter a message.";
+            isValid = false;
+        } else if (containsRestrictedWords(messageValue)) {
+            messageError.textContent = "This message cannot be send";
+            isValid = false;
+        } else {
+            messageError.textContent = "";
+        }
+
+        // Disable submit button if form is invalid
+        submitButton.disabled = !isValid;
+
+        return isValid;
+    }
+
+    // Modal functions
+    function displayModal() {
+        var modal = document.getElementById("myModal");
+        modal.style.opacity = "1";
+        modal.style.visibility = "visible";
+    }
+
+    function hideModal() {
+        var modal = document.getElementById("myModal");
+        modal.style.opacity = "0";
+        modal.style.visibility = "hidden";
+    }
+
+    function hideModalContent() {
+        var modalContent = document.getElementById("modalContent");
+        modalContent.style.display = "none";
+    }
+
+    function showSpinner() {
+        var spinner = document.getElementById("spinner");
+        spinner.style.display = "flex"; // Set to flex to center the blades
+    }
+
+    function hideSpinner() {
+        var spinner = document.getElementById("spinner");
+        spinner.style.display = "none";
+    }
+
+    form.addEventListener("submit", function (event) {
+        event.preventDefault(); // Prevent the default form submission
+
+        if (validateForm()) {
+            hideModalContent(); // Hide only the modal content
+            showSpinner(); // Show the spinner
+
+            // Simulate form submission delay
+            setTimeout(function () {
+                // Handle successful form submission logic here
+
+                hideSpinner(); // Hide the spinner
+                hideModal(); // Hide the entire modal after form submission
+            }, 3000); // Adjust the delay as needed
+        }
+    });
+
+    // Validate form inputs on input events
+    form.addEventListener("input", validateForm);
+
+    document.getElementById("closeButton").addEventListener("click", hideModal);
+
+    // Initial display of the modal
+    setTimeout(displayModal, 10000);
 });
-
-document.getElementById("closeButton").addEventListener("click", hideModal);
-
-// Initial display of the modal
-setTimeout(displayModal, 10000);
 
 
 // For FAQ // 
